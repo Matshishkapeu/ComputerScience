@@ -2,3 +2,4 @@ sphinx
 sphinx_rtd_theme
 sphinx-numfig
 sphinxcontrib-bibtex
+sphinx-catalystcloud-theme
