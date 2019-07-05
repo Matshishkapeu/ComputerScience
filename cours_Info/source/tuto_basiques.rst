@@ -59,21 +59,23 @@ Pour créer une section de **code**:
 
 La liste des synthaxe reconnue est disponible sur le site Pygments_
 
-.. admonition:: attention
+.. caution::
 	
-	Sauts de ligne a respecter !
+	Les sauts de ligne doivent toujours être respecter (avant et après les balises .. !
 
 Figure/image
 ------------
-Insérer une figure référencé de la manière suivante :
+Insérer une figure référencé avec légende de la manière suivante :
 
 .. code-block:: ReST
 
 	.. _Fig:introduction:arduino:
 
 	.. figure:: ./fig/arduino.jpg
+	  :scale: 50%
+	  :align: center
 
-		The arduino UNO electronics plateform that is used in this course.
+	  The arduino UNO electronics plateform that is used in this course.
 
 et faire référence avec :
 
@@ -83,12 +85,13 @@ et faire référence avec :
 
 LaTeX
 -----
-On peut insérer des formules en LaTeX avec :
+On peut insérer des formules en LaTeX numérotées avec :
 
 .. code-block:: ReST
 
   .. math::
-
+	  :label: formula
+    
     f:x \to x^2 \frac{x}{42}
 
 mais aussi directement dans le texte via :
@@ -148,6 +151,10 @@ ou encore list-table :
 	   * - Gannet Ripple
 	     - 1.99
 	     - On a stick!
+
+.. caution::
+
+	A priori avec *csv-table* et *list-table*, on ne peut pas intégrer de Latex ou autre. Juste du texte.
 
 Référence vers une autre section
 --------------------------------
