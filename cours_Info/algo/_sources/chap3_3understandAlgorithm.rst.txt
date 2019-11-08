@@ -1,0 +1,67 @@
+********************************
+Think, write and test algorithms
+********************************
+
+Writting an algorithm to solve a problem acts in several steps. From a clear statement, the analyst should:
+
+1. Extract and formalize input data
+2. Determine what will be the result
+3. Elaborate the process that will produce the result from input data
+
+Thinking and writting algorithm
+===============================
+In the major cases, the analyst is not producing the "good" algorithm the first time. It is common to produce several versions of an algorithm until it reaches the objectives. One can retain some general method to write an algorithm:
+
+* Read and understand the statement.
+* Imagine the discussion between the user and the processor: what should the user give to the processor and what does it return in exchange.
+* Solve the problem by hand on typical example to verify the understanding and begin to structure what kind of instructions will be necessary.
+* Isolate the problem data and make a first version of variable declarations.
+* Organise ideas to find complex successive instructions that can solve the problem. Take care about conditions and repetitive instructions that can emerge from any reformulation of the statement.
+* Treat independantly each complex instruction in elementary instructions that will represent instruction blocks of the written algorithm. This step may require to add new variables to the declaration section of the algorithm. If some operations seems very complex, do not hesitate to structure the algorithm using functions.
+
+Testing: trace table
+====================
+When a version of an algorithm has been written, it should be tested and eventually corrected. This is a complex step in algorithm writting because the more the tests will be exhaustive, the more the validation of the safety of the produced algorithm will be. For example, if one of the input of the algorithm is an integer, one can test positive, nul and negative values for this integer.
+
+There are at least two possibilities to test an algorithm:
+
+* Traduce it in a programming language and run it on a computer on different data sets.
+* Test by hand using a trace table
+
+A **trace table** is representing the value of variables (and eventually the screen output) at each line during the algorithm execution.
+
+Let us take the example of the conversion algorithm seen in section :ref:`Sec:chap3:firstExample`. This algorithm is recalled hereafter:
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm convertTemperatureCtoK
+  --------------------------------
+  Description
+    Print temperature in Kelvin from input read temperature in Celcius
+  --------------------------------
+  Constants
+    zeroC = 273.15
+  Variables
+    tempC : real
+    tempK : real
+  Start
+    Print("Enter temperature in Celcius :")
+    Read(tempC)
+    tempK <- tempC + zeroC
+    Print(tempC, "°C is ", tempK, "K")
+  End
+
+A possible trace table for this algorithm is:
+
+======  ========  =======  =======  ================================
+line    zeroC      tempC    tempK    screen  
+======  ========  =======  =======  ================================
+7       273.15                          
+12                                   Enter temperature un Celcius : 
+13                 42.0                             
+14                          315.15     
+15                                   42.0°C is 315.15K
+======  ========  =======  =======  ================================
+
+Testing this algorithm with a temperature of -300 °C will send an unphysical result and shows one of the algorithm limitations.

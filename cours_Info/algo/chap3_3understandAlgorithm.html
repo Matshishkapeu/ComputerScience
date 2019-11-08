@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3. Think, write and test algorithms &mdash; Computer engineering, Part 3:Algorithm 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Homework" href="Homework.html" />
+    <link rel="prev" title="1.2. Algorithm Syntax" href="chap3_2algorithmSyntax.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Computer engineering, Part 3:Algorithm
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="chap3_algorithm_Chap.html">1. Algorithm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap3_1concept.html">1.1. Basic concept of algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap3_2algorithmSyntax.html">1.2. Algorithm Syntax</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.3. Think, write and test algorithms</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#thinking-and-writting-algorithm">1.3.1. Thinking and writting algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-trace-table">1.3.2. Testing: trace table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Homework.html">2. Homework</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computer engineering, Part 3:Algorithm</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="chap3_algorithm_Chap.html">1. Algorithm</a> &raquo;</li>
+        
+      <li>1.3. Think, write and test algorithms</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chap3_3understandAlgorithm.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="think-write-and-test-algorithms">
+<h1>1.3. Think, write and test algorithms<a class="headerlink" href="#think-write-and-test-algorithms" title="Permalink to this headline">¶</a></h1>
+<p>Writting an algorithm to solve a problem acts in several steps. From a clear statement, the analyst should:</p>
+<ol class="arabic simple">
+<li>Extract and formalize input data</li>
+<li>Determine what will be the result</li>
+<li>Elaborate the process that will produce the result from input data</li>
+</ol>
+<div class="section" id="thinking-and-writting-algorithm">
+<h2>1.3.1. Thinking and writting algorithm<a class="headerlink" href="#thinking-and-writting-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>In the major cases, the analyst is not producing the “good” algorithm the first time. It is common to produce several versions of an algorithm until it reaches the objectives. One can retain some general method to write an algorithm:</p>
+<ul class="simple">
+<li>Read and understand the statement.</li>
+<li>Imagine the discussion between the user and the processor: what should the user give to the processor and what does it return in exchange.</li>
+<li>Solve the problem by hand on typical example to verify the understanding and begin to structure what kind of instructions will be necessary.</li>
+<li>Isolate the problem data and make a first version of variable declarations.</li>
+<li>Organise ideas to find complex successive instructions that can solve the problem. Take care about conditions and repetitive instructions that can emerge from any reformulation of the statement.</li>
+<li>Treat independantly each complex instruction in elementary instructions that will represent instruction blocks of the written algorithm. This step may require to add new variables to the declaration section of the algorithm. If some operations seems very complex, do not hesitate to structure the algorithm using functions.</li>
+</ul>
+</div>
+<div class="section" id="testing-trace-table">
+<h2>1.3.2. Testing: trace table<a class="headerlink" href="#testing-trace-table" title="Permalink to this headline">¶</a></h2>
+<p>When a version of an algorithm has been written, it should be tested and eventually corrected. This is a complex step in algorithm writting because the more the tests will be exhaustive, the more the validation of the safety of the produced algorithm will be. For example, if one of the input of the algorithm is an integer, one can test positive, nul and negative values for this integer.</p>
+<p>There are at least two possibilities to test an algorithm:</p>
+<ul class="simple">
+<li>Traduce it in a programming language and run it on a computer on different data sets.</li>
+<li>Test by hand using a trace table</li>
+</ul>
+<p>A <strong>trace table</strong> is representing the value of variables (and eventually the screen output) at each line during the algorithm execution.</p>
+<p>Let us take the example of the conversion algorithm seen in section <a class="reference internal" href="chap3_2algorithmSyntax.html#sec-chap3-firstexample"><span class="std std-ref">A first example</span></a>. This algorithm is recalled hereafter:</p>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Algorithm convertTemperatureCtoK
+--------------------------------
+Description
+  Print temperature in Kelvin from input read temperature in Celcius
+--------------------------------
+Constants
+  zeroC = 273.15
+Variables
+  tempC : real
+  tempK : real
+Start
+  Print(&quot;Enter temperature in Celcius :&quot;)
+  Read(tempC)
+  tempK &lt;- tempC + zeroC
+  Print(tempC, &quot;°C is &quot;, tempK, &quot;K&quot;)
+End
+</pre></div>
+</td></tr></table></div>
+<p>A possible trace table for this algorithm is:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="13%" />
+<col width="12%" />
+<col width="12%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">line</th>
+<th class="head">zeroC</th>
+<th class="head">tempC</th>
+<th class="head">tempK</th>
+<th class="head">screen</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>7</td>
+<td>273.15</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>12</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>Enter temperature un Celcius :</td>
+</tr>
+<tr class="row-even"><td>13</td>
+<td>&#160;</td>
+<td>42.0</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>315.15</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>15</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>&#160;</td>
+<td>42.0°C is 315.15K</td>
+</tr>
+</tbody>
+</table>
+<p>Testing this algorithm with a temperature of -300 °C will send an unphysical result and shows one of the algorithm limitations.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Homework.html" class="btn btn-neutral float-right" title="2. Homework" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap3_2algorithmSyntax.html" class="btn btn-neutral float-left" title="1.2. Algorithm Syntax" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Fabien Petitpas, Aix Marseille University / Polytech Marseille
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

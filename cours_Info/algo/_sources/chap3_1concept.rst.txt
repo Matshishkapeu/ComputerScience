@@ -1,0 +1,40 @@
+**************************
+Basic concept of algorithm
+**************************
+An **algorithm** is a set of unambiguous simple instructions. It ends after a finite amount of operations and produces a result from input data.
+The algorithm is designed to be executed by the processor. If the processor is a computer, then the algorithm is traduced in a programming language (ie. C/C++, Python, Fortran, Java, etc.) and becomes a **program**.
+
+The developpement of a programm is following different steps and actors.
+
+.. _Fig:chap3:program:
+
+.. figure:: ./_static/fig/chap3/program.jpg
+  :scale: 50%
+  :align: center
+
+  Main steps of program development
+
+The analyse step consists on proposing a solution to the problem by writting an algorithm together with a set of verification tests proving the algorithm value.
+
+Simple algorithm example
+=========================
+Recipe of a chocolate cake is an algorithm as it includes a list of simple instructions that takes ingredients in input and produces a chocolate cake as result:
+
+1. Preheat oven at 180°C.
+2. Melt chocolate and butter together.
+3. Whisk 3 eggs.
+4. Add chestnut cream and beat with eggs.
+5. Incorporate melt chocolate.
+6. Bake for 35 min at 180°C.
+
+Flowchart representation of an algorithm
+========================================
+Algorithms can be more complex than the preceding recipe. For example it can contains structured instructions. In that case, it can be usefull to represent the algorithm using a flowchart.
+
+.. _Fig:chap3:algoLesson:
+
+.. figure:: ./_static/fig/chap3/algoLesson.jpg
+  :scale: 60%
+  :align: center
+
+  A basic algorithm example with conditional instructions.

@@ -1,0 +1,725 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.2. Algorithm Syntax &mdash; Computer engineering, Part 3:Algorithm 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1.3. Think, write and test algorithms" href="chap3_3understandAlgorithm.html" />
+    <link rel="prev" title="1.1. Basic concept of algorithm" href="chap3_1concept.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Computer engineering, Part 3:Algorithm
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="chap3_algorithm_Chap.html">1. Algorithm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap3_1concept.html">1.1. Basic concept of algorithm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.2. Algorithm Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-first-example">1.2.1. A first example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-types">1.2.2. Data types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#primitive-types">1.2.2.1. Primitive types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#composite-types">1.2.2.2. Composite types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#predefined-operators-and-mathematical-functions">1.2.3. Predefined operators and mathematical functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instructions">1.2.4. Instructions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#affectation">1.2.4.1. Affectation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#input-output">1.2.4.2. Input/Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conditional-instructions">1.2.4.3. Conditional instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repetitive-instructions">1.2.4.4. Repetitive instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">1.2.5. Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">1.2.6. Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap3_3understandAlgorithm.html">1.3. Think, write and test algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Homework.html">2. Homework</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computer engineering, Part 3:Algorithm</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="chap3_algorithm_Chap.html">1. Algorithm</a> &raquo;</li>
+        
+      <li>1.2. Algorithm Syntax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chap3_2algorithmSyntax.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="algorithm-syntax">
+<h1>1.2. Algorithm Syntax<a class="headerlink" href="#algorithm-syntax" title="Permalink to this headline">¶</a></h1>
+<p>An algorithm is dedicated to be run by an abstract machine similar to a computer but without its physical limits. This abstract machine is composed by:</p>
+<ul class="simple">
+<li>A processor: this is the executing unit (can be the analyst)</li>
+<li>A memory: to store data and instructions (can be a simple sheet)</li>
+<li>Input and Output devices: to permits communication (can be reading or printing a variable)</li>
+</ul>
+<p>The processor execute the instructions as specified in the algorithm and data and instructions are stored in the infinite memory (we don’t care about their physical representations).</p>
+<p>This section gives writting conventions that should be seen as an “algorithm vocabulary”. An <strong>algorithm</strong> should be structured as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Algorithm &lt;id_algorithm&gt;
+------------------------
+Description
+  &lt;Comments to explain goals, and conditions to run the algorithm correctly&gt;
+------------------------
+Constants
+  &lt;id_constant&gt; = &lt;expression&gt;
+  ...
+Functions
+  &lt;id_function&gt; (&lt;id_param&gt; : &lt;id_type&gt;, ...)
+  ...
+Variables
+  &lt;id_variable&gt; : &lt;id_type&gt;
+  ...
+Start
+  &lt;instructions&gt;
+  ...
+End
+</pre></div>
+</div>
+<p>We will consider as <strong>mandatory</strong>:</p>
+<ul class="simple">
+<li>The <strong>name</strong> of algorithm</li>
+<li>the <strong>Description</strong> block that is a comment to help the user to understand the algorithm and how to use it. It includes desription for inputs/outputs.</li>
+<li>the <strong>Start/End</strong> block contains instructions (that can be structured in different instructions blocks)</li>
+</ul>
+<p>Others part of the algorithm are facultative and depends on its complexity and on the solved problem.</p>
+<div class="section" id="a-first-example">
+<span id="sec-chap3-firstexample"></span><h2>1.2.1. A first example<a class="headerlink" href="#a-first-example" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following algorithm as a basic example:</p>
+<div class="literal-block-wrapper docutils container" id="converttemperaturectok">
+<div class="code-block-caption"><span class="caption-number">Listing 1.1:  </span><span class="caption-text">conversion algorithm</span><a class="headerlink" href="#converttemperaturectok" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Algorithm convertTemperatureCtoK
+--------------------------------
+Description
+  Print temperature in Kelvin from input read temperature in Celcius
+--------------------------------
+Constants
+  zeroC = 273.15
+Variables
+  tempC : real
+  tempK : real
+Start
+  Print(&quot;Enter temperature in Celcius :&quot;)
+  Read(tempC)
+  tempK &lt;- tempC + zeroC
+  Print(tempC, &quot;°C is &quot;, tempK, &quot;K&quot;)
+End
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Some programming languages will be study in details in following lessons, but it is already interesting to look for this algorithm transcription in different programming languages:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 1.2:  </span><span class="caption-text">convertTemperatureCtoK.c</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//convertTemperatureCtoK</span>
+<span class="c1">//----------------------</span>
+<span class="c1">//Print temperature in Kelvin from input read temperature in Celcius</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">const</span> <span class="kt">float</span> <span class="n">zeroC</span><span class="p">(</span><span class="mf">273.15</span><span class="p">);</span>
+  <span class="kt">float</span> <span class="n">tempC</span><span class="p">,</span><span class="n">tempK</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter temperature in Celcius :</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">scanf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tempC</span><span class="p">);</span>
+  <span class="n">tempK</span> <span class="o">=</span> <span class="n">tempC</span> <span class="o">+</span> <span class="n">zeroC</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f °C is %f K</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">tempC</span><span class="p">,</span> <span class="n">tempK</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 1.3:  </span><span class="caption-text">convertTemperatureCtoK.cpp</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-C++ notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">//convertTemperatureCtoK</span>
+<span class="c1">//----------------------</span>
+<span class="c1">//Print temperature in Kelvin from input read temperature in Celcius</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">const</span> <span class="kt">float</span> <span class="n">zeroC</span><span class="p">(</span><span class="mf">273.15</span><span class="p">);</span>
+  <span class="kt">float</span> <span class="n">tempC</span><span class="p">,</span><span class="n">tempK</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter temperature in Celcius :&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">tempC</span><span class="p">;</span>
+  <span class="n">tempK</span> <span class="o">=</span> <span class="n">tempC</span> <span class="o">+</span> <span class="n">zeroC</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">tempC</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; °C is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">tempK</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; K&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 1.4:  </span><span class="caption-text">convertTemperatureCtoK.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-default notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#convertTemperatureCtoK</span>
+<span class="c1">#----------------------</span>
+<span class="c1">#Print temperature in Kelvin from input read temperature in Celcius</span>
+<span class="c1"># -*-coding:utf8 -*</span>
+<span class="n">zeroC</span> <span class="o">=</span> <span class="mf">273.15</span>
+<span class="n">tempC</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter temperature in Celcius :&quot;</span><span class="p">)</span>
+<span class="n">tempC</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">tempC</span><span class="p">)</span>
+<span class="n">tempK</span> <span class="o">=</span> <span class="n">tempC</span> <span class="o">+</span> <span class="n">zeroC</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tempC</span><span class="p">,</span> <span class="s2">&quot; °C is &quot;</span><span class="p">,</span> <span class="n">tempK</span><span class="p">,</span> <span class="s2">&quot; K&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 1.5:  </span><span class="caption-text">convertTemperatureCtoK.f90</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-fortran notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c">!convertTemperatureCtoK</span>
+<span class="c">!----------------------</span>
+<span class="c">!Print temperature in Kelvin from input read temperature in Celcius</span>
+<span class="k">PROGRAM </span><span class="n">convertTemperatureCtoK</span>
+  <span class="k">IMPLICIT NONE</span>
+<span class="k">  </span><span class="kt">REAL</span><span class="p">,</span> <span class="k">PARAMETER</span> <span class="kd">::</span> <span class="n">zeroC</span> <span class="o">=</span> <span class="mi">27</span><span class="mf">3.15d0</span>
+  <span class="kt">REAL</span> <span class="kd">::</span> <span class="n">tempC</span><span class="p">,</span> <span class="n">tempK</span>
+  <span class="k">PRINT</span><span class="o">*</span><span class="p">,</span> <span class="s2">&quot;Enter temperature in Celcius :&quot;</span>
+  <span class="k">READ</span><span class="o">*</span><span class="p">,</span> <span class="n">tempC</span>
+  <span class="n">tempK</span> <span class="o">=</span> <span class="n">tempC</span> <span class="o">+</span> <span class="n">zeroC</span>
+  <span class="k">PRINT</span><span class="o">*</span><span class="p">,</span> <span class="n">tempC</span><span class="p">,</span> <span class="s2">&quot; °C is &quot;</span><span class="p">,</span> <span class="n">tempK</span><span class="p">,</span> <span class="s2">&quot; K&quot;</span>
+<span class="k">END PROGRAM </span><span class="n">convertTemperatureCtoK</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="data-types">
+<span id="index-0"></span><h2>1.2.2. Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<p>In algorithms, data types (integer, real, etc.) are important since they determine the possible operations that can be perfomed on data (<em>i.e.</em> euclidian division or real division produce different results). Variables definitions should include data type.</p>
+<div class="section" id="primitive-types">
+<span id="index-1"></span><h3>1.2.2.1. Primitive types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h3>
+<p>These primitive types of data are generally available whatever the programming language is. For algorithmic purpose, we will retain: <em>boolean</em>, <em>integer</em>, <em>float</em> and <em>character</em>.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 1.6:  </span><span class="caption-text">four variables with different <em>identifier</em> and different <em>types</em></span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
+  testVar : boolean
+  n : integer
+  f : float
+  c : character
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="composite-types">
+<h3>1.2.2.2. Composite types<a class="headerlink" href="#composite-types" title="Permalink to this headline">¶</a></h3>
+<p>When a lot of data of the same type are required, they are grouped in <strong>composite types</strong> as <em>arrays</em>. A <em>string</em> is a specific array of character.</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 1.7:  </span><span class="caption-text">defining different arrays in algorithms and operations</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
+  myArray : array[50] of integer
+  myString : string[3]
+  sentence : &quot;algorithm is not so difficult&quot;    / A string with 29 characters (+ 0 for ending)
+Start
+  myArray[0] &lt;- 42
+  myString[0] &lt;- &#39;O&#39;
+  myString[1] &lt;- &#39;K&#39;
+  myString[2] &lt;- 0     /Code for end of the string
+End
+</pre></div>
+</div>
+</div>
+<p>Other composite types exist and may be used depending on the programming language used: list, tuple, dictionary, stack, tree, graph, objects, etc.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Caution</p>
+<p class="last">Arrays are accessed using the formalisme arrayName[indice]. We use the convention that a n size array always begin by indice 0 and finishes by indice n-1.</p>
+</div>
+</div>
+</div>
+<div class="section" id="predefined-operators-and-mathematical-functions">
+<span id="index-2"></span><h2>1.2.3. Predefined operators and mathematical functions<a class="headerlink" href="#predefined-operators-and-mathematical-functions" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm operations are done thanks to predefined operators and functions that can be used directly in algorithms: <img class="math" src="_images/math/eb8f66a2bd861ca3725b373803daa770208eb2b3.svg" alt="-, +, *, /, \%, abs, sqrt, cos, sin, etc."/></p>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-number">Listing 1.8:  </span><span class="caption-text">some basic operations and printing</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
+  n, i : integer
+Start
+  Print(&quot;Euclidian division of n by i. Quotient: &quot;, n/i, &quot; remainder: &quot;, n%i)
+  Print(&quot; pi: &quot;, 4*atan(-1.))
+End
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="instructions">
+<h2>1.2.4. Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<p>Instructions are generally executed sequentially, that is to say step-by-step from top to bottom in the algorithm sequence. But some structured instructions as conditional and repetitive instructions will modify this sequence. Here are described the basic instructions that are used in algorithm.</p>
+<div class="section" id="affectation">
+<span id="index-3"></span><h3>1.2.4.1. Affectation<a class="headerlink" href="#affectation" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>affectation</strong> consists in attributing a value to a given variable. This is done thanks to the arrow symbol <img class="math" src="_images/math/b30e95233347399f9dedf4e56a53b1ae4d9c927f.svg" alt="\leftarrow"/> (&lt;-).</p>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-number">Listing 1.9:  </span><span class="caption-text">some affectations</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
+  i : integer
+  f : float
+  c : character
+  b : boolean
+Start
+  i &lt;- 42
+  f &lt;- 3.14
+  c &lt;- &#39;h&#39;
+  b &lt;- true (or 0)
+End
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="input-output">
+<span id="index-4"></span><h3>1.2.4.2. Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h3>
+<p>The algorithm is communicating with the rest of the world thanks to input and outputs. We will use mainly <em>Read</em> and <em>Print</em> instructions:</p>
+<ul class="simple">
+<li>the <em>Read</em> instruction allows to get a value from an input (from the keyboard for example) during execution of the algorithm.</li>
+<li>the <em>Print</em> instruction allows to present the result of the algorithm to an output (can be the screen).</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-number">Listing 1.10:  </span><span class="caption-text">Read and Print instructions</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
+  f : float
+Start
+  Read(f)
+  Print(&quot;the value is:&quot;, f)
+End
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="conditional-instructions">
+<span id="index-5"></span><h3>1.2.4.3. Conditional instructions<a class="headerlink" href="#conditional-instructions" title="Permalink to this headline">¶</a></h3>
+<p>When elementary instructions are used in an algorithm (ie. affectations, inputs/outputs), the execution of the algorithm is <em>sequential</em>. Using conditional instructions permits to modify the execution sequence.</p>
+<p>The <strong>if</strong> conditional instruction allows to switch between two branches in an algorithm. It requires a boolean expression.</p>
+<div class="sidebar">
+<p class="first sidebar-title">if flow chart</p>
+<div class="last figure align-center" id="fig-chap3-if">
+<a class="reference internal image-reference" href="_images/if.jpg"><img alt="_images/if.jpg" src="_images/if.jpg" style="width: 182.0px; height: 124.0px;" /></a>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if &lt;boolean expression&gt; then
+  &lt;instructions&gt;
+else
+  &lt;instructions&gt;
+endif
+</pre></div>
+</div>
+<p>Executed instructions depends on the evaluation of the expression: if <em>true</em>, instructions present in the <strong>if</strong> structure are executed, elsewhere this is the instructions in the <strong>else</strong> structure that are executed. The <strong>else</strong> structure is facultative: in that case, if the boolean expression is evaluated as <em>false</em>, nothing appends.</p>
+<p>The <strong>switch</strong> conditional instruction allows to switch between N branches in an algorithm.</p>
+<div class="sidebar">
+<p class="first sidebar-title">switch flow chart</p>
+<div class="last figure align-center" id="fig-chap3-switch">
+<a class="reference internal image-reference" href="_images/switch.jpg"><img alt="_images/switch.jpg" src="_images/switch.jpg" style="width: 184.0px; height: 263.2px;" /></a>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>switch &lt;expression&gt;
+  &lt;case 1&gt; : &lt;instructions&gt;
+  &lt;case 2&gt; : &lt;instructions&gt;
+  &lt;case 3&gt; : &lt;instructions&gt;
+  default : &lt;instructions&gt;
+endswitch
+</pre></div>
+</div>
+<p>Such conditional instruction is usefull to avoid successive if and improve algorithm lisibility.
+Treating keybord inputs in an application/game is a good example of such conditional instruction utility: the results of the application will depend on the hit key: the left, up, bottom and right key will have different effects on the application.</p>
+</div>
+<div class="section" id="repetitive-instructions">
+<h3>1.2.4.4. Repetitive instructions<a class="headerlink" href="#repetitive-instructions" title="Permalink to this headline">¶</a></h3>
+<p>They represent engine of algorithm since if algorithm exists, this is mainly to automatize repetitive human tasks. Two kinds of repetitive instructions (loops) exists.</p>
+<p>The <strong>while</strong> loop  will execute instructions while an expression is evaluated as <em>true</em>.</p>
+<div class="sidebar">
+<p class="first sidebar-title">while loop flow chart</p>
+<div class="last figure align-center" id="fig-chap3-while">
+<a class="reference internal image-reference" href="_images/while.jpg"><img alt="_images/while.jpg" src="_images/while.jpg" style="width: 110.4px; height: 102.4px;" /></a>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>while &lt;boolean expression&gt;
+  &lt;instructions&gt;
+endwhile
+</pre></div>
+</div>
+<p>This loop is preferabily used when the number of repetitive instructions to do is unknown. One have to take care that the evaluation of the boolean expression can become <em>false</em>, otherwise it will generate an infinite loop.</p>
+<p>When the number of repetitive instruction to do is known, it is more appropriate to use a <strong>for</strong> loop.</p>
+<div class="sidebar">
+<p class="first sidebar-title">for loop flow chart</p>
+<div class="last figure align-center" id="fig-chap3-for">
+<a class="reference internal image-reference" href="_images/for.jpg"><img alt="_images/for.jpg" src="_images/for.jpg" style="width: 105.2px; height: 148.4px;" /></a>
+</div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>for &lt;id_variable&gt; from &lt;init_expression&gt; to &lt;final_expression&gt;
+  &lt;instructions&gt;
+endfor
+</pre></div>
+</div>
+<p>This loop uses a counter:</p>
+<ul class="simple">
+<li>It is initialised to &lt;init_expression&gt; before the loop.</li>
+<li>It is automatically increment at each pass trhough the loop (default increment is 1).</li>
+<li>After counter modification, a condition verifies if the counter reach the &lt;final_expression&gt;. In that case, it exits the loop.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>1.2.5. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>Functions are used to structure algorithms when they become more complex. They are similar to mathematical functions as they may return an output value from inputs data. A function will have the following structure:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Function &lt;id_function&gt; (&lt;id_param&gt; : &lt;id_type&gt;, ...) : &lt;id_type&gt;
+------------------------
+Description
+  &lt;Comments to explain goals, and conditions to use the function correctly, including input and output descriptions&gt;
+------------------------
+Constants
+  &lt;id_constant&gt; = &lt;expression&gt;
+  ...
+Functions
+  &lt;id_function&gt; (&lt;id_param&gt; : &lt;id_type&gt;, ...)
+  ...
+Variables
+  &lt;id_variable&gt; : &lt;id_type&gt;
+  ...
+Start
+  &lt;instructions&gt;
+  ...
+  return &lt;expression&gt;
+End
+</pre></div>
+</div>
+<p>An interesting feature of function is that they acts like black boxes for the developer as he only needs to know what are the inputs and output.</p>
+<div class="figure align-center" id="id10">
+<span id="fig-chap3-function"></span><a class="reference internal image-reference" href="_images/function.jpg"><img alt="_images/function.jpg" src="_images/function.jpg" style="width: 483.6px; height: 142.2px;" /></a>
+<p class="caption"><span class="caption-number">Figure 1.7:  </span><span class="caption-text">Schematic representation of a function</span></p>
+</div>
+<p>Some programming languages make differences between functions and procedures as procedures are not returning any value. This is the case in FORTRAN, but not in C or Python.</p>
+</div>
+<div class="section" id="example">
+<h2>1.2.6. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>To illustrate this section, the following algorithm permits to calcul some statitics on the notes obtained by a group of student to an exam.</p>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Algorithm notesStats
+------------------------
+Description
+  Read notes obtained to an exam by a group of students and calcul some statistics: average, min, max
+------------------------
+Constants
+  NUMBERSTUDENT = 42
+Functions
+  getNote() : float
+  calculAverage (myArray : array of float, size : integer) : float
+  calculMax (myArray : array of float, size : integer) : float
+  calculMin (myArray : array of float, size : integer) : float
+Variables
+  etudiants : array[NUMBERSTUDENT] of float
+  i : integer
+  average, max, min : float
+
+Start
+  Print(&quot;Exam stats: enter notes for the &quot;, NUMBERSTUDENT, &quot; students.&quot;)
+
+  for i from 0 to NUMBERSTUDENT-1
+    etudiants[i] &lt;- getNote()
+  endfor
+
+  average &lt;- calculAverage(etudiants, NUMBERSTUDENT)
+  max &lt;- calculMax(etudiants, NUMBERSTUDENT)
+  min &lt;- calculMax(etudiants, NUMBERSTUDENT)
+
+  Print(&quot;The average is: &quot;, average)
+  Print(&quot;The maximum note is: &quot;, max)
+  Print(&quot;The minimum note is: &quot;, min)
+  Print(&quot;*****&quot;)
+End
+</pre></div>
+</td></tr></table></div>
+<p>For example, the function to enter a note can be defined as:</p>
+<div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="highlight"><pre><span></span>Function getNote() : float
+------------------------
+Description
+  Return a note entered by user and verifies if in the interval [0;20]
+------------------------
+Variables
+  float note
+
+Start
+  do
+    Print(&quot;Enter note &quot;, i, &quot;:&quot;)
+    Read(note)
+  while(note&lt;0 ou note&gt;20)
+  return note
+End
+</pre></div>
+</td></tr></table></div>
+<p>It is interesting to note here another use of the while loop. In this last example the loop begins by the <em>do</em> instruction and finishes with the test. This is easy to understand that, in that case, the test is done at the end of the loop. As a consequence, we are sure that the algorithm will execute the instructions in the loop one time before testing the condition. Implementation of this variant of while loop is generally found in the different programming languages.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap3_3understandAlgorithm.html" class="btn btn-neutral float-right" title="1.3. Think, write and test algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap3_1concept.html" class="btn btn-neutral float-left" title="1.1. Basic concept of algorithm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Fabien Petitpas, Aix Marseille University / Polytech Marseille
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+Computer engineering - Part 3: Algorithm
+========================================
+
+This document contains the third lesson of the "Computer engineering" course for third year students of Poltyech'Marseille engineering school (Mechanical and Energy departement). This lesson must be learned autonomously at home.
+
+It is divided in two parts:
+
+  * A first chapter named **Algorithm**: this chapter must be read first and used to help answer questions of the homework in the following chapter.
+  * A second chapter named **Homework**: Contains exercices to do at home. This part must be returned **before Tuesday, November 19 at 3:30 pm**. Detailed instructions are given in section :ref:`Sec:chap3:homework`.
+
+
+.. _Arduino: https://www.arduino.cc/
+.. _python: https://www.python.org/
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   :numbered:
+
+   chap3_algorithm_Chap
+   Homework.rst
+

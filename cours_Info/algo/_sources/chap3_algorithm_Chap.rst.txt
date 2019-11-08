@@ -1,0 +1,22 @@
+.. _Sec:chap:algorithm:
+
+*********
+Algorithm
+*********
+
+In this lesson are presented the essential notion of algorithmic language. It first proposes a formalism to write an algorithm independantely of any programming language. Then it exposes how to design an algorithm and how to analyse its execution. This lessons covers the concepts of instructions for choices, loops, fonctions, etc.
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Contents:
+
+  chap3_1concept
+  chap3_2algorithmSyntax
+  chap3_3understandAlgorithm
+
+  
+
+
+
+
+
