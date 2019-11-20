@@ -1,0 +1,447 @@
+*******************
+Propositional Logic
+*******************
+
+Propositional logic is a branch of logic. It helps to formalize logical problems and to solve it. It also provides the prerequisites to understand the basics of how the integrated circuits used in our computers work.
+This lesson presents the logical approach and introduces the Boolean algebra.
+
+Intuitive approach
+==================
+A **proposition** (also named **statement**) can be *true* or *false*. Here are presented some examples of propositions:
+
+.. code-block:: none
+
+	1 + 1 = 2
+	1 + 1 = 3
+	the weather is sunny today
+	42 is the answer
+	Marseille is the capital of France
+
+.. .. nextslide::
+..   :increment:
+
+.. caution:: 
+
+  Following statements are not propositions:
+	
+	* 1 + x = 2  (x being a variable, it is a predicate).
+	* this sentence is false  (this can not be true or false).
+
+Propositions can be assembled to form new propositions thanks to "connections". 
+
+.. code-block:: none
+
+  It is cloudy AND it is cold
+  The cat is sleeping OR the mouse is happy
+
+Propositional syntax
+====================
+The syntax gives the rules on how to form new propositions using simple statements. This can be seen as the "grammar" of propositional logic.
+
+Proposition constant
+--------------------
+We call **proposition constant** (or **logical constant**) a variable belonging to the **Boolean domain** that contains exactly two values:
+
+.. math::
+  
+  \mathbf{B} = \{true, false\} = \{0, 1\}
+
+Compounds propositions
+----------------------
+If a proposition constant can be either *true* (1) or *false* (0), they can be combined to form new propositions. These new propositions are obtained thanks to different operators: :math:`\lnot`, :math:`\land`, :math:`\lor`, :math:`\Rightarrow`, :math:`\Leftrightarrow` and :math:`\oplus`.
+
+As example, if :math:`p`, :math:`q` and :math:`r` are three proposition constants, we can build thanks to preceeding operators a new compound proposition F also named **propositional formula**:
+
+.. math:: 
+  :label: formula_ex
+
+  F = ((p\land q) \lor (\lnot r)) \Rightarrow p
+
+Vocabulary and language
+-----------------------
+A **propositional vocabulary** is a set of proposition constants. The set of all compound propositions that can be formed using a vocabulary is named **propositional language**.
+
+The propositional formula of :eq:`formula_ex`: is a compound propositions belonging to the language formed by the vocabulary :math:`\{p,q,r\}`.
+
+Tree representation
+-------------------
+A propositional formula can also be represented by a tree structure. Here is presented the tree representation of :eq:`formula_ex`:
+
+.. _Fig:chap1:arbre:
+
+.. figure:: ./_static/fig/chap1/arbre.png
+  :scale: 50%
+  :align: center
+
+  Tree representation for example of :eq:`formula_ex`.
+
+Operator precedence
+-------------------
+To simplify writting of propositional formulae and limit usage of parenthesis, an operator precedence is defined:
+
+==============================================  =========================
+operator                                        precedence
+==============================================  =========================
+:math:`\lnot`                                   5                        
+:math:`\land`                                   4                        
+:math:`\lor`                                    3                        
+:math:`\oplus`                                  2                        
+:math:`\Rightarrow`, :math:`\Leftrightarrow`    1                        
+==============================================  =========================
+
+Propositional semantics
+=======================
+Once the syntax being define (rules of grammar), the "meanings" of the symbol used is then defined. This is named **semantics**. 
+
+Truth assignment
+------------------
+If we consider a propositional vocabulary :math:`\mathcal{V}=\{ p_1, p_2, ..., p_n \}` of :math:`n` propositional constants, we call a **truth assignment** an application such that:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{cccc}
+    \sigma: & \mathcal{V} & \to & \mathbf{B} \\
+            &   p_1  & \mapsto & ... \\
+            &   p_1  & \mapsto & ... \\
+            & ... \\
+            &   p_n  & \mapsto & ...
+  \end{array}
+  \]
+
+For example, we will write that :math:`(p = 1, q=0, r=1)` is a possible truth assignment of vocabulary :math:`\mathcal{V}=\{ p,q,r \}`.
+
+* For :math:`n=1`, there are 2 possible truth assignments, 
+* For :math:`n=2`, there are 4 possible truth assignments,
+* ...
+* For :math:`n`, there are :math:`2^n` possible truth assignments,
+
+The complexity is exponential. To be understand here as "explosive".
+
+Definition of logical operators
+-------------------------------
+A semantic is given to each operators: :math:`\lnot`, :math:`\land`, :math:`\lor`, :math:`\Rightarrow`, :math:`\Leftrightarrow` and :math:`\oplus`
+
+Negation
+~~~~~~~~
+This is the only unitary operator (working with a unique proposition) noted :math:`\lnot p`. The truth table for negation (NOT) is:
+
+===========  =================
+:math:`p`    :math:`\lnot p`  
+===========  =================
+0            1                
+1            0                
+===========  =================
+
+It is interesting to remark that :math:`\lnot\lnot p = p`
+
+Conjunction :math:`\land`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Conjunction of two propositions :math:`p` and :math:`q` is noted :math:`p \land q`. Evaluation of this propositional formula is *true* only if :math:`p` and :math:`q` are *true*. The corresponding truth table for conjunction (AND) is:
+
+===========  ===========  ===================
+:math:`p`    :math:`q`    :math:`p \land q`  
+===========  ===========  ===================
+0            0            0                  
+0            1            0                  
+1            0            0                  
+1            1            1                  
+===========  ===========  ===================
+
+Disjunction :math:`\lor`
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Disjunction of two propositions :math:`p` and :math:`q` is noted :math:`p \lor q`. Evaluation of this propositional formula is *false* only if :math:`p` and :math:`q` are *false*. The corresponding truth table for disjunction (OR) is:
+
+===========  ===========  ===================
+:math:`p`    :math:`q`    :math:`p \lor q`  
+===========  ===========  ===================
+0            0            0                  
+0            1            1                  
+1            0            1                  
+1            1            1                  
+===========  ===========  ===================
+
+Exclusive disjunction :math:`\oplus`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The exclusive disjunction of two propositions :math:`p` and :math:`q` is noted :math:`p \oplus q`. Evaluation of this propositional formula is *true* if only one of :math:`p` and :math:`q` is *true*. The corresponding truth table for exclusive disjunction (XOR) is:
+
+===========  ===========  =====================
+:math:`p`    :math:`q`    :math:`p \oplus q`  
+===========  ===========  =====================
+0            0            0                    
+0            1            1                    
+1            0            1                    
+1            1            0                    
+===========  ===========  =====================
+
+Implication :math:`\Rightarrow`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Implication between two propositions :math:`p` and :math:`q` is noted :math:`p \Rightarrow q`. Evaluation of this propositional formula is *false* only if :math:`p` is *true* and :math:`q` is *false*. The corresponding truth table for implication (IMPLY) is:
+
+===========  ===========  =========================
+:math:`p`    :math:`q`    :math:`p \Rightarrow q`  
+===========  ===========  =========================
+0            0            1                        
+0            1            1                        
+1            0            0                        
+1            1            1                        
+===========  ===========  =========================
+
+Biconditional :math:`\Leftrightarrow`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Biconditional between two propositions :math:`p` and :math:`q` is noted :math:`p \Leftrightarrow q`. Evaluation of this propositional formula is *false* if only one of :math:`p` and :math:`q` is *false*. The corresponding truth table for Biconditional (XNOR) is:
+
+===========  ===========  =============================
+:math:`p`    :math:`q`    :math:`p \Leftrightarrow q`  
+===========  ===========  =============================
+0            0            1                            
+0            1            0                            
+1            0            0                            
+1            1            1                            
+===========  ===========  =============================
+
+Other notations for operators
+-----------------------------
+Sometimes, other notations can be found for operators:
+
+* :math:`\lnot p` can also be written :math:`\overline p`
+* :math:`p \land q` can also be written :math:`p \cdot q`
+* :math:`p \lor q` can also be written :math:`p + q`
+
+Evaluation of a compound proposition
+------------------------------------
+**Evaluate** a compound proposition consists in determining the truth value of the compound proposition given a truth assignment.
+
+This is done in practice by replacing proposition constants by there values in formula. For example, the evaluation of compound proposition :eq:`formula_ex` under the truth assignment :math:`(p = 0, q=1, r=0)` is :
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{cc}
+    F = & ((p\land q) \lor (\lnot r)) \Rightarrow p \\
+    & ((0\land 1) \lor (\lnot 0)) \Rightarrow 0 \\
+    & (1 \lor 1) \Rightarrow 0 \\
+    & 1 \Rightarrow 0 \\
+    & 0
+  \end{array}
+  \]
+
+The evaluation of :eq:`formula_ex` under the truth assignment :math:`(p = 0, q=1, r=0)` is *false*.
+
+Truth tables for compounds propositions
+----------------------------------------
+truth tables for compounds propositions allows to determine exhaustively the truth values of compounds propositions for each possible truth assignment. They are build by adding as many columns as necessary to evaluate sub-propositions. As example, let us consider the propositional formula of :eq:`formula_ex`. The corresponding truth table is:
+
+.. table:: truth table for :eq:`formula_ex`
+
+	===========  ===========  ===========  ===================  =================  ===============================  ===========
+	:math:`p`    :math:`q`    :math:`r`    :math:`p \land q`    :math:`\lnot r`    :math:`(p\land q)\lor\lnot r`    :math:`F`  
+	===========  ===========  ===========  ===================  =================  ===============================  ===========
+	0            0            0            0                    1                  1                                0          
+	0            0            1            0                    0                  0                                1          
+	0            1            0            0                    1                  1                                0          
+	0            1            1            0                    0                  0                                1          
+	1            0            0            0                    1                  1                                1          
+	1            0            1            0                    0                  0                                1          
+	1            1            0            1                    1                  1                                1          
+	1            1            1            1                    0                  1                                1          
+	===========  ===========  ===========  ===================  =================  ===============================  ===========
+
+Satisfaction
+------------
+A truth assignment is said to **satisfy** a proposition if and only if the proposition is evaluated as *true* under that truth assignment.
+
+A truth assignment is said to **falsify** a proposition if and only if the proposition is evaluated as *false* under that truth assignment.
+
+* A proposition is said **valid** if and only if it *satisfies* every truth assignment.
+* A proposition is said **unsatisfiable** if and only if it *satisfies* any truth assignment.
+* A proposition is said **contingent** if and only if some truth assignments *satisfies* it and some other *falsifies* it.
+
+Here are some examples:
+
+1. As example, the proposition defined in :eq:`formula_ex` is *contingent* since 6 truth assignments *satisfies* the proposition and 2 *falsifies* it.
+2. the formula :math:`p \lor \lnot p` is *valid*
+3. the formula :math:`p \land \lnot p` is *unsatisfiable*
+
+Natural language and logic
+--------------------------
+Propositional logic can be used to formalize natural language by encoding sentences and thus helps to solve logical problems.
+
+Consider the following sentence: *If a student does not work hard in physics or in informatics, he will not become an engineer*. This sentence is composed with 3 statements:
+
+* p: *student works hard in physics*
+* i: *student works hard in informatics*
+* e: *student will become an engineer*
+
+This sentence can be easily traduced in propositional logic by the formula:
+
+.. math::
+
+	\lnot p \lor \lnot i \Rightarrow \lnot e
+
+Propositional Analysis
+======================
+
+Logical equivalence
+-------------------
+The logical equivalence can be intuitively understand: Two propositions are equivalent if they says the same thing.
+
+Two propositions F and G are thus said **logically equivalent** if and only if every truth assignment that satisfies F satisfies G and every truth assignment that satisfies G satisfies F. In that case we will write:
+
+.. math::
+
+  F \equiv G
+
+It is possible to check the equivalence between two propositions by determining their truth tables and compare results.
+
+.. caution:: **Logical equivalence** is a semantic equivalence that should not be confused with **biconditional** that is a syntax operator for logical propositions.
+
+.. _Sec:logical:properties:
+
+Logical properties
+------------------
+It is possible to demonstrate an important number of logical properties. Thus, we have:
+
+Commutation
+~~~~~~~~~~~
+conjunction and disjunction operators can commute:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    p \land q & \equiv & q \land p \\
+    p \lor q & \equiv & q \lor p
+  \end{array}
+  \]
+
+Association
+~~~~~~~~~~~
+conjunction and disjunction operators are associative:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    (p \land q) \land r & \equiv & p \land ( q \land r) \\
+    (p \lor q) \lor r & \equiv & p \lor ( q \lor r)
+  \end{array}
+  \]
+
+Distribution
+~~~~~~~~~~~~
+conjunction and disjunction operators are distributive:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    p \land (q \lor r) & \equiv & (p \land q) \lor( p \land r) \\
+    p \lor (q \land r) & \equiv & (p \lor q) \land( p \lor r)
+  \end{array}
+  \]
+
+Neutral elements
+~~~~~~~~~~~~~~~~
+*true* is neutral for conjunction and *false* is neutral for disjunction:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    p \land true & \equiv & p \\
+    p \lor false & \equiv & p
+  \end{array}
+  \]
+
+Absorptive elements
+~~~~~~~~~~~~~~~~~~~
+*false* is absorptive for conjunction and *true* is absorptive for disjunction:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    p \land false & \equiv & false \\
+    p \lor true & \equiv & true
+  \end{array}
+  \]
+
+.. _Sec:chap1:eliminateOperators:
+
+Elimination of logical operators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Some operators can be eliminate to the profit of others. This is the case for *implication*, *biconditional* and *exclusive disjunction*:
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    p \Rightarrow q & \equiv & \lnot p \lor q \\
+    p \Leftrightarrow q & \equiv & (p \Rightarrow q) \land (q \Rightarrow p) \\
+    p \oplus q & \equiv & \lnot (p \Leftrightarrow q)
+  \end{array}
+  \]
+
+Morgan's laws
+~~~~~~~~~~~~~
+
+.. math::
+  :nowrap:
+
+  \[
+  \begin{array}{ccc}
+    \lnot (p \land q) & \equiv & \lnot p \lor \lnot q \\
+    \lnot (p \lor q) & \equiv & \lnot p \land \lnot q
+  \end{array}
+  \]
+
+.. _Sec:chap1:fullSystem:
+
+Full system of operators
+------------------------
+A system of logical operators is said **functionally complete** on a propositional language if every logical formula of this language can be expressed in terms of this system's operators.
+
+If we consider a finite domain of propositional constants, ie. :math:`\mathcal{V}=\{ p_1,p_2, .. p_n \}` and :math:`\mathcal{F}` representing the domain of propositional formulas that can be build on this vocabulary. 
+
+1. We can say that the system :math:`S=\{ \lnot, \land, \lor\}` is functionally complete. This can be demonstrate easily from properties of section :ref:`Sec:chap1:eliminateOperators`.
+2. :math:`\{ \lnot, \land\}` and :math:`\{ \lnot, \lor\}` are also functionally complete systems.
+
+The NAND and NOR operators
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+The NAND and NOR operators respectively for 'not and' and 'not or' are defined by the following truth table:
+
+===========  ===========  ===========================  ==========================
+:math:`p`    :math:`q`    :math:`p \text{ NAND } q`    :math:`p \text{ NOR } q`  
+===========  ===========  ===========================  ==========================
+0            0            1                            1                         
+0            1            1                            0                         
+1            0            1                            0                         
+1            1            0                            0                         
+===========  ===========  ===========================  ==========================
+
+Systems {NAND} and {NOR} are functionally complete and are used for digital circuits.
+
+Normal forms
+------------
+A clause containing only the  :math:`\lor` connector between propositional constants (or their negation) is called a **disjunctive clause**, also called **maxterm**.
+
+A clause containing only the  :math:`\land` connector between propositional constants (or their negation) is called a **conjunctive clause**, also called **minterm**.
+
+Let us consider a propositional formulae F composed with propositional constants of vocabulary :math:`\mathcal{V}=\{ p_1,p_2, .. p_n \}`.
+
+We call **disjunctive normal form** (DNF) of propositional formulae F, the propositional formula :math:`F_D` semantically equivalent to F and that is a disjunction of *conjunctive clauses* relative to F.
+
+We call **conjunctive normal form** (CNF) of propositional formulae F, the propositional formula :math:`F_C` semantically equivalent to F that is a disjunction of *conjunctive clauses* relative to F.
+
+A propositional formulae F admit a unique CNF and a unique DNF.
+
+Writing the CNF or DNF of a propositional formulae is a way to determine if it is *valid* or *unsatisfiable*. It can be easily done using properties of section :ref:`Sec:logical:properties`

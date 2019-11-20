@@ -1,13 +1,22 @@
-Computer engineering - Part 3: Algorithm
-========================================
+Computing for engineer
+======================
 
-This document contains the third lesson of the "Computer engineering" course for third year students of Poltyech'Marseille engineering school (Mechanical and Energy departement). This lesson must be learned autonomously at home.
+This course has the vocation to help the student to develop his basics skills in informatics. After this course, the student will be able to:
 
-It is divided in two parts:
+* Understand the mechanisms of informatics systems to treat complex data.
+* Produce algorithms to answer to a specific problems including complex instructions.
+* Traduce his algorithms in different languages (C/C++, Python, etc.)
+* Cable and code simple electronic circuits to manage data obtained by different sensors and how they can be used to automatize some process that can be found in industry: motor, heater, etc.
 
-  * A first chapter named **Algorithm**: this chapter must be read first and used to help answer questions of the homework in the following chapter.
-  * A second chapter named **Homework**: Contains exercices to do at home. This part must be returned **before Tuesday, November 19 at 3:30 pm**. Detailed instructions are given in section :ref:`Sec:chap3:homework`.
+This course is decomposed in 7 chapters, treating different subjects of informatics for engineers:
 
+* The first section is an introduction to logic. The student will learn the concept of propositional language and its application to logical circuits that constitute basics components of informatics complex systems.
+* The second section will introduce computer architecture concepts. It includes mother board, microcontrollers and processors descriptions. Registers, addresses and data management are detailed at the low scale.
+* In the third section, algorithm concepts are developed and the student will learn how to write and to test his algorithms.
+* The fourth section is dedicated to the transcription of algorithms in computer language C/C++.
+* In the fifth section, the student will apply the previous concepts on the electronics plateform Arduino_.
+* The sixth section is devoted to data treatment using python_ programming language.
+* The seventh and last section will give to the student perspectives of programmation object oriented applied in Python/C++. This will be an introduction to programming architecture and how to develop efficient applications.
 
 .. _Arduino: https://www.arduino.cc/
 .. _python: https://www.python.org/
@@ -17,6 +26,17 @@ It is divided in two parts:
    :caption: Contents:
    :numbered:
 
+   Introduction
+   chap1_binaryLogic_Chap
+   chap2_architecture_Chap
    chap3_algorithm_Chap
-   Homework.rst
+   chap4_cLangage_Chap
+   chap5_arduino_Chap
+   chap6_python_Chap
+   chap7_C++_Chap
 
+Table of contents
+=================
+
+* :ref:`genindex`
+* :ref:`search`

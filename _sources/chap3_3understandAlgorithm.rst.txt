@@ -65,3 +65,265 @@ line    zeroC      tempC    tempK    screen
 ======  ========  =======  =======  ================================
 
 Testing this algorithm with a temperature of -300 °C will send an unphysical result and shows one of the algorithm limitations.
+
+.. _Sec:chap3:basics:
+
+Basic exercices
+===============
+Here are presented some basic exercices that needs to be understand before writting more complex algorithms. This section is a practicing section that should be done sequentially to understand the basic instructions to build algorithms.
+
+.. _Sec:chap3:permutation:
+
+Permutation
+-----------
+The aim is to permut the content of two variables. This kind of instruction may be used when sorting data in arrays for example. Consider the following algorithm:
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm permutation_V0
+  ------------------------
+  Description
+    Permuts the content of variables var1 and var2
+  ------------------------------------------------
+  Variables
+    var1 : integer
+    var2 : integer
+  Start
+    var1 <- 25
+    var2 <- 63
+
+    var2 <- var1
+    var1 <- var2
+    
+    Print("Permuted variables are: var1 = ", var1, " and var2 = ", var2)
+  End
+
+1. Write the trace table of the algorithm *permutation_V0* and explain why it is wrong.
+2. Propose a new version *permutation_V1* that correct the algorithm (use a third variable).
+
+.. _Sec:chap3:accumulation:
+
+Accumulation
+------------
+The value of an **accumulation** variable increases during the execution of the algorithm. As example, the following algorithm proposes to accumulate points during darts game with 3 throws.
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm accumulation_V0
+  -------------------------
+  Description
+    Three successive throws permits to accumulate point at darts game
+  --------------------------------
+  Variables
+    points : integer   /to read points of a throw
+    score : integer    /to accumulate points
+  Start
+    Print("Enter the first throw points: ")
+    Read(points)
+    score <- score + points
+    Print("Enter the second throw points: ")
+    Read(points)
+    score <- score + points
+    Print("Enter the third throw points: ")
+    Read(points)
+    score <- score + points
+    
+    Print("Your total score is: ", score)
+  End
+
+1. This algorithm is wrong. Explain why.
+2. Propose a new version *accumulation_V1* that correct the algorithm
+
+if conditional instructions
+---------------------------
+Consider the two following algorithm:
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm condition1
+  --------------------
+  Variables
+    e : integer
+  Start
+    Print("Enter an integer:")
+    Read(e)
+    if (e<0) then
+      e = e + 10
+    else
+      e = e - 10
+    endif
+    Print("New value: ", e)
+  End
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm condition2
+  --------------------
+  Variables
+    e : integer
+  Start
+    Print("Enter an integer:")
+    Read(e)
+    if (e<0) then
+      e = e + 10
+    endif
+    if (e>=0) then
+      e = e - 10
+    endif
+    Print("New value: ", e)
+  End
+
+1. Write the trace table for each algorithm with value for e = 20, -20 and -2
+2. Are these two algorithm equivalent ?
+   
+We want an algorithm that asks for three values entered by user and prints the maximum.
+
+3. Write this algorithm.
+4. Verify your algorithm using a trace table and different input values.
+
+While repetitive instructions
+-----------------------------
+Consider the following algorithm:
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm repetitive1
+  ---------------------
+  Variables
+    x : integer
+  Start
+    x <- 42
+    while (x>=0)
+      Print ("Current value: ", x)
+      x <- x - 11
+    endwhile
+    Print ("Last value: ", x)
+  End
+
+1. Write the trace table of this algorithm and give the final value for x.
+
+Consider the following algorithm:
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm repetitive2_V0
+  ------------------------
+  Variables
+    i, x : integer
+  Start
+    i <- 0
+    x <- 2
+    while (x < 4)
+      Print ("Current value: ", x)
+      i <- i + 1
+    endwhile
+    Print ("Last value: ", x)
+  End
+
+2. This algorithm is wrong as it contains an infinite loop. Propose a corrected version for  this algorithm and write its trace table.
+
+For repetitive instruction
+--------------------------
+Consider the following algorithm
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm accumulation_V2
+  -------------------------
+  Description
+    3 successive throws permits to accumulate point at darts game
+  --------------------------------
+  Variables
+    points : integer   /to read points of a throw
+    score : integer    /to accumulate points
+    i: integer         /loop variable
+  Start
+    score <- 0
+    for i from 1 to 3 (include)
+      Print("Enter the ", i, " throw points: ")
+      Read(points)
+      score <- score + points
+    endfor
+    
+    Print("Your total score is: ", score)
+  End
+
+1. Write the trace table of this algorithm and compare it to the preceding algorithm accumulation_V1 of section :ref:`Sec:chap3:accumulation`.
+2. Write an algorithm that asks n real to a user (n is also given by user) and prints the average.
+
+Using and writting functions
+----------------------------
+Consider that you dispose the description (and not the definition) of the following functions:
+
+.. code-block:: none
+
+  units(number : integer) : integer
+    /Returns the number of units in the positive integer number
+    /ex : units(56) will return 6
+
+  tens(number : integer) : integer
+    /Returns the number of tens in the positive integer number
+    /ex : units(56) will return 5
+
+  hundreds(number : integer) : integer
+    /Returns the number of hundreds in the positive integer number
+    /ex : units(56) will return 0
+
+1. Write an algotrithm that asks user for a positive number and prints the reversed corresponding number (ex : 156 -> 651)
+2. Write the two functions tens and hundreds, the units fonction definition being:
+   
+.. code-block:: none
+  :linenos:
+
+  Function units(number : integer) : integer
+  ------------------------
+  Description
+    Returns the number of units in the positive integer number
+    ex : units(56) will return 6
+  ------------------------
+  Start
+    return number%10     / % is for the remainder of euclidian division
+  End
+  
+
+Playing with arrays
+-------------------
+
+Consider the following algorithm that allows a user to enter 5 real numbers in an array: 
+
+.. code-block:: none
+  :linenos:
+
+  Algorithm playArrays
+  --------------------
+  Constants
+    N = 5
+  Variables
+    myArray : array[5] of real
+    i : integer
+  Start
+    for i from 0 to N-1
+      Print ("Enter case", i+1, " of array:)
+      Read(myArray[i])
+    endfor
+  End
+
+1. Add to this algorithm instructions for printing the array.
+2. Add to this algorithm instructions for reversing the array. You can help with the permutation algorithm of section :ref:`Sec:chap3:permutation` under a function form. 
+
+Example of reversed array:
+
++----------------+-------+------+-----+-----+-------+
+| original array | 3.2   | 40.0 | 1.0 | 5.0 | -26.1 |
++================+=======+======+=====+=====+=======+
+| reversed array | -26.1 | 5.   | 1.  | 40. | 3.2   |
++----------------+-------+------+-----+-----+-------+
+
+3. Write a function that sorts the array (ascending or descending)

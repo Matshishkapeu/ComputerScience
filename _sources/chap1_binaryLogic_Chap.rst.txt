@@ -1,0 +1,20 @@
+************
+Binary logic
+************
+
+If as human we are communicating using complex languages, a computer is working thanks to electric currents that progress throught its electronic components. The aim of this chapter is to give to the student the basics knowledge on how it is possible to treat complex informations using only two simple ones : 0 or 1.
+First are exposed the concept of propositional langage and Boolean algebra. Then, binary encoding of complex informations is presented. Last, building of simple digital circuits is presented to show how this binary logic is implemented in the basic components that composed a computer.
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Contents:
+
+  chap1_1propositions
+  chap1_2binaryEncoding
+  chap1_3digitalCircuits
+   
+
+
+
+
+

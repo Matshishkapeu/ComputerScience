@@ -1,0 +1,29 @@
+************
+Introduction
+************
+
+Why learning informatics in ME ?
+================================
+This course exposes understanding basics to give the engineer some kind of autonomy regarding informatics systems.
+
+If an engineer in mechanical engineering has his first vocation to work on fluid mechanics and energetic systems, but in all cases he will need to develop algorithm for numerical simulations or to manage informatics systems to control other mechanics or energetic systems. There is many applications:
+
+* controlling engines injection systems,
+* managing home automation systems to improve energy power consumption,
+* regulating heating systems,
+* simulating fluid mechanics problems.
+
+What is Arduino ?
+=================
+Arduino is an open-source electronics platform that uses the C programming language. It is one of the simplest electronic plateform that can use simple sensors and control actuators by making simple programs using a great number of functions available in existing librairies.
+
+.. _Fig:introduction:arduino:
+
+.. figure:: ./_static/fig/arduino.jpg
+  :scale: 50%
+  :align: center
+
+  The arduino UNO electronics platform that is used in this course.
+
+
+

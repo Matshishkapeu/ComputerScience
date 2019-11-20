@@ -1,0 +1,266 @@
+****************
+Digital circuits
+****************
+
+The binary logic presented in the preceding lesson is at the basis of modern computers technology. Indeed, our personal computers and more generally informatic systems are able to do a lot of impressive things (working, playing, watching movies, surfing on the web, controlling very complex systems, etc.). Today, it seems that everything became possible thanks to informatics and electric currents in cables that passes (1) or not (0). This chapter will present how it is possible to perform complex operations from basics electronic components.
+
+Basic components
+================
+
+Diode
+-----
+A diode is a junction between two semiconductors (PN junction):
+
+* The first semiconductor is P-type (for positive). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having **less** valence electrons (bore for example). In this material, there is a deficit of electron. We talk about **holes**
+* The second semiconductor is N-type (for negative). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having **more** valence electrons (phosphore for example). In this material, there is an excess of electron. We talk about **free electrons**
+
+Then 3 possibility occurs:
+1. When no current is applied to the PN junction, some free electron of N zone moves to fill holes of the P zone creating an electric neutral zone named depletion zone.
+2. If a current is applied in the sense P->N, holes in the P zone are filled with electrons and free electrons are leaving the N zone. It results in increasing the depletion zone. The junction then acts like an insulator. No current pass.
+3. If a current is applied in the sense N->P, free electrons are pushed from the N zone to the P zone. The depletion zone disappear as holes are moving from P to N and electrons from N to P. The current is passing.
+
+.. _Fig:chap1:PNJunction:
+
+.. figure:: ./_static/fig/chap1/PNJunction.jpg
+  :scale: 50%
+  :align: center
+
+  Forward and Reversed biased for a PN junction.
+
+Transistors MOS
+---------------
+A transistor is a basic electronic component with three external terminals:
+
+.. _Fig:chap1:transistors:
+
+.. figure:: ./_static/fig/chap1/transistors.jpg
+  :scale: 50%
+  :align: center
+
+  Different shapes of bipolar transistors with their three terminals
+
+Transistors can be used for amplification (this is the case for bipolar transistors) or for switching (as MOS for logical gates building).
+
+Inside a MOS transistor (Metal oxide semiconductor), there are:
+
+* a grid linked to the **gate** terminal
+* a pair of semiconductor *PN* *NP* (or *NP* *PN*) junctions that linked the two others terminals **drain** and **source**
+* an insulating layer that separates the gate from semiconductor
+
+.. _Fig:chap1:insideTransistor:
+
+.. figure:: ./_static/fig/chap1/insideTransistor.jpg
+  :scale: 70%
+  :align: center
+
+  Two kind of CMOS transistors (nMOS and pMOS)
+
+In the case of nMOS, when no tension is applied to the grid, the *NP* and *PN* junctions works as diodes in opposition and no current pass between the drain and the source (0). On the opposite, if a positive tension is applied to the grid, the region in the substract of p-type will charge negatively. His comportement will act as a n-type semiconductor and the current pass between the drain and the source (1). The pMOS transistor operates reversely.
+
+The transistor can be seen as a switch between two terminals (drain and source), the third terminal (gate) commands the switch:
+
+.. _Fig:chap1:nMOS_pMOS:
+
+.. figure:: ./_static/fig/chap1/nMOS_pMOS.jpg
+  :scale: 70%
+  :align: center
+
+  Possible states for nMOS and pMOS transistors
+
+Logical gates in CMOS technology
+================================
+Using transistors render possible to build **logical gates** that are electronic circuits corresponding exactly to logical connectors NOT, AND, OR, NAND, NOR, etc.
+
+NOT gate
+--------
+The NOT gate is the easier logical gate that can be build using only two transistors:
+
+.. _Fig:chap1:notGate:
+
+.. figure:: ./_static/fig/chap1/notGate.jpg
+  :scale: 40%
+  :align: center
+
+  Building a NOT gate using a nMOS and a pMOS
+
+It can be easily verified that when the input is set to 0, the nMOS transistor will act as an open switch and the pMOS one will act as a closed switch. It results in a connection between output and the + of power supply. In that case, input is 0 and output is 1. If the input is set to 1, the reverse phenomena occurs and the outpur will connect to the ground, setting it to 0.
+
+.. _Fig:chap1:notGateTest:
+
+.. figure:: ./_static/fig/chap1/notGateTest.jpg
+  :scale: 60%
+  :align: center
+
+  Comportement of the NOT gate depending on the input
+
+NOR and NAND gates
+------------------
+Here are presented the logical gates for NAND and NOR:
+
+.. _Fig:chap1:nandGate:
+
+.. figure:: ./_static/fig/chap1/nandCMOS.jpg
+  :scale: 40%
+  :align: center
+
+  Building a NAND gate using two nMOS and two pMOS
+
+.. _Fig:chap1:norGate:
+
+.. figure:: ./_static/fig/chap1/norCMOS.jpg
+  :scale: 40%
+  :align: center
+
+  Building a NOR gate using two nMOS and two pMOS
+
+Other gates
+-----------
+In section :ref:`Sec:chap1:fullSystem`, we have seen that {NAND} and {NOR} represent full system of operators. Then, it is easy to build other gates thanks to them. Practically, logic circuits are build by combining NOT, NAND and NOR gates. Here are the ANSI representation of other gates:
+
+.. _Fig:chap1:otherGates:
+
+.. figure:: ./_static/fig/chap1/otherGates.jpg
+  :scale: 60%
+  :align: center
+
+  AND, OR and XOR ANSI representations
+
+Combinational logic circuits
+============================
+Logical gates can be assembled in logical circuits to perform different operations. These circuits are named **combinational circuits**. These circuits take binary informations on several inputs that are treated using several logical gates and return outputs that depends entirely on the input states. Common combinational circuits are:
+
+* Data transmission: encoders/decoders, multiplexers/demultiplexers
+* Arithmetic: comparators, adders, substractors
+
+Here are presented two examples of combinational circuits: A very simple 2-input multiplexer and a binary adders.
+
+2-input multiplexer
+-------------------
+A multiplexer (MUX) has several inputs and a unique output. Its role is to copy on of the input on the output using a command input. The simpler multiplexer has 2 inputs:
+
+.. _Fig:chap1:multiplexer2:
+
+.. figure:: ./_static/fig/chap1/multiplexer.jpg
+  :scale: 60%
+  :align: center
+
+  A 2 input multiplexer
+
+Binary adder
+------------
+It is a little bit more complex to build a combinational logic circuits that ensure addition of two positive integers. Let us first recall how to perform a 2-bit adder named **half adder**. There are four possible results for adding two bits:
+
+* 0 + 0 = 0
+* 0 + 1 = 1
+* 1 + 0 = 1
+* 1 + 1 = 10 (0 carry 1)
+
+The last possible results will be equal to 0 with a carry bit of 1. The corresponding circuit will thus have two outputs, one for the sum and one for the carry:
+
+.. _Fig:chap1:halfAdder:
+
+.. figure:: ./_static/fig/chap1/halfAdder.jpg
+  :scale: 60%
+  :align: center
+
+  1-bit half adder
+
+The **full adder** circuit is build thanks to 2 half adders and on additional AND gate. It then operates thank to three inputs. The third input is a carry in bit:
+
+.. _Fig:chap1:fullAdder:
+
+.. figure:: ./_static/fig/chap1/fullAdder.jpg
+  :scale: 60%
+  :align: center
+
+  1-bit full adder
+
+Full adders can then be chained to perform binary addition of n-bit integers:
+
+.. _Fig:chap1:nBitAdder:
+
+.. figure:: ./_static/fig/chap1/nBitAdder.jpg
+  :scale: 60%
+  :align: center
+
+  n-bit adder
+
+
+Sequential circuits: Memories
+=============================
+Logical gates can also be assembled for data storage purpose. The circuits formed are named **sequential circuits**.  They differs from combinational circuits because their outputs depend not only from their inputs but also from their past outputs by using loops connections. The basic components of memories are named **flip-flop**. Common flip-flop are SR, JK or D type.
+
+SR flip-flop
+------------
+The simpler flip-flop is of SR type (for Set/Reset). The SR flip-flop can be build for example using NOR gates.
+
+.. _Fig:chap1:SRflipflop:
+
+.. figure:: ./_static/fig/chap1/SRflipflop.jpg
+  :scale: 50%
+  :align: center
+
+  SR fli-flop using NOR gates
+
+The thruth-table for the SR flip-flop is
+
++-----------+-----------+-----------------+----------------------+
+| :math:`S` | :math:`R` | :math:`Q`       | :math:`\overline{Q}` |
++===========+===========+=================+======================+
+| 0         | 0         | memorized value                        |
++-----------+-----------+-----------------+----------------------+
+| 0         | 1         | 0               | 1                    |
++-----------+-----------+-----------------+----------------------+
+| 1         | 0         | 1               | 0                    |
++-----------+-----------+-----------------+----------------------+
+| 1         | 1         | forbiden                               |
++-----------+-----------+-----------------+----------------------+
+
+A flip-flop is able to store 1 bit. It is then possible to build circuits able to store n-bits. These circuits are named **registers**.
+
+Integrated circuits
+===================
+A seen previously, transistors and logical gates are used to create combinational or sequential circuits. This circuits may be assembled to form complex circuits named **integrated circuits**. Modern processors and memories are integrated circuits containing millions of transistors. Some of them are linked to form complex logical circuits and other are linked to input/output terminals (several hundreds for modern intergated circuits).
+
+First integrated circuits appeared in the 60th. They were using less than a 100 transitors to form some logical gates. A classification was done from Small Scale integration (SSI) to Large Scale integration (LSI and more). Nowadays, computers processors are embedding more than :math:`10^9` transistors.
+
+
+==========  ======  ===================  ==========================================================
+Acronyme    year    transistors numb.    examples                                                  
+==========  ======  ===================  ==========================================================
+SSI         1960    :math:`10`           logical gates                                             
+MSI         1970    :math:`100`          Multiplexer, counters, decoder                            
+LSI         1975    :math:`10^4`         joystick, keyboard, remote control                        
+VLSI        1980    :math:`10^6`         cars, smart watch, home systems                           
+GSI         2000    :math:`>10^6`        computers, cell phone processors, graphics, large memory  
+==========  ======  ===================  ==========================================================
+
+
+.. _Fig:chap1:SN7400:
+
+.. figure:: ./_static/fig/chap1/7400.jpg
+  :scale: 60%
+  :align: center
+
+  The 7400 chip of Texas Instrument contains 4 NAND gates and 14 terminals (1976)
+
+More informations on: https://en.wikipedia.org/wiki/Transistor_count
+
+The ATmega328P
+--------------
+The arduino UNO card is equipped with a ATmega328P microcontroller that uses a CMOS technology and contains about 20 000 logical gates. Detailed informations on https://www.microchip.com/wwwproducts/en/ATmega328P
+
+.. _Fig:chap1:ATmega328P:
+
+.. figure:: ./_static/fig/chap1/ATmega328P.jpg
+  :scale: 60%
+  :align: center
+
+  The ATmega328P microcontroller from Atmel
+
+Learn more
+==========
+For more information about digital circuits, one can refer to the following website ressources:
+
+* https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur
+* https://www.electronics-tutorials.ws/
