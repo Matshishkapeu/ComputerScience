@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4.3. Think, write and test algorithms" href="chap3_3understandAlgorithm.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -116,12 +117,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -160,11 +163,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap3_algorithm_Chap.html">4. Algorithm</a> &raquo;</li>
+          <li><a href="chap3_algorithm_Chap.html"><span class="section-number">4. </span>Algorithm</a> &raquo;</li>
         
-      <li>4.2. Algorithm Syntax</li>
+      <li><span class="section-number">4.2. </span>Algorithm Syntax</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,12 +187,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="algorithm-syntax">
-<h1>4.2. Algorithm Syntax<a class="headerlink" href="#algorithm-syntax" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.2. </span>Algorithm Syntax<a class="headerlink" href="#algorithm-syntax" title="Permalink to this headline">¶</a></h1>
 <p>An algorithm is dedicated to be run by an abstract machine similar to a computer but without its physical limits. This abstract machine is composed by:</p>
 <ul class="simple">
-<li>A processor: this is the executing unit (can be the analyst)</li>
-<li>A memory: to store data and instructions (can be a simple sheet)</li>
-<li>Input and Output devices: to permits communication (can be reading or printing a variable)</li>
+<li><p>A processor: this is the executing unit (can be the analyst)</p></li>
+<li><p>A memory: to store data and instructions (can be a simple sheet)</p></li>
+<li><p>Input and Output devices: to permits communication (can be reading or printing a variable)</p></li>
 </ul>
 <p>The processor execute the instructions as specified in the algorithm and data and instructions are stored in the infinite memory (we don’t care about their physical representations).</p>
 <p>This section gives writting conventions that should be seen as an “algorithm vocabulary”. An <strong>algorithm</strong> should be structured as:</p>
@@ -215,13 +218,13 @@ End
 </div>
 <p>We will consider as <strong>mandatory</strong>:</p>
 <ul class="simple">
-<li>The <strong>name</strong> of algorithm</li>
-<li>the <strong>Description</strong> block that is a comment to help the user to understand the algorithm and how to use it. It includes desription for inputs/outputs.</li>
-<li>the <strong>Start/End</strong> block contains instructions (that can be structured in different instructions blocks)</li>
+<li><p>The <strong>name</strong> of algorithm</p></li>
+<li><p>the <strong>Description</strong> block that is a comment to help the user to understand the algorithm and how to use it. It includes desription for inputs/outputs.</p></li>
+<li><p>the <strong>Start/End</strong> block contains instructions (that can be structured in different instructions blocks)</p></li>
 </ul>
 <p>Others part of the algorithm are facultative and depends on its complexity and on the solved problem.</p>
 <div class="section" id="a-first-example">
-<span id="sec-chap3-firstexample"></span><h2>4.2.1. A first example<a class="headerlink" href="#a-first-example" title="Permalink to this headline">¶</a></h2>
+<span id="sec-chap3-firstexample"></span><h2><span class="section-number">4.2.1. </span>A first example<a class="headerlink" href="#a-first-example" title="Permalink to this headline">¶</a></h2>
 <p>Consider the following algorithm as a basic example:</p>
 <div class="literal-block-wrapper docutils container" id="converttemperaturectok">
 <div class="code-block-caption"><span class="caption-number">Listing 4.1:  </span><span class="caption-text">conversion algorithm</span><a class="headerlink" href="#converttemperaturectok" title="Permalink to this code">¶</a></div>
@@ -372,10 +375,10 @@ End
 </div>
 </div>
 <div class="section" id="data-types">
-<span id="index-0"></span><h2>4.2.2. Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2><span class="section-number">4.2.2. </span>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
 <p>In algorithms, data types (integer, real, etc.) are important since they determine the possible operations that can be perfomed on data (<em>i.e.</em> euclidian division or real division produce different results). Variables definitions should include data type.</p>
 <div class="section" id="primitive-types">
-<span id="index-1"></span><h3>4.2.2.1. Primitive types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h3>
+<span id="index-1"></span><h3><span class="section-number">4.2.2.1. </span>Primitive types<a class="headerlink" href="#primitive-types" title="Permalink to this headline">¶</a></h3>
 <p>These primitive types of data are generally available whatever the programming language is. For algorithmic purpose, we will retain: <em>boolean</em>, <em>integer</em>, <em>float</em> and <em>character</em>.</p>
 <div class="literal-block-wrapper docutils container" id="id5">
 <div class="code-block-caption"><span class="caption-number">Listing 4.6:  </span><span class="caption-text">four variables with different <em>identifier</em> and different <em>types</em></span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
@@ -389,7 +392,7 @@ End
 </div>
 </div>
 <div class="section" id="composite-types">
-<h3>4.2.2.2. Composite types<a class="headerlink" href="#composite-types" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.2.2. </span>Composite types<a class="headerlink" href="#composite-types" title="Permalink to this headline">¶</a></h3>
 <p>When a lot of data of the same type are required, they are grouped in <strong>composite types</strong> as <em>arrays</em>. A <em>string</em> is a specific array of character.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
 <div class="code-block-caption"><span class="caption-number">Listing 4.7:  </span><span class="caption-text">defining different arrays in algorithms and operations</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
@@ -408,14 +411,14 @@ End
 </div>
 <p>Other composite types exist and may be used depending on the programming language used: list, tuple, dictionary, stack, tree, graph, objects, etc.</p>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last">Arrays are accessed using the formalisme arrayName[indice]. We use the convention that a n size array always begin by indice 0 and finishes by indice n-1.</p>
+<p class="admonition-title">Caution</p>
+<p>Arrays are accessed using the formalisme arrayName[indice]. We use the convention that a n size array always begin by indice 0 and finishes by indice n-1.</p>
 </div>
 </div>
 </div>
 <div class="section" id="predefined-operators-and-mathematical-functions">
-<span id="index-2"></span><h2>4.2.3. Predefined operators and mathematical functions<a class="headerlink" href="#predefined-operators-and-mathematical-functions" title="Permalink to this headline">¶</a></h2>
-<p>Algorithm operations are done thanks to predefined operators and functions that can be used directly in algorithms: <img class="math" src="_images/math/eb8f66a2bd861ca3725b373803daa770208eb2b3.svg" alt="-, +, *, /, \%, abs, sqrt, cos, sin, etc."/></p>
+<span id="index-2"></span><h2><span class="section-number">4.2.3. </span>Predefined operators and mathematical functions<a class="headerlink" href="#predefined-operators-and-mathematical-functions" title="Permalink to this headline">¶</a></h2>
+<p>Algorithm operations are done thanks to predefined operators and functions that can be used directly in algorithms: <img class="math" src="_images/math/d0004b7d27b3f888b7f6c6d0a77d60ded4767d01.svg" alt="-, +, *, /, \%, abs, sqrt, cos, sin, etc." style="vertical-align: -4px"/></p>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-number">Listing 4.8:  </span><span class="caption-text">some basic operations and printing</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
@@ -429,11 +432,11 @@ End
 </div>
 </div>
 <div class="section" id="instructions">
-<h2>4.2.4. Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.4. </span>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <p>Instructions are generally executed sequentially, that is to say step-by-step from top to bottom in the algorithm sequence. But some structured instructions as conditional and repetitive instructions will modify this sequence. Here are described the basic instructions that are used in algorithm.</p>
 <div class="section" id="affectation">
-<span id="index-3"></span><h3>4.2.4.1. Affectation<a class="headerlink" href="#affectation" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>affectation</strong> consists in attributing a value to a given variable. This is done thanks to the arrow symbol <img class="math" src="_images/math/b30e95233347399f9dedf4e56a53b1ae4d9c927f.svg" alt="\leftarrow"/> (&lt;-).</p>
+<span id="index-3"></span><h3><span class="section-number">4.2.4.1. </span>Affectation<a class="headerlink" href="#affectation" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>affectation</strong> consists in attributing a value to a given variable. This is done thanks to the arrow symbol <img class="math" src="_images/math/e172d4c7f202ffb7dc60b722a887bc768ebeca9a.svg" alt="\leftarrow" style="vertical-align: 0px"/> (&lt;-).</p>
 <div class="literal-block-wrapper docutils container" id="id8">
 <div class="code-block-caption"><span class="caption-number">Listing 4.9:  </span><span class="caption-text">some affectations</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Variables
@@ -452,11 +455,11 @@ End
 </div>
 </div>
 <div class="section" id="input-output">
-<span id="index-4"></span><h3>4.2.4.2. Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h3>
+<span id="index-4"></span><h3><span class="section-number">4.2.4.2. </span>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h3>
 <p>The algorithm is communicating with the rest of the world thanks to input and outputs. We will use mainly <em>Read</em> and <em>Print</em> instructions:</p>
 <ul class="simple">
-<li>the <em>Read</em> instruction allows to get a value from an input (from the keyboard for example) during execution of the algorithm.</li>
-<li>the <em>Print</em> instruction allows to present the result of the algorithm to an output (can be the screen).</li>
+<li><p>the <em>Read</em> instruction allows to get a value from an input (from the keyboard for example) during execution of the algorithm.</p></li>
+<li><p>the <em>Print</em> instruction allows to present the result of the algorithm to an output (can be the screen).</p></li>
 </ul>
 <div class="literal-block-wrapper docutils container" id="id9">
 <div class="code-block-caption"><span class="caption-number">Listing 4.10:  </span><span class="caption-text">Read and Print instructions</span><a class="headerlink" href="#id9" title="Permalink to this code">¶</a></div>
@@ -471,12 +474,12 @@ End
 </div>
 </div>
 <div class="section" id="conditional-instructions">
-<span id="index-5"></span><h3>4.2.4.3. Conditional instructions<a class="headerlink" href="#conditional-instructions" title="Permalink to this headline">¶</a></h3>
+<span id="index-5"></span><h3><span class="section-number">4.2.4.3. </span>Conditional instructions<a class="headerlink" href="#conditional-instructions" title="Permalink to this headline">¶</a></h3>
 <p>When elementary instructions are used in an algorithm (ie. affectations, inputs/outputs), the execution of the algorithm is <em>sequential</em>. Using conditional instructions permits to modify the execution sequence.</p>
 <p>The <strong>if</strong> conditional instruction allows to switch between two branches in an algorithm. It requires a boolean expression.</p>
 <div class="sidebar">
-<p class="first sidebar-title">if flow chart</p>
-<div class="last figure align-center" id="fig-chap3-if">
+<p class="sidebar-title">if flow chart</p>
+<div class="figure align-center" id="fig-chap3-if">
 <a class="reference internal image-reference" href="_images/if.jpg"><img alt="_images/if.jpg" src="_images/if.jpg" style="width: 182.0px; height: 124.0px;" /></a>
 </div>
 </div>
@@ -490,8 +493,8 @@ endif
 <p>Executed instructions depends on the evaluation of the expression: if <em>true</em>, instructions present in the <strong>if</strong> structure are executed, elsewhere this is the instructions in the <strong>else</strong> structure that are executed. The <strong>else</strong> structure is facultative: in that case, if the boolean expression is evaluated as <em>false</em>, nothing appends.</p>
 <p>The <strong>switch</strong> conditional instruction allows to switch between N branches in an algorithm.</p>
 <div class="sidebar">
-<p class="first sidebar-title">switch flow chart</p>
-<div class="last figure align-center" id="fig-chap3-switch">
+<p class="sidebar-title">switch flow chart</p>
+<div class="figure align-center" id="fig-chap3-switch">
 <a class="reference internal image-reference" href="_images/switch.jpg"><img alt="_images/switch.jpg" src="_images/switch.jpg" style="width: 184.0px; height: 263.2px;" /></a>
 </div>
 </div>
@@ -507,12 +510,12 @@ endswitch
 Treating keybord inputs in an application/game is a good example of such conditional instruction utility: the results of the application will depend on the hit key: the left, up, bottom and right key will have different effects on the application.</p>
 </div>
 <div class="section" id="repetitive-instructions">
-<h3>4.2.4.4. Repetitive instructions<a class="headerlink" href="#repetitive-instructions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.4.4. </span>Repetitive instructions<a class="headerlink" href="#repetitive-instructions" title="Permalink to this headline">¶</a></h3>
 <p>They represent engine of algorithm since if algorithm exists, this is mainly to automatize repetitive human tasks. Two kinds of repetitive instructions (loops) exists.</p>
 <p>The <strong>while</strong> loop  will execute instructions while an expression is evaluated as <em>true</em>.</p>
 <div class="sidebar">
-<p class="first sidebar-title">while loop flow chart</p>
-<div class="last figure align-center" id="fig-chap3-while">
+<p class="sidebar-title">while loop flow chart</p>
+<div class="figure align-center" id="fig-chap3-while">
 <a class="reference internal image-reference" href="_images/while.jpg"><img alt="_images/while.jpg" src="_images/while.jpg" style="width: 110.4px; height: 102.4px;" /></a>
 </div>
 </div>
@@ -524,8 +527,8 @@ endwhile
 <p>This loop is preferabily used when the number of repetitive instructions to do is unknown. One have to take care that the evaluation of the boolean expression can become <em>false</em>, otherwise it will generate an infinite loop.</p>
 <p>When the number of repetitive instruction to do is known, it is more appropriate to use a <strong>for</strong> loop.</p>
 <div class="sidebar">
-<p class="first sidebar-title">for loop flow chart</p>
-<div class="last figure align-center" id="fig-chap3-for">
+<p class="sidebar-title">for loop flow chart</p>
+<div class="figure align-center" id="fig-chap3-for">
 <a class="reference internal image-reference" href="_images/for.jpg"><img alt="_images/for.jpg" src="_images/for.jpg" style="width: 105.2px; height: 148.4px;" /></a>
 </div>
 </div>
@@ -536,14 +539,14 @@ endfor
 </div>
 <p>This loop uses a counter:</p>
 <ul class="simple">
-<li>It is initialised to &lt;init_expression&gt; before the loop.</li>
-<li>It is automatically increment at each pass trhough the loop (default increment is 1).</li>
-<li>After counter modification, a condition verifies if the counter reach the &lt;final_expression&gt;. In that case, it exits the loop.</li>
+<li><p>It is initialised to &lt;init_expression&gt; before the loop.</p></li>
+<li><p>It is automatically increment at each pass trhough the loop (default increment is 1).</p></li>
+<li><p>After counter modification, a condition verifies if the counter reach the &lt;final_expression&gt;. In that case, it exits the loop.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="functions">
-<h2>4.2.5. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.5. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <p>Functions are used to structure algorithms when they become more complex. They are similar to mathematical functions as they may return an output value from inputs data. A function will have the following structure:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Function &lt;id_function&gt; (&lt;id_param&gt; : &lt;id_type&gt;, ...) : &lt;id_type&gt;
 ------------------------
@@ -568,13 +571,13 @@ End
 </div>
 <p>An interesting feature of function is that they acts like black boxes for the developer as he only needs to know what are the inputs and output.</p>
 <div class="figure align-center" id="id10">
-<span id="fig-chap3-function"></span><a class="reference internal image-reference" href="_images/function.jpg"><img alt="_images/function.jpg" src="_images/function.jpg" style="width: 483.6px; height: 142.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 4.7:  </span><span class="caption-text">Schematic representation of a function</span></p>
+<span id="fig-chap3-function"></span><a class="reference internal image-reference" href="_images/function.jpg"><img alt="_images/function.jpg" src="_images/function.jpg" style="width: 483.59999999999997px; height: 142.2px;" /></a>
+<p class="caption"><span class="caption-number">Figure 4.3:  </span><span class="caption-text">Schematic representation of a function</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 <p>Some programming languages make differences between functions and procedures as procedures are not returning any value. This is the case in FORTRAN, but not in C or Python.</p>
 </div>
 <div class="section" id="example">
-<h2>4.2.6. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2.6. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>To illustrate this section, the following algorithm permits to calcul some statitics on the notes obtained by a group of student to an exam.</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -699,11 +702,19 @@ End
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -714,7 +725,6 @@ End
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

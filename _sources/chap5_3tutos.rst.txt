@@ -1,0 +1,393 @@
+*********************
+Electronic components
+*********************
+
+Here are presented basic tutorials for using main components of Arduino system
+
+.. -----------------------------------------------------------------------------------
+
+LED
+===
+
+Datasheet
+---------
+:download:`Download the LED datasheet <_static/dataSheets/LED.pdf>`
+
+Presentation
+------------
+A LED (Light-Emitting Diode) is a diode (:ref:`Sec:chap1:diode`) emitting light when crossed by a current.
+
+.. _Fig:chap5:LED:
+
+.. figure:: ./_static/fig/chap5/LED.png
+  :scale: 70%
+  :align: center
+
+  Different kind of LED.
+
+Connection
+----------
+
+.. caution:: 
+
+	1) A LED is a polarized electronic component that allow electricity to flow through it in one direction only. The **long leg(Anode)** should be connected to the + and the **short leg (Cathode)** to the -.
+
+	2) A LED should always be protected by a resistor.
+
+The :download:`datasheet <_static/dataSheets/LED.pdf>` of a standart LED precognize a current of **20 mA** and a voltage of **2V**. Then it should be connected to a serial resistor depending of the source volatge.
+
+**How to determine the resistor ?**
+
+The formula for resistor is: 
+
+.. math:: 
+  :label: formula_R_LED
+
+  R = (U_S - U_{LED})/I
+
+In the following example, if the source voltage is :math:`U_S = 5V`, a resistor of 220 :math:`\Omega` should be added to the LED.
+
+.. _Fig:chap5:LED_scheme:
+
+.. figure:: ./_static/fig/chap5/LED_scheme.png
+  :scale: 40%
+  :align: center
+
+  Direct connection of a LED using a resistor.
+
+Example using Arduino
+---------------------
+
+A LED can then be connected to a digital pin on the arduino UNO.
+
+.. _Fig:chap5:LED_Arduino:
+
+.. figure:: ./_static/fig/chap5/LED_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a LED to a digital pin.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the LED (connected to digital pin 2) turns on for one second, then turn off for one second, repeatedly.
+
+.. literalinclude:: _static/codes/chap5/blinkLED.ino
+  :language: C
+  :linenos:
+  :caption: blinkLED.ino
+
+.. -----------------------------------------------------------------------------------
+
+Switch (pushbutton)
+===================
+
+Datasheet
+---------
+:download:`Download the pushbutton datasheet <_static/dataSheets/Button.pdf>`
+
+Presentation
+------------
+A pushbutton connects two pins when they are pushed.
+
+.. _Fig:chap5:pushbutton:
+
+.. figure:: ./_static/fig/chap5/pushbutton.png
+  :scale: 30%
+  :align: center
+
+  The pushbutton in the arduino UNO kit.
+
+Connection
+----------
+A pushbutton connects very simply:
+
+.. _Fig:chap5:pushbutton_scheme:
+
+.. figure:: ./_static/fig/chap5/pushbutton_scheme.png
+  :scale: 30%
+  :align: center
+
+  A pushbutton in a simple circuit containing a LED.
+
+Example using Arduino
+---------------------
+A pushbutton can be used to command the arduino UNO microcontroller as in the following example:
+
+.. _Fig:chap5:pushbutton_Arduino:
+
+.. figure:: ./_static/fig/chap5/pushbutton_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a pushbutton as input to a digital pin.
+
+.. admonition:: Note
+
+  Note that a pull-down resistor is added (:math:`10 k\Omega`) from ground to the switch. It ensure connection from ground to the pin when the pushbutton is open, allowing the input to read LOW when no voltage coming in throught the pushbutton.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the LED (connected to digital pin 13) turns on when the pushbutton (connected to pin 2) is pressed. No extra LED is added here because a LED on the board is already attached to pin 13 (L)
+
+.. literalinclude:: _static/codes/chap5/pushbutton.ino
+  :language: C
+  :linenos:
+  :caption: pushbutton.ino
+
+.. -----------------------------------------------------------------------------------
+
+Temperature sensor
+==================
+
+Datasheet
+---------
+:download:`Download the TMP35/36/37 datasheet <_static/dataSheets/TMP35_36_37.pdf>`
+
+Presentation
+------------
+The temperature sensor in the Arduino UNO starter kit is a TMP36 that outputs a changing voltage on its middle pin depending on the temperature it senses.
+
+.. _Fig:chap5:tempSensor:
+
+.. figure:: ./_static/fig/chap5/tempSensor.png
+  :scale: 50%
+  :align: center
+
+  The TMP36 temperature sensor in the kit.
+
+.. admonition:: possible confusion
+
+  The TMP36 temperature sensor can be confused with a transistor. *TMP* is written on the flat side of the TMP36 sensor.
+
+Connection
+----------
+Looking for the flat facing face of the sensor, the left pin is connected to power, the right pin to the ground. The middle pin is linked to an analog input.
+
+.. _Fig:chap5:TMP36_scheme:
+
+.. figure:: ./_static/fig/chap5/TMP36_scheme.png
+  :scale: 50%
+  :align: center
+
+  Connecting a TMP36 temperature sensor.
+
+Example using Arduino
+---------------------
+Connection to a analog pin to catch the voltage is possible with Arduino UNO board.
+
+.. _Fig:chap5:TMP36_Arduino:
+
+.. figure:: ./_static/fig/chap5/TMP36_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a TMP36 temperature sensor to an analog pin on the Arduino UNO board.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 catch the value of the sensor. The value that is between **0** and **1023** is a representation of the voltage on the pin. 
+
+.. literalinclude:: _static/codes/chap5/TMP36AnalogIn.ino
+  :language: C
+  :linenos:
+  :caption: TMP36AnalogIn.ino
+
+The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor ("Tools" -> "Serial monitor" in the Arduino application).
+
+.. _Fig:chap5:TMP36Monitor:
+
+.. figure:: ./_static/fig/chap5/TMP36Monitor.png
+  :scale: 40%
+  :align: center
+
+  The serial monitor shown the value catch by the analog input each 200 ms.
+
+Using the :download:`dataSheet <_static/dataSheets/TMP35_36_37.pdf>`, it is easy to transform the analog input voltage :math:`U_{tmp}` in temperature with:
+
+.. math:: 
+  :label: formula_Temp_V
+
+  \theta = 100 \times (\frac{5 \times U_{tmp}}{1024} - 0.5)
+
+.. -----------------------------------------------------------------------------------
+
+Photoresistor
+=============
+
+Datasheet
+---------
+:download:`Download the VT9000 photoresistor datasheet <_static/dataSheets/photo_resistance.pdf>`
+
+Presentation
+------------
+A photoresistor changes its resistor depending on the amount of light that hits it. In dark, the resistor is hight, and it decreases when light hits it.
+
+Connection
+----------
+It can be used together with a resistor to form a voltage divider.
+
+.. _Fig:chap5:photoresistor_scheme:
+
+.. figure:: ./_static/fig/chap5/photoresistor_scheme.png
+  :scale: 50%
+  :align: center
+
+  A voltage divider using a photoresistor allows to obtain a voltage variation with lights.
+
+.. admonition:: Choice for the resistor
+
+	Looking for the :download:`datasheet <_static/dataSheets/photo_resistance.pdf>`, one reads a maximum of :math:`200 k\Omega` in the dark and typically :math:`12 k\Omega` for a :math:`10 lux` light flux. Using a :math:`10 k\Omega` will ensure to range from nearly :math:`0V` to :math:`U_S`
+
+Example using Arduino
+---------------------
+The voltage at the point between the photoresistor and the serial resistor can be mesured by connection to an analog input of the Arduino board.
+
+.. _Fig:chap5:photoresistor_Arduino:
+
+.. figure:: ./_static/fig/chap5/photoresistor_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a photoresistor to an analog pin on the Arduino UNO board.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 catch the value of the sensor. The value that is between **0** and **1023** is a representation of the voltage on the pin. 
+
+.. literalinclude:: _static/codes/chap5/photoresistor.ino
+  :language: C
+  :linenos:
+  :caption: photoresistor.ino
+
+The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor ("Tools" -> "Serial monitor" in the Arduino application).
+
+.. _Fig:chap5:photoresistorMonitor:
+
+.. figure:: ./_static/fig/chap5/photoresistorMonitor.png
+  :scale: 40%
+  :align: center
+
+  The serial monitor shown the value catch by the analog input each 1000 ms. The value ranges from 0 (nul voltage) to 1023 (5V).
+
+.. -----------------------------------------------------------------------------------
+
+Servo motor
+===========
+
+Presentation
+------------
+A servo motor is a special type of motor that don't spin around a circle. It can move to a sepcific position and keep it. Servos usually only rotate 180 degrees.
+
+.. _Fig:chap5:servoMotor:
+
+.. figure:: ./_static/fig/chap5/servoMotor.png
+  :scale: 50%
+  :align: center
+
+  The servo motor in the kit.
+
+Example using Arduino
+---------------------
+Connection to a analog pin to catch the voltage is possible with Arduino UNO board.
+
+.. _Fig:chap5:servo_Arduino:
+
+.. figure:: ./_static/fig/chap5/servo_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a servo to a digital PWM pin on the Arduino UNO board.
+
+.. caution::
+
+  A decoupling :math:`100 \mu F` capacitor is used to reduce voltage changes when the motor start and stop. The capacitor anode (long leg) **must** be connected to power and the cathode (short leg) to the ground to prevent explosion of the component.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog PWM output 9 is used to send pulse to the servo. The arduino code uses the library `servo <https://www.arduino.cc/reference/en/libraries/servo/>`_. This library allows to specify directly an angle between 0 and 179 degrees to the servo.
+
+.. literalinclude:: _static/codes/chap5/servo.ino
+  :language: C
+  :linenos:
+  :caption: servo.ino
+
+.. -----------------------------------------------------------------------------------
+
+Piezo
+=====
+
+Datasheet
+---------
+:download:`Download the Piezo datasheet <_static/dataSheets/PIEZO-PKM22EPPH4001-BO.pdf>`
+
+Presentation
+------------
+A piezo is an electrical component used to detect vibrations (input) or produce noises (output). The piezo in the Arduino UNO starter kit is a PKM22EPP-4005-B0.
+
+Connections using Arduino
+-------------------------
+The piezo can be connected as input or output using the Arduino UNO board.
+
+Piezo as input
+^^^^^^^^^^^^^^
+The piezo can detect vibration as knocks, that can be catch by the Arduino board through an analog input.
+
+.. _Fig:chap5:PiezoIn_Arduino:
+
+.. figure:: ./_static/fig/chap5/PiezoIn_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a Piezo to detect vibrations.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 is used to detect the piezo vibrations.
+
+.. literalinclude:: _static/codes/chap5/PiezoInput.ino
+  :language: C
+  :linenos:
+  :caption: PiezoInput.ino
+
+The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor ("Tools" -> "Serial monitor" in the Arduino application).
+
+.. _Fig:chap5:piezoMonitor:
+
+.. figure:: ./_static/fig/chap5/piezoMonitor.png
+  :scale: 50%
+  :align: center
+
+  The serial monitor shown the value catch by the analog input each 600 ms. A change in value is observed when a knock is detected.
+
+Piezo as output
+^^^^^^^^^^^^^^^
+Emitting sounds is possible with the piezo by direct connection to a digital pin.
+
+.. _Fig:chap5:PiezoOut_Arduino:
+
+.. figure:: ./_static/fig/chap5/PiezoOut_Arduino.png
+  :scale: 40%
+  :align: center
+
+  Connecting a Piezo as output to emit sounds.
+
+An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the digital output 2 is used to connect the piezo. 
+
+.. literalinclude:: _static/codes/chap5/pinpon.ino
+  :language: C
+  :linenos:
+  :caption: pinpon.ino
+
+The **tone(int digitalPin, int frequency, int duration)** function is adpated to the piezo utilisation and takes 3 arguments: the pin, the frequency (Hz) and the duration (ms). This command sends pulses to the pin at 50% duty cycle (half the time the pin in HIGH, the other half the time it is low) but with a custom frequency.
+
+.. admonition:: Note
+
+	This is different to PWM **analogWrite(int PWMPin, int value)** function where the frequency is fixed, but the duty cycle changes (from 0 to 100% corresponding to a *value* between 0 and 255).
+
+.. -----------------------------------------------------------------------------------
+
+Motor
+=====
+
+Datasheet
+---------
+:download:`Download the TMP35/36/37 datasheet <_static/dataSheets/TMP35_36_37.pdf>`
+
+Presentation
+------------
+
+Connection
+----------
+
+Example using Arduino
+---------------------
+

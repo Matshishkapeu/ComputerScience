@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.3. Electronic components &mdash; Computing for engineer 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Python" href="chap6_python_Chap.html" />
+    <link rel="prev" title="6.2. Data base" href="chap5_2dataBase.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1_binaryLogic_Chap.html">2. Binary logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_architecture_Chap.html">3. Computer architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_algorithm_Chap.html">4. Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chap5_1presentation.html">6.1. Arduino system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5_2dataBase.html">6.2. Data base</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.3. Electronic components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#led">6.3.1. LED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#datasheet">6.3.1.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#presentation">6.3.1.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connection">6.3.1.3. Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-using-arduino">6.3.1.4. Example using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#switch-pushbutton">6.3.2. Switch (pushbutton)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">6.3.2.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">6.3.2.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">6.3.2.3. Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">6.3.2.4. Example using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-sensor">6.3.3. Temperature sensor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">6.3.3.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6.3.3.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">6.3.3.3. Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">6.3.3.4. Example using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#photoresistor">6.3.4. Photoresistor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">6.3.4.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">6.3.4.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">6.3.4.3. Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">6.3.4.4. Example using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#servo-motor">6.3.5. Servo motor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">6.3.5.1. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id14">6.3.5.2. Example using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#piezo">6.3.6. Piezo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id15">6.3.6.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">6.3.6.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connections-using-arduino">6.3.6.3. Connections using Arduino</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#motor">6.3.7. Motor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">6.3.7.1. Datasheet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">6.3.7.2. Presentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id19">6.3.7.3. Connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id20">6.3.7.4. Example using Arduino</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computing for engineer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="chap5_arduino_Chap.html"><span class="section-number">6. </span>Arduino</a> &raquo;</li>
+        
+      <li><span class="section-number">6.3. </span>Electronic components</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chap5_3tutos.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="electronic-components">
+<h1><span class="section-number">6.3. </span>Electronic components<a class="headerlink" href="#electronic-components" title="Permalink to this headline">¶</a></h1>
+<p>Here are presented basic tutorials for using main components of Arduino system</p>
+<div class="section" id="led">
+<h2><span class="section-number">6.3.1. </span>LED<a class="headerlink" href="#led" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="datasheet">
+<h3><span class="section-number">6.3.1.1. </span>Datasheet<a class="headerlink" href="#datasheet" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/61fc63e32322aad972f906bf58ce73d9/LED.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">LED</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="presentation">
+<h3><span class="section-number">6.3.1.2. </span>Presentation<a class="headerlink" href="#presentation" title="Permalink to this headline">¶</a></h3>
+<p>A LED (Light-Emitting Diode) is a diode (<a class="reference internal" href="chap1_3digitalCircuits.html#sec-chap1-diode"><span class="std std-ref">Diode</span></a>) emitting light when crossed by a current.</p>
+<div class="figure align-center" id="id21">
+<span id="fig-chap5-led"></span><a class="reference internal image-reference" href="_images/LED.png"><img alt="_images/LED.png" src="_images/LED.png" style="width: 448.0px; height: 312.9px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.8:  </span><span class="caption-text">Different kind of LED.</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="connection">
+<h3><span class="section-number">6.3.1.3. </span>Connection<a class="headerlink" href="#connection" title="Permalink to this headline">¶</a></h3>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ol class="arabic simple">
+<li><p>A LED is a polarized electronic component that allow electricity to flow through it in one direction only. The <strong>long leg(Anode)</strong> should be connected to the + and the <strong>short leg (Cathode)</strong> to the -.</p></li>
+<li><p>A LED should always be protected by a resistor.</p></li>
+</ol>
+</div>
+<p>The <a class="reference download internal" download="" href="_downloads/61fc63e32322aad972f906bf58ce73d9/LED.pdf"><code class="xref download docutils literal notranslate"><span class="pre">datasheet</span></code></a> of a standart LED precognize a current of <strong>20 mA</strong> and a voltage of <strong>2V</strong>. Then it should be connected to a serial resistor depending of the source volatge.</p>
+<p><strong>How to determine the resistor ?</strong></p>
+<p>The formula for resistor is:</p>
+<div class="math" id="equation-formula-r-led">
+<p><span class="eqno">(6.1)<a class="headerlink" href="#equation-formula-r-led" title="Permalink to this equation">¶</a></span><img src="_images/math/19978c3f6f0e189257c375cc3213c6dedde50289.svg" alt="R = (U_S - U_{LED})/I"/></p>
+</div><p>In the following example, if the source voltage is <img class="math" src="_images/math/bb9cec2c28943c61fcc4f3350c7206d2a0deff99.svg" alt="U_S = 5V" style="vertical-align: -2px"/>, a resistor of 220 <img class="math" src="_images/math/30937eb1613976acc77ca6aa9240b3d9eb7fe9bd.svg" alt="\Omega" style="vertical-align: 0px"/> should be added to the LED.</p>
+<div class="figure align-center" id="id22">
+<span id="fig-chap5-led-scheme"></span><a class="reference internal image-reference" href="_images/LED_scheme.png"><img alt="_images/LED_scheme.png" src="_images/LED_scheme.png" style="width: 477.6px; height: 333.6px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.9:  </span><span class="caption-text">Direct connection of a LED using a resistor.</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="example-using-arduino">
+<h3><span class="section-number">6.3.1.4. </span>Example using Arduino<a class="headerlink" href="#example-using-arduino" title="Permalink to this headline">¶</a></h3>
+<p>A LED can then be connected to a digital pin on the arduino UNO.</p>
+<div class="figure align-center" id="id23">
+<span id="fig-chap5-led-arduino"></span><a class="reference internal image-reference" href="_images/LED_Arduino.png"><img alt="_images/LED_Arduino.png" src="_images/LED_Arduino.png" style="width: 485.20000000000005px; height: 388.8px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.10:  </span><span class="caption-text">Connecting a LED to a digital pin.</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the LED (connected to digital pin 2) turns on for one second, then turn off for one second, repeatedly.</p>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-number">Listing 6.2:  </span><span class="caption-text">blinkLED.ino</span><a class="headerlink" href="#id24" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// initialize digital pin 2 as an output.</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>   <span class="c1">// turn the LED on (HIGH is the voltage level)</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>             <span class="c1">// wait for a second</span>
+  <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>    <span class="c1">// turn the LED off by making the voltage LOW</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>             <span class="c1">// wait for a second</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="switch-pushbutton">
+<h2><span class="section-number">6.3.2. </span>Switch (pushbutton)<a class="headerlink" href="#switch-pushbutton" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3><span class="section-number">6.3.2.1. </span>Datasheet<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/714a2a092cca8fe7020c9ce0f72ac68b/Button.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">pushbutton</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">6.3.2.2. </span>Presentation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>A pushbutton connects two pins when they are pushed.</p>
+<div class="figure align-center" id="id25">
+<span id="fig-chap5-pushbutton"></span><a class="reference internal image-reference" href="_images/pushbutton.png"><img alt="_images/pushbutton.png" src="_images/pushbutton.png" style="width: 237.0px; height: 189.9px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.11:  </span><span class="caption-text">The pushbutton in the arduino UNO kit.</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">6.3.2.3. </span>Connection<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>A pushbutton connects very simply:</p>
+<div class="figure align-center" id="id26">
+<span id="fig-chap5-pushbutton-scheme"></span><a class="reference internal image-reference" href="_images/pushbutton_scheme.png"><img alt="_images/pushbutton_scheme.png" src="_images/pushbutton_scheme.png" style="width: 264.3px; height: 249.29999999999998px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.12:  </span><span class="caption-text">A pushbutton in a simple circuit containing a LED.</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">6.3.2.4. </span>Example using Arduino<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>A pushbutton can be used to command the arduino UNO microcontroller as in the following example:</p>
+<div class="figure align-center" id="id27">
+<span id="fig-chap5-pushbutton-arduino"></span><a class="reference internal image-reference" href="_images/pushbutton_Arduino.png"><img alt="_images/pushbutton_Arduino.png" src="_images/pushbutton_Arduino.png" style="width: 494.0px; height: 420.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.13:  </span><span class="caption-text">Connecting a pushbutton as input to a digital pin.</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Note that a pull-down resistor is added (<img class="math" src="_images/math/fbe64888ee5d94aba88907bd41ed5a02c61ffb16.svg" alt="10 k\Omega" style="vertical-align: 0px"/>) from ground to the switch. It ensure connection from ground to the pin when the pushbutton is open, allowing the input to read LOW when no voltage coming in throught the pushbutton.</p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the LED (connected to digital pin 13) turns on when the pushbutton (connected to pin 2) is pressed. No extra LED is added here because a LED on the board is already attached to pin 13 (L)</p>
+<div class="literal-block-wrapper docutils container" id="id28">
+<div class="code-block-caption"><span class="caption-number">Listing 6.3:  </span><span class="caption-text">pushbutton.ino</span><a class="headerlink" href="#id28" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">);</span> <span class="c1">// initialize the LED pin as an output:</span>
+  <span class="n">pinMode</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span> <span class="c1">// initialize the pushbutton pin as an input:</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">buttonState</span><span class="p">;</span>
+
+  <span class="c1">// read the state of the pushbutton value:</span>
+  <span class="n">buttonState</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+  <span class="c1">// check if the pushbutton is pressed. If it is, the buttonState is HIGH:</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">buttonState</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// turn LED on:</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">HIGH</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// turn LED off:</span>
+    <span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="n">LOW</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="temperature-sensor">
+<h2><span class="section-number">6.3.3. </span>Temperature sensor<a class="headerlink" href="#temperature-sensor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3><span class="section-number">6.3.3.1. </span>Datasheet<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/8c17ffa3464aff94556a138f7cb80470/TMP35_36_37.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">TMP35/36/37</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">6.3.3.2. </span>Presentation<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>The temperature sensor in the Arduino UNO starter kit is a TMP36 that outputs a changing voltage on its middle pin depending on the temperature it senses.</p>
+<div class="figure align-center" id="id29">
+<span id="fig-chap5-tempsensor"></span><a class="reference internal image-reference" href="_images/tempSensor.png"><img alt="_images/tempSensor.png" src="_images/tempSensor.png" style="width: 626.0px; height: 315.5px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.14:  </span><span class="caption-text">The TMP36 temperature sensor in the kit.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-possible-confusion admonition">
+<p class="admonition-title">possible confusion</p>
+<p>The TMP36 temperature sensor can be confused with a transistor. <em>TMP</em> is written on the flat side of the TMP36 sensor.</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">6.3.3.3. </span>Connection<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Looking for the flat facing face of the sensor, the left pin is connected to power, the right pin to the ground. The middle pin is linked to an analog input.</p>
+<div class="figure align-center" id="id30">
+<span id="fig-chap5-tmp36-scheme"></span><a class="reference internal image-reference" href="_images/TMP36_scheme.png"><img alt="_images/TMP36_scheme.png" src="_images/TMP36_scheme.png" style="width: 383.5px; height: 261.5px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.15:  </span><span class="caption-text">Connecting a TMP36 temperature sensor.</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">6.3.3.4. </span>Example using Arduino<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Connection to a analog pin to catch the voltage is possible with Arduino UNO board.</p>
+<div class="figure align-center" id="id31">
+<span id="fig-chap5-tmp36-arduino"></span><a class="reference internal image-reference" href="_images/TMP36_Arduino.png"><img alt="_images/TMP36_Arduino.png" src="_images/TMP36_Arduino.png" style="width: 458.0px; height: 362.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.16:  </span><span class="caption-text">Connecting a TMP36 temperature sensor to an analog pin on the Arduino UNO board.</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 catch the value of the sensor. The value that is between <strong>0</strong> and <strong>1023</strong> is a representation of the voltage on the pin.</p>
+<div class="literal-block-wrapper docutils container" id="id32">
+<div class="code-block-caption"><span class="caption-number">Listing 6.4:  </span><span class="caption-text">TMP36AnalogIn.ino</span><a class="headerlink" href="#id32" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> <span class="c1">// initialize serial communications at 9600 bps:</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">sensorValue</span><span class="p">;</span>        <span class="c1">// value read from the TMP36</span>
+
+  <span class="n">sensorValue</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span> <span class="c1">// read the analog in value:</span>
+  <span class="c1">// print the results to the Serial Monitor:</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;sensor = &quot;</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span> <span class="c1">//Wait 200 ms before the next loop</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor (“Tools” -&gt; “Serial monitor” in the Arduino application).</p>
+<div class="figure align-center" id="id33">
+<span id="fig-chap5-tmp36monitor"></span><a class="reference internal image-reference" href="_images/TMP36Monitor.png"><img alt="_images/TMP36Monitor.png" src="_images/TMP36Monitor.png" style="width: 440.8px; height: 209.20000000000002px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.17:  </span><span class="caption-text">The serial monitor shown the value catch by the analog input each 200 ms.</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using the <a class="reference download internal" download="" href="_downloads/8c17ffa3464aff94556a138f7cb80470/TMP35_36_37.pdf"><code class="xref download docutils literal notranslate"><span class="pre">dataSheet</span></code></a>, it is easy to transform the analog input voltage <img class="math" src="_images/math/f647f089c993bb94b8a2850e6facd3072ce94c18.svg" alt="U_{tmp}" style="vertical-align: -5px"/> in temperature with:</p>
+<div class="math" id="equation-formula-temp-v">
+<p><span class="eqno">(6.2)<a class="headerlink" href="#equation-formula-temp-v" title="Permalink to this equation">¶</a></span><img src="_images/math/9d3011431905116eab447a8e82eaa8dc52b6d6c1.svg" alt="\theta = 100 \times (\frac{5 \times U_{tmp}}{1024} - 0.5)"/></p>
+</div></div>
+</div>
+<div class="section" id="photoresistor">
+<h2><span class="section-number">6.3.4. </span>Photoresistor<a class="headerlink" href="#photoresistor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3><span class="section-number">6.3.4.1. </span>Datasheet<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/b762ade3e89c6d0239e15fa3e4554d31/photo_resistance.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">VT9000</span> <span class="pre">photoresistor</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">6.3.4.2. </span>Presentation<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>A photoresistor changes its resistor depending on the amount of light that hits it. In dark, the resistor is hight, and it decreases when light hits it.</p>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">6.3.4.3. </span>Connection<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>It can be used together with a resistor to form a voltage divider.</p>
+<div class="figure align-center" id="id34">
+<span id="fig-chap5-photoresistor-scheme"></span><a class="reference internal image-reference" href="_images/photoresistor_scheme.png"><img alt="_images/photoresistor_scheme.png" src="_images/photoresistor_scheme.png" style="width: 417.0px; height: 287.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.18:  </span><span class="caption-text">A voltage divider using a photoresistor allows to obtain a voltage variation with lights.</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-choice-for-the-resistor admonition">
+<p class="admonition-title">Choice for the resistor</p>
+<p>Looking for the <a class="reference download internal" download="" href="_downloads/b762ade3e89c6d0239e15fa3e4554d31/photo_resistance.pdf"><code class="xref download docutils literal notranslate"><span class="pre">datasheet</span></code></a>, one reads a maximum of <img class="math" src="_images/math/2e2e27e0acb8e3c19777543d2ae58482bb4e24c6.svg" alt="200 k\Omega" style="vertical-align: 0px"/> in the dark and typically <img class="math" src="_images/math/36e1e9b974c44a3ac1deed0db24e3787ce1eb3e8.svg" alt="12 k\Omega" style="vertical-align: 0px"/> for a <img class="math" src="_images/math/6a169e4d1ff1916b1375e6fd19cb6bfb9bb15e0c.svg" alt="10 lux" style="vertical-align: 0px"/> light flux. Using a <img class="math" src="_images/math/fbe64888ee5d94aba88907bd41ed5a02c61ffb16.svg" alt="10 k\Omega" style="vertical-align: 0px"/> will ensure to range from nearly <img class="math" src="_images/math/698c6389c2dec4299d5605b9e2e5fd0da24a9c8d.svg" alt="0V" style="vertical-align: 0px"/> to <img class="math" src="_images/math/fb829c6fd26b4789b67ec06244ea542b13d0f5ab.svg" alt="U_S" style="vertical-align: -2px"/></p>
+</div>
+</div>
+<div class="section" id="id12">
+<h3><span class="section-number">6.3.4.4. </span>Example using Arduino<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>The voltage at the point between the photoresistor and the serial resistor can be mesured by connection to an analog input of the Arduino board.</p>
+<div class="figure align-center" id="id35">
+<span id="fig-chap5-photoresistor-arduino"></span><a class="reference internal image-reference" href="_images/photoresistor_Arduino.png"><img alt="_images/photoresistor_Arduino.png" src="_images/photoresistor_Arduino.png" style="width: 386.0px; height: 328.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.19:  </span><span class="caption-text">Connecting a photoresistor to an analog pin on the Arduino UNO board.</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 catch the value of the sensor. The value that is between <strong>0</strong> and <strong>1023</strong> is a representation of the voltage on the pin.</p>
+<div class="literal-block-wrapper docutils container" id="id36">
+<div class="code-block-caption"><span class="caption-number">Listing 6.5:  </span><span class="caption-text">photoresistor.ino</span><a class="headerlink" href="#id36" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> <span class="c1">// initialize serial communications at 9600 bps:</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">sensorValue</span><span class="p">;</span>        <span class="c1">// value read from the voltage divider (resistor + photoresistor)</span>
+
+  <span class="n">sensorValue</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span> <span class="c1">// read the analog in value</span>
+  <span class="c1">// print the results to the Serial Monitor:</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;sensor = &quot;</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">sensorValue</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">//Wait 1000 ms before the next loop</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor (“Tools” -&gt; “Serial monitor” in the Arduino application).</p>
+<div class="figure align-center" id="id37">
+<span id="fig-chap5-photoresistormonitor"></span><a class="reference internal image-reference" href="_images/photoresistorMonitor.png"><img alt="_images/photoresistorMonitor.png" src="_images/photoresistorMonitor.png" style="width: 441.6px; height: 207.60000000000002px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.20:  </span><span class="caption-text">The serial monitor shown the value catch by the analog input each 1000 ms. The value ranges from 0 (nul voltage) to 1023 (5V).</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="servo-motor">
+<h2><span class="section-number">6.3.5. </span>Servo motor<a class="headerlink" href="#servo-motor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3><span class="section-number">6.3.5.1. </span>Presentation<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>A servo motor is a special type of motor that don’t spin around a circle. It can move to a sepcific position and keep it. Servos usually only rotate 180 degrees.</p>
+<div class="figure align-center" id="id38">
+<span id="fig-chap5-servomotor"></span><a class="reference internal image-reference" href="_images/servoMotor.png"><img alt="_images/servoMotor.png" src="_images/servoMotor.png" style="width: 407.5px; height: 310.5px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.21:  </span><span class="caption-text">The servo motor in the kit.</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id14">
+<h3><span class="section-number">6.3.5.2. </span>Example using Arduino<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>Connection to a analog pin to catch the voltage is possible with Arduino UNO board.</p>
+<div class="figure align-center" id="id39">
+<span id="fig-chap5-servo-arduino"></span><a class="reference internal image-reference" href="_images/servo_Arduino.png"><img alt="_images/servo_Arduino.png" src="_images/servo_Arduino.png" style="width: 454.40000000000003px; height: 352.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.22:  </span><span class="caption-text">Connecting a servo to a digital PWM pin on the Arduino UNO board.</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>A decoupling <img class="math" src="_images/math/32fbb8acb31bd845e82b77bbab58a7303f538b7c.svg" alt="100 \mu F" style="vertical-align: -3px"/> capacitor is used to reduce voltage changes when the motor start and stop. The capacitor anode (long leg) <strong>must</strong> be connected to power and the cathode (short leg) to the ground to prevent explosion of the component.</p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog PWM output 9 is used to send pulse to the servo. The arduino code uses the library <a class="reference external" href="https://www.arduino.cc/reference/en/libraries/servo/">servo</a>. This library allows to specify directly an angle between 0 and 179 degrees to the servo.</p>
+<div class="literal-block-wrapper docutils container" id="id40">
+<div class="code-block-caption"><span class="caption-number">Listing 6.6:  </span><span class="caption-text">servo.ino</span><a class="headerlink" href="#id40" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;Servo.h&gt;</span><span class="cp"></span>
+<span class="n">Servo</span> <span class="n">servo</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">servo</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span> <span class="c1">//The servo is attached to digital pin 9</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+  <span class="n">servo</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">179</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+</div>
+<div class="section" id="piezo">
+<h2><span class="section-number">6.3.6. </span>Piezo<a class="headerlink" href="#piezo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id15">
+<h3><span class="section-number">6.3.6.1. </span>Datasheet<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/a3f81d92516706e6ca16155c77429637/PIEZO-PKM22EPPH4001-BO.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">Piezo</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="id16">
+<h3><span class="section-number">6.3.6.2. </span>Presentation<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>A piezo is an electrical component used to detect vibrations (input) or produce noises (output). The piezo in the Arduino UNO starter kit is a PKM22EPP-4005-B0.</p>
+</div>
+<div class="section" id="connections-using-arduino">
+<h3><span class="section-number">6.3.6.3. </span>Connections using Arduino<a class="headerlink" href="#connections-using-arduino" title="Permalink to this headline">¶</a></h3>
+<p>The piezo can be connected as input or output using the Arduino UNO board.</p>
+<div class="section" id="piezo-as-input">
+<h4><span class="section-number">6.3.6.3.1. </span>Piezo as input<a class="headerlink" href="#piezo-as-input" title="Permalink to this headline">¶</a></h4>
+<p>The piezo can detect vibration as knocks, that can be catch by the Arduino board through an analog input.</p>
+<div class="figure align-center" id="id41">
+<span id="fig-chap5-piezoin-arduino"></span><a class="reference internal image-reference" href="_images/PiezoIn_Arduino.png"><img alt="_images/PiezoIn_Arduino.png" src="_images/PiezoIn_Arduino.png" style="width: 450.40000000000003px; height: 364.40000000000003px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.23:  </span><span class="caption-text">Connecting a Piezo to detect vibrations.</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the analog input A0 is used to detect the piezo vibrations.</p>
+<div class="literal-block-wrapper docutils container" id="id42">
+<div class="code-block-caption"><span class="caption-number">Listing 6.7:  </span><span class="caption-text">PiezoInput.ino</span><a class="headerlink" href="#id42" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">piezoValue</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> <span class="c1">//begin serial connection for monitoring</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">piezoValue</span> <span class="o">=</span> <span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;piezo value &quot;</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">piezoValue</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">600</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>The value is printed on the serial connection between the board and the computer. It can be observed using the serial monitor (“Tools” -&gt; “Serial monitor” in the Arduino application).</p>
+<div class="figure align-center" id="id43">
+<span id="fig-chap5-piezomonitor"></span><a class="reference internal image-reference" href="_images/piezoMonitor.png"><img alt="_images/piezoMonitor.png" src="_images/piezoMonitor.png" style="width: 442.0px; height: 210.5px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.24:  </span><span class="caption-text">The serial monitor shown the value catch by the analog input each 600 ms. A change in value is observed when a knock is detected.</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="piezo-as-output">
+<h4><span class="section-number">6.3.6.3.2. </span>Piezo as output<a class="headerlink" href="#piezo-as-output" title="Permalink to this headline">¶</a></h4>
+<p>Emitting sounds is possible with the piezo by direct connection to a digital pin.</p>
+<div class="figure align-center" id="id44">
+<span id="fig-chap5-piezoout-arduino"></span><a class="reference internal image-reference" href="_images/PiezoOut_Arduino.png"><img alt="_images/PiezoOut_Arduino.png" src="_images/PiezoOut_Arduino.png" style="width: 389.6px; height: 366.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.25:  </span><span class="caption-text">Connecting a Piezo as output to emit sounds.</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+</div>
+<p>An example of arduino code that could be uploaded in the microcontroller is shown below. In this example, the digital output 2 is used to connect the piezo.</p>
+<div class="literal-block-wrapper docutils container" id="id45">
+<div class="code-block-caption"><span class="caption-number">Listing 6.8:  </span><span class="caption-text">pinpon.ino</span><a class="headerlink" href="#id45" title="Permalink to this code">¶</a></div>
+<div class="highlight-C notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//No specific setup when using the tone function on an input</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">tone</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">440</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// Play a 440Hz A during 1 sec on pin 2</span>
+      <span class="n">delay</span><span class="p">(</span><span class="mi">1050</span><span class="p">);</span>
+      <span class="n">tone</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">494</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// Play a 494Hz B during 1 sec on pin 2</span>
+      <span class="n">delay</span><span class="p">(</span><span class="mi">1050</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>The <strong>tone(int digitalPin, int frequency, int duration)</strong> function is adpated to the piezo utilisation and takes 3 arguments: the pin, the frequency (Hz) and the duration (ms). This command sends pulses to the pin at 50% duty cycle (half the time the pin in HIGH, the other half the time it is low) but with a custom frequency.</p>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>This is different to PWM <strong>analogWrite(int PWMPin, int value)</strong> function where the frequency is fixed, but the duty cycle changes (from 0 to 100% corresponding to a <em>value</em> between 0 and 255).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="motor">
+<h2><span class="section-number">6.3.7. </span>Motor<a class="headerlink" href="#motor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id17">
+<h3><span class="section-number">6.3.7.1. </span>Datasheet<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference download internal" download="" href="_downloads/8c17ffa3464aff94556a138f7cb80470/TMP35_36_37.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">TMP35/36/37</span> <span class="pre">datasheet</span></code></a></p>
+</div>
+<div class="section" id="id18">
+<h3><span class="section-number">6.3.7.2. </span>Presentation<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id19">
+<h3><span class="section-number">6.3.7.3. </span>Connection<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id20">
+<h3><span class="section-number">6.3.7.4. </span>Example using Arduino<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap6_python_Chap.html" class="btn btn-neutral float-right" title="7. Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap5_2dataBase.html" class="btn btn-neutral float-left" title="6.2. Data base" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

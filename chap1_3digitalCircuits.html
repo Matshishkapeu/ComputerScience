@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="3. Computer architecture" href="chap2_architecture_Chap.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -125,12 +126,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -169,11 +172,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap1_binaryLogic_Chap.html">2. Binary logic</a> &raquo;</li>
+          <li><a href="chap1_binaryLogic_Chap.html"><span class="section-number">2. </span>Binary logic</a> &raquo;</li>
         
-      <li>2.3. Digital circuits</li>
+      <li><span class="section-number">2.3. </span>Digital circuits</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,16 +196,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="digital-circuits">
-<h1>2.3. Digital circuits<a class="headerlink" href="#digital-circuits" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.3. </span>Digital circuits<a class="headerlink" href="#digital-circuits" title="Permalink to this headline">¶</a></h1>
 <p>The binary logic presented in the preceding lesson is at the basis of modern computers technology. Indeed, our personal computers and more generally informatic systems are able to do a lot of impressive things (working, playing, watching movies, surfing on the web, controlling very complex systems, etc.). Today, it seems that everything became possible thanks to informatics and electric currents in cables that passes (1) or not (0). This chapter will present how it is possible to perform complex operations from basics electronic components.</p>
 <div class="section" id="basic-components">
-<h2>2.3.1. Basic components<a class="headerlink" href="#basic-components" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.1. </span>Basic components<a class="headerlink" href="#basic-components" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="diode">
-<h3>2.3.1.1. Diode<a class="headerlink" href="#diode" title="Permalink to this headline">¶</a></h3>
+<span id="sec-chap1-diode"></span><h3><span class="section-number">2.3.1.1. </span>Diode<a class="headerlink" href="#diode" title="Permalink to this headline">¶</a></h3>
 <p>A diode is a junction between two semiconductors (PN junction):</p>
 <ul class="simple">
-<li>The first semiconductor is P-type (for positive). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having <strong>less</strong> valence electrons (bore for example). In this material, there is a deficit of electron. We talk about <strong>holes</strong></li>
-<li>The second semiconductor is N-type (for negative). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having <strong>more</strong> valence electrons (phosphore for example). In this material, there is an excess of electron. We talk about <strong>free electrons</strong></li>
+<li><p>The first semiconductor is P-type (for positive). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having <strong>less</strong> valence electrons (bore for example). In this material, there is a deficit of electron. We talk about <strong>holes</strong></p></li>
+<li><p>The second semiconductor is N-type (for negative). This semiconductor is made by replacing some atoms in a material (for example the silicium) by some others having <strong>more</strong> valence electrons (phosphore for example). In this material, there is an excess of electron. We talk about <strong>free electrons</strong></p></li>
 </ul>
 <p>Then 3 possibility occurs:
 1. When no current is applied to the PN junction, some free electron of N zone moves to fill holes of the P zone creating an electric neutral zone named depletion zone.
@@ -210,157 +213,161 @@
 3. If a current is applied in the sense N-&gt;P, free electrons are pushed from the N zone to the P zone. The depletion zone disappear as holes are moving from P to N and electrons from N to P. The current is passing.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-chap1-pnjunction"></span><a class="reference internal image-reference" href="_images/PNJunction.jpg"><img alt="_images/PNJunction.jpg" src="_images/PNJunction.jpg" style="width: 511.0px; height: 164.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.4:  </span><span class="caption-text">Forward and Reversed biased for a PN junction.</span></p>
+<p class="caption"><span class="caption-number">Figure 2.4:  </span><span class="caption-text">Forward and Reversed biased for a PN junction.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="transistors-mos">
-<h3>2.3.1.2. Transistors MOS<a class="headerlink" href="#transistors-mos" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1.2. </span>Transistors MOS<a class="headerlink" href="#transistors-mos" title="Permalink to this headline">¶</a></h3>
 <p>A transistor is a basic electronic component with three external terminals:</p>
 <div class="figure align-center" id="id2">
 <span id="fig-chap1-transistors"></span><a class="reference internal image-reference" href="_images/transistors.jpg"><img alt="_images/transistors.jpg" src="_images/transistors.jpg" style="width: 250.0px; height: 127.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.5:  </span><span class="caption-text">Different shapes of bipolar transistors with their three terminals</span></p>
+<p class="caption"><span class="caption-number">Figure 2.5:  </span><span class="caption-text">Different shapes of bipolar transistors with their three terminals</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Transistors can be used for amplification (this is the case for bipolar transistors) or for switching (as MOS for logical gates building).</p>
 <p>Inside a MOS transistor (Metal oxide semiconductor), there are:</p>
 <ul class="simple">
-<li>a grid linked to the <strong>gate</strong> terminal</li>
-<li>a pair of semiconductor <em>PN</em> <em>NP</em> (or <em>NP</em> <em>PN</em>) junctions that linked the two others terminals <strong>drain</strong> and <strong>source</strong></li>
-<li>an insulating layer that separates the gate from semiconductor</li>
+<li><p>a grid linked to the <strong>gate</strong> terminal</p></li>
+<li><p>a pair of semiconductor <em>PN</em> <em>NP</em> (or <em>NP</em> <em>PN</em>) junctions that linked the two others terminals <strong>drain</strong> and <strong>source</strong></p></li>
+<li><p>an insulating layer that separates the gate from semiconductor</p></li>
 </ul>
 <div class="figure align-center" id="id3">
 <span id="fig-chap1-insidetransistor"></span><a class="reference internal image-reference" href="_images/insideTransistor.jpg"><img alt="_images/insideTransistor.jpg" src="_images/insideTransistor.jpg" style="width: 350.0px; height: 161.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.6:  </span><span class="caption-text">Two kind of CMOS transistors (nMOS and pMOS)</span></p>
+<p class="caption"><span class="caption-number">Figure 2.6:  </span><span class="caption-text">Two kind of CMOS transistors (nMOS and pMOS)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>In the case of nMOS, when no tension is applied to the grid, the <em>NP</em> and <em>PN</em> junctions works as diodes in opposition and no current pass between the drain and the source (0). On the opposite, if a positive tension is applied to the grid, the region in the substract of p-type will charge negatively. His comportement will act as a n-type semiconductor and the current pass between the drain and the source (1). The pMOS transistor operates reversely.</p>
 <p>The transistor can be seen as a switch between two terminals (drain and source), the third terminal (gate) commands the switch:</p>
 <div class="figure align-center" id="id4">
 <span id="fig-chap1-nmos-pmos"></span><a class="reference internal image-reference" href="_images/nMOS_pMOS.jpg"><img alt="_images/nMOS_pMOS.jpg" src="_images/nMOS_pMOS.jpg" style="width: 455.7px; height: 336.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.7:  </span><span class="caption-text">Possible states for nMOS and pMOS transistors</span></p>
+<p class="caption"><span class="caption-number">Figure 2.7:  </span><span class="caption-text">Possible states for nMOS and pMOS transistors</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="logical-gates-in-cmos-technology">
-<h2>2.3.2. Logical gates in CMOS technology<a class="headerlink" href="#logical-gates-in-cmos-technology" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.2. </span>Logical gates in CMOS technology<a class="headerlink" href="#logical-gates-in-cmos-technology" title="Permalink to this headline">¶</a></h2>
 <p>Using transistors render possible to build <strong>logical gates</strong> that are electronic circuits corresponding exactly to logical connectors NOT, AND, OR, NAND, NOR, etc.</p>
 <div class="section" id="not-gate">
-<h3>2.3.2.1. NOT gate<a class="headerlink" href="#not-gate" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2.1. </span>NOT gate<a class="headerlink" href="#not-gate" title="Permalink to this headline">¶</a></h3>
 <p>The NOT gate is the easier logical gate that can be build using only two transistors:</p>
 <div class="figure align-center" id="id5">
 <span id="fig-chap1-notgate"></span><a class="reference internal image-reference" href="_images/notGate.jpg"><img alt="_images/notGate.jpg" src="_images/notGate.jpg" style="width: 440.0px; height: 288.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.8:  </span><span class="caption-text">Building a NOT gate using a nMOS and a pMOS</span></p>
+<p class="caption"><span class="caption-number">Figure 2.8:  </span><span class="caption-text">Building a NOT gate using a nMOS and a pMOS</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>It can be easily verified that when the input is set to 0, the nMOS transistor will act as an open switch and the pMOS one will act as a closed switch. It results in a connection between output and the + of power supply. In that case, input is 0 and output is 1. If the input is set to 1, the reverse phenomena occurs and the outpur will connect to the ground, setting it to 0.</p>
 <div class="figure align-center" id="id6">
 <span id="fig-chap1-notgatetest"></span><a class="reference internal image-reference" href="_images/notGateTest.jpg"><img alt="_images/notGateTest.jpg" src="_images/notGateTest.jpg" style="width: 358.8px; height: 174.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.9:  </span><span class="caption-text">Comportement of the NOT gate depending on the input</span></p>
+<p class="caption"><span class="caption-number">Figure 2.9:  </span><span class="caption-text">Comportement of the NOT gate depending on the input</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="nor-and-nand-gates">
-<h3>2.3.2.2. NOR and NAND gates<a class="headerlink" href="#nor-and-nand-gates" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2.2. </span>NOR and NAND gates<a class="headerlink" href="#nor-and-nand-gates" title="Permalink to this headline">¶</a></h3>
 <p>Here are presented the logical gates for NAND and NOR:</p>
 <div class="figure align-center" id="id7">
 <span id="fig-chap1-nandgate"></span><a class="reference internal image-reference" href="_images/nandCMOS.jpg"><img alt="_images/nandCMOS.jpg" src="_images/nandCMOS.jpg" style="width: 435.6px; height: 275.6px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.10:  </span><span class="caption-text">Building a NAND gate using two nMOS and two pMOS</span></p>
+<p class="caption"><span class="caption-number">Figure 2.10:  </span><span class="caption-text">Building a NAND gate using two nMOS and two pMOS</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-center" id="id8">
 <span id="fig-chap1-norgate"></span><a class="reference internal image-reference" href="_images/norCMOS.jpg"><img alt="_images/norCMOS.jpg" src="_images/norCMOS.jpg" style="width: 434.0px; height: 275.6px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.11:  </span><span class="caption-text">Building a NOR gate using two nMOS and two pMOS</span></p>
+<p class="caption"><span class="caption-number">Figure 2.11:  </span><span class="caption-text">Building a NOR gate using two nMOS and two pMOS</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="other-gates">
-<h3>2.3.2.3. Other gates<a class="headerlink" href="#other-gates" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2.3. </span>Other gates<a class="headerlink" href="#other-gates" title="Permalink to this headline">¶</a></h3>
 <p>In section <a class="reference internal" href="chap1_1propositions.html#sec-chap1-fullsystem"><span class="std std-ref">Full system of operators</span></a>, we have seen that {NAND} and {NOR} represent full system of operators. Then, it is easy to build other gates thanks to them. Practically, logic circuits are build by combining NOT, NAND and NOR gates. Here are the ANSI representation of other gates:</p>
 <div class="figure align-center" id="id9">
 <span id="fig-chap1-othergates"></span><a class="reference internal image-reference" href="_images/otherGates.jpg"><img alt="_images/otherGates.jpg" src="_images/otherGates.jpg" style="width: 295.2px; height: 306.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.12:  </span><span class="caption-text">AND, OR and XOR ANSI representations</span></p>
+<p class="caption"><span class="caption-number">Figure 2.12:  </span><span class="caption-text">AND, OR and XOR ANSI representations</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="combinational-logic-circuits">
-<h2>2.3.3. Combinational logic circuits<a class="headerlink" href="#combinational-logic-circuits" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.3. </span>Combinational logic circuits<a class="headerlink" href="#combinational-logic-circuits" title="Permalink to this headline">¶</a></h2>
 <p>Logical gates can be assembled in logical circuits to perform different operations. These circuits are named <strong>combinational circuits</strong>. These circuits take binary informations on several inputs that are treated using several logical gates and return outputs that depends entirely on the input states. Common combinational circuits are:</p>
 <ul class="simple">
-<li>Data transmission: encoders/decoders, multiplexers/demultiplexers</li>
-<li>Arithmetic: comparators, adders, substractors</li>
+<li><p>Data transmission: encoders/decoders, multiplexers/demultiplexers</p></li>
+<li><p>Arithmetic: comparators, adders, substractors</p></li>
 </ul>
 <p>Here are presented two examples of combinational circuits: A very simple 2-input multiplexer and a binary adders.</p>
 <div class="section" id="input-multiplexer">
-<h3>2.3.3.1. 2-input multiplexer<a class="headerlink" href="#input-multiplexer" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3.1. </span>2-input multiplexer<a class="headerlink" href="#input-multiplexer" title="Permalink to this headline">¶</a></h3>
 <p>A multiplexer (MUX) has several inputs and a unique output. Its role is to copy on of the input on the output using a command input. The simpler multiplexer has 2 inputs:</p>
 <div class="figure align-center" id="id10">
-<span id="fig-chap1-multiplexer2"></span><a class="reference internal image-reference" href="_images/multiplexer.jpg"><img alt="_images/multiplexer.jpg" src="_images/multiplexer.jpg" style="width: 564.0px; height: 251.4px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.13:  </span><span class="caption-text">A 2 input multiplexer</span></p>
+<span id="fig-chap1-multiplexer2"></span><a class="reference internal image-reference" href="_images/multiplexer.jpg"><img alt="_images/multiplexer.jpg" src="_images/multiplexer.jpg" style="width: 564.0px; height: 251.39999999999998px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2.13:  </span><span class="caption-text">A 2 input multiplexer</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>What is the output of the preceding multiplexer if the command value is 1.</p>
 </div>
 </div>
 <div class="section" id="binary-adder">
-<h3>2.3.3.2. Binary adder<a class="headerlink" href="#binary-adder" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3.2. </span>Binary adder<a class="headerlink" href="#binary-adder" title="Permalink to this headline">¶</a></h3>
 <p>It is a little bit more complex to build a combinational logic circuits that ensure addition of two positive integers. Let us first recall how to perform a 2-bit adder named <strong>half adder</strong>. There are four possible results for adding two bits:</p>
 <ul class="simple">
-<li>0 + 0 = 0</li>
-<li>0 + 1 = 1</li>
-<li>1 + 0 = 1</li>
-<li>1 + 1 = 10 (0 carry 1)</li>
+<li><p>0 + 0 = 0</p></li>
+<li><p>0 + 1 = 1</p></li>
+<li><p>1 + 0 = 1</p></li>
+<li><p>1 + 1 = 10 (0 carry 1)</p></li>
 </ul>
 <p>The last possible results will be equal to 0 with a carry bit of 1. The corresponding circuit will thus have two outputs, one for the sum and one for the carry:</p>
 <div class="figure align-center" id="id11">
-<span id="fig-chap1-halfadder"></span><a class="reference internal image-reference" href="_images/halfAdder.jpg"><img alt="_images/halfAdder.jpg" src="_images/halfAdder.jpg" style="width: 499.2px; height: 251.4px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.14:  </span><span class="caption-text">1-bit half adder</span></p>
+<span id="fig-chap1-halfadder"></span><a class="reference internal image-reference" href="_images/halfAdder.jpg"><img alt="_images/halfAdder.jpg" src="_images/halfAdder.jpg" style="width: 499.2px; height: 251.39999999999998px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2.14:  </span><span class="caption-text">1-bit half adder</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 <p>The <strong>full adder</strong> circuit is build thanks to 2 half adders and on additional AND gate. It then operates thank to three inputs. The third input is a carry in bit:</p>
 <div class="figure align-center" id="id12">
 <span id="fig-chap1-fulladder"></span><a class="reference internal image-reference" href="_images/fullAdder.jpg"><img alt="_images/fullAdder.jpg" src="_images/fullAdder.jpg" style="width: 573.0px; height: 201.6px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.15:  </span><span class="caption-text">1-bit full adder</span></p>
+<p class="caption"><span class="caption-number">Figure 2.15:  </span><span class="caption-text">1-bit full adder</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
 </div>
 <p>Full adders can then be chained to perform binary addition of n-bit integers:</p>
 <div class="figure align-center" id="id13">
-<span id="fig-chap1-nbitadder"></span><a class="reference internal image-reference" href="_images/nBitAdder.jpg"><img alt="_images/nBitAdder.jpg" src="_images/nBitAdder.jpg" style="width: 583.2px; height: 175.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.16:  </span><span class="caption-text">n-bit adder</span></p>
+<span id="fig-chap1-nbitadder"></span><a class="reference internal image-reference" href="_images/nBitAdder.jpg"><img alt="_images/nBitAdder.jpg" src="_images/nBitAdder.jpg" style="width: 583.1999999999999px; height: 175.2px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2.16:  </span><span class="caption-text">n-bit adder</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="sequential-circuits-memories">
-<h2>2.3.4. Sequential circuits: Memories<a class="headerlink" href="#sequential-circuits-memories" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.4. </span>Sequential circuits: Memories<a class="headerlink" href="#sequential-circuits-memories" title="Permalink to this headline">¶</a></h2>
 <p>Logical gates can also be assembled for data storage purpose. The circuits formed are named <strong>sequential circuits</strong>.  They differs from combinational circuits because their outputs depend not only from their inputs but also from their past outputs by using loops connections. The basic components of memories are named <strong>flip-flop</strong>. Common flip-flop are SR, JK or D type.</p>
 <div class="section" id="sr-flip-flop">
-<h3>2.3.4.1. SR flip-flop<a class="headerlink" href="#sr-flip-flop" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.4.1. </span>SR flip-flop<a class="headerlink" href="#sr-flip-flop" title="Permalink to this headline">¶</a></h3>
 <p>The simpler flip-flop is of SR type (for Set/Reset). The SR flip-flop can be build for example using NOR gates.</p>
 <div class="figure align-center" id="id14">
 <span id="fig-chap1-srflipflop"></span><a class="reference internal image-reference" href="_images/SRflipflop.jpg"><img alt="_images/SRflipflop.jpg" src="_images/SRflipflop.jpg" style="width: 555.0px; height: 223.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.17:  </span><span class="caption-text">SR fli-flop using NOR gates</span></p>
+<p class="caption"><span class="caption-number">Figure 2.17:  </span><span class="caption-text">SR fli-flop using NOR gates</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
 </div>
 <p>The thruth-table for the SR flip-flop is</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="18%" />
-<col width="18%" />
-<col width="28%" />
-<col width="36%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 28%" />
+<col style="width: 36%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/a5162b7161b432fcc4edac98ad598f47af67dad1.svg" alt="S"/></th>
-<th class="head"><img class="math" src="_images/math/d5cee366ba5ce7c73d0dee7cdc1fe9a9b58b7aa4.svg" alt="R"/></th>
-<th class="head"><img class="math" src="_images/math/603fad2f5698329be9353d3dbecf4237df8b8a54.svg" alt="Q"/></th>
-<th class="head"><img class="math" src="_images/math/8d06c2baa884ccb6617dd6e436e3034317aa9cb7.svg" alt="\overline{Q}"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/ee3806941f0c34a66712655741feee51094ba496.svg" alt="S" style="vertical-align: 0px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/df6c386829085a57f0cef02dc0e1e432e81be6d5.svg" alt="R" style="vertical-align: 0px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/85cfc946977ed45e30885cf181967beff11b1f8d.svg" alt="Q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/5c8148a2b7693c3e0335eba433affd4087f42507.svg" alt="\overline{Q}" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td colspan="2">memorized value</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td colspan="2"><p>memorized value</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td colspan="2">forbiden</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td colspan="2"><p>forbiden</p></td>
 </tr>
 </tbody>
 </table>
@@ -368,71 +375,71 @@
 </div>
 </div>
 <div class="section" id="integrated-circuits">
-<h2>2.3.5. Integrated circuits<a class="headerlink" href="#integrated-circuits" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.5. </span>Integrated circuits<a class="headerlink" href="#integrated-circuits" title="Permalink to this headline">¶</a></h2>
 <p>A seen previously, transistors and logical gates are used to create combinational or sequential circuits. This circuits may be assembled to form complex circuits named <strong>integrated circuits</strong>. Modern processors and memories are integrated circuits containing millions of transistors. Some of them are linked to form complex logical circuits and other are linked to input/output terminals (several hundreds for modern intergated circuits).</p>
-<p>First integrated circuits appeared in the 60th. They were using less than a 100 transitors to form some logical gates. A classification was done from Small Scale integration (SSI) to Large Scale integration (LSI and more). Nowadays, computers processors are embedding more than <img class="math" src="_images/math/4353cf5a7daf4c469b8cd3982980a24defd03828.svg" alt="10^9"/> transistors.</p>
-<table border="1" class="docutils">
+<p>First integrated circuits appeared in the 60th. They were using less than a 100 transitors to form some logical gates. A classification was done from Small Scale integration (SSI) to Large Scale integration (LSI and more). Nowadays, computers processors are embedding more than <img class="math" src="_images/math/703dd9237c393620a44f13116cce15ad650796e7.svg" alt="10^9" style="vertical-align: 0px"/> transistors.</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="11%" />
-<col width="6%" />
-<col width="20%" />
-<col width="62%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 20%" />
+<col style="width: 62%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Acronyme</th>
-<th class="head">year</th>
-<th class="head">transistors numb.</th>
-<th class="head">examples</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Acronyme</p></th>
+<th class="head"><p>year</p></th>
+<th class="head"><p>transistors numb.</p></th>
+<th class="head"><p>examples</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>SSI</td>
-<td>1960</td>
-<td><img class="math" src="_images/math/80fd4d104ce80f4c0e5cb727f50006a251a165fa.svg" alt="10"/></td>
-<td>logical gates</td>
+<tbody>
+<tr class="row-even"><td><p>SSI</p></td>
+<td><p>1960</p></td>
+<td><p><img class="math" src="_images/math/75bc44167e29e8c904ab0fb0084957522090c997.svg" alt="10" style="vertical-align: 0px"/></p></td>
+<td><p>logical gates</p></td>
 </tr>
-<tr class="row-odd"><td>MSI</td>
-<td>1970</td>
-<td><img class="math" src="_images/math/695fe453f900500c00016600bc73e5f1e5c068d3.svg" alt="100"/></td>
-<td>Multiplexer, counters, decoder</td>
+<tr class="row-odd"><td><p>MSI</p></td>
+<td><p>1970</p></td>
+<td><p><img class="math" src="_images/math/f79e9f49b6124fb01b27f54c79426d5820db19d0.svg" alt="100" style="vertical-align: 0px"/></p></td>
+<td><p>Multiplexer, counters, decoder</p></td>
 </tr>
-<tr class="row-even"><td>LSI</td>
-<td>1975</td>
-<td><img class="math" src="_images/math/2b428e37a4f9a48828ddb56a456574d3fae13b56.svg" alt="10^4"/></td>
-<td>joystick, keyboard, remote control</td>
+<tr class="row-even"><td><p>LSI</p></td>
+<td><p>1975</p></td>
+<td><p><img class="math" src="_images/math/d1cdd81820251bfd3a6037a2841b443327766e95.svg" alt="10^4" style="vertical-align: 0px"/></p></td>
+<td><p>joystick, keyboard, remote control</p></td>
 </tr>
-<tr class="row-odd"><td>VLSI</td>
-<td>1980</td>
-<td><img class="math" src="_images/math/d69baf005ea4037d5e360c78f798f9109e2c265d.svg" alt="10^6"/></td>
-<td>cars, smart watch, home systems</td>
+<tr class="row-odd"><td><p>VLSI</p></td>
+<td><p>1980</p></td>
+<td><p><img class="math" src="_images/math/a819c76b8c28fc14562f4b42d0e1da05289b54e0.svg" alt="10^6" style="vertical-align: 0px"/></p></td>
+<td><p>cars, smart watch, home systems</p></td>
 </tr>
-<tr class="row-even"><td>GSI</td>
-<td>2000</td>
-<td><img class="math" src="_images/math/32be91cf145c196e636332539ab08fbacb378708.svg" alt="&gt;10^6"/></td>
-<td>computers, cell phone processors, graphics, large memory</td>
+<tr class="row-even"><td><p>GSI</p></td>
+<td><p>2000</p></td>
+<td><p><img class="math" src="_images/math/18d1859c4da05d442806e99db5417ec3ed6af203.svg" alt="&gt;10^6" style="vertical-align: 0px"/></p></td>
+<td><p>computers, cell phone processors, graphics, large memory</p></td>
 </tr>
 </tbody>
 </table>
 <div class="figure align-center" id="id15">
-<span id="fig-chap1-sn7400"></span><a class="reference internal image-reference" href="_images/7400.jpg"><img alt="_images/7400.jpg" src="_images/7400.jpg" style="width: 260.4px; height: 321.6px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.18:  </span><span class="caption-text">The 7400 chip of Texas Instrument contains 4 NAND gates and 14 terminals (1976)</span></p>
+<span id="fig-chap1-sn7400"></span><a class="reference internal image-reference" href="_images/7400.jpg"><img alt="_images/7400.jpg" src="_images/7400.jpg" style="width: 260.4px; height: 321.59999999999997px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2.18:  </span><span class="caption-text">The 7400 chip of Texas Instrument contains 4 NAND gates and 14 terminals (1976)</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 <p>More informations on: <a class="reference external" href="https://en.wikipedia.org/wiki/Transistor_count">https://en.wikipedia.org/wiki/Transistor_count</a></p>
 <div class="section" id="the-atmega328p">
-<h3>2.3.5.1. The ATmega328P<a class="headerlink" href="#the-atmega328p" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.5.1. </span>The ATmega328P<a class="headerlink" href="#the-atmega328p" title="Permalink to this headline">¶</a></h3>
 <p>The arduino UNO card is equipped with a ATmega328P microcontroller that uses a CMOS technology and contains about 20 000 logical gates. Detailed informations on <a class="reference external" href="https://www.microchip.com/wwwproducts/en/ATmega328P">https://www.microchip.com/wwwproducts/en/ATmega328P</a></p>
 <div class="figure align-center" id="id16">
 <span id="fig-chap1-atmega328p"></span><a class="reference internal image-reference" href="_images/ATmega328P.jpg"><img alt="_images/ATmega328P.jpg" src="_images/ATmega328P.jpg" style="width: 187.2px; height: 91.2px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.19:  </span><span class="caption-text">The ATmega328P microcontroller from Atmel</span></p>
+<p class="caption"><span class="caption-number">Figure 2.19:  </span><span class="caption-text">The ATmega328P microcontroller from Atmel</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="learn-more">
-<h2>2.3.6. Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3.6. </span>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h2>
 <p>For more information about digital circuits, one can refer to the following website ressources:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur">https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur</a></li>
-<li><a class="reference external" href="https://www.electronics-tutorials.ws/">https://www.electronics-tutorials.ws/</a></li>
+<li><p><a class="reference external" href="https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur">https://fr.wikibooks.org/wiki/Fonctionnement_d%27un_ordinateur</a></p></li>
+<li><p><a class="reference external" href="https://www.electronics-tutorials.ws/">https://www.electronics-tutorials.ws/</a></p></li>
 </ul>
 </div>
 </div>
@@ -457,11 +464,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -472,7 +487,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

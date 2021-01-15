@@ -34,6 +34,13 @@ Propositions can be assembled to form new propositions thanks to "connections".
   It is cloudy AND it is cold
   The cat is sleeping OR the mouse is happy
 
+.. admonition:: Question
+
+  Precise if the following sentences are propositions:
+ 
+  * Monkey walk on the moon
+  * A square has 5 sides
+
 Propositional syntax
 ====================
 The syntax gives the rules on how to form new propositions using simple statements. This can be seen as the "grammar" of propositional logic.
@@ -62,6 +69,14 @@ Vocabulary and language
 A **propositional vocabulary** is a set of proposition constants. The set of all compound propositions that can be formed using a vocabulary is named **propositional language**.
 
 The propositional formula of :eq:`formula_ex`: is a compound propositions belonging to the language formed by the vocabulary :math:`\{p,q,r\}`.
+
+.. admonition:: Question
+
+  Do the following propositional formulas belong to the propositional language using the vocabulary :math:`\{p,q,r\}` ?
+ 
+  * :math:`F_1 = p \Leftrightarrow r`
+  * :math:`F_2 = r \Rightarrow q \land \lnot s`
+
 
 Tree representation
 -------------------
@@ -118,6 +133,10 @@ For example, we will write that :math:`(p = 1, q=0, r=1)` is a possible truth as
 * For :math:`n`, there are :math:`2^n` possible truth assignments,
 
 The complexity is exponential. To be understand here as "explosive".
+
+.. admonition:: Question
+
+  If we consider a vocabulary composed with 8 propositional constants, what is the total number of possible truth assignments?
 
 Definition of logical operators
 -------------------------------
@@ -248,6 +267,10 @@ truth tables for compounds propositions allows to determine exhaustively the tru
 	1            1            0            1                    1                  1                                1          
 	1            1            1            1                    0                  1                                1          
 	===========  ===========  ===========  ===================  =================  ===============================  ===========
+
+.. admonition:: Question
+
+  What is the evaluation of propositional formula F under the truth assignment (p=0, q=1, r=1) ?
 
 Satisfaction
 ------------

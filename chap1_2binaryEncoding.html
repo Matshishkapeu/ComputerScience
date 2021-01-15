@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2.3. Digital circuits" href="chap1_3digitalCircuits.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -112,12 +113,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -156,11 +159,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap1_binaryLogic_Chap.html">2. Binary logic</a> &raquo;</li>
+          <li><a href="chap1_binaryLogic_Chap.html"><span class="section-number">2. </span>Binary logic</a> &raquo;</li>
         
-      <li>2.2. Binary encoding</li>
+      <li><span class="section-number">2.2. </span>Binary encoding</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,274 +183,284 @@
            <div itemprop="articleBody">
             
   <div class="section" id="binary-encoding">
-<h1>2.2. Binary encoding<a class="headerlink" href="#binary-encoding" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.2. </span>Binary encoding<a class="headerlink" href="#binary-encoding" title="Permalink to this headline">¶</a></h1>
 <p>Informatics systems are treating a lot of information (sensors, text, images, musics, videos, games, etc.) called data. Whatever the form of the data is, everything on a computer is encoded as numbers, such that a computer is finally a big calculator with specific input and output peripherals (keyboard, screen, etc.).</p>
 <div class="section" id="encoding-using-numbers">
-<h2>2.2.1. Encoding using numbers<a class="headerlink" href="#encoding-using-numbers" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.1. </span>Encoding using numbers<a class="headerlink" href="#encoding-using-numbers" title="Permalink to this headline">¶</a></h2>
 <p>Whatever the origin of the data is, the computer is treating it as numbers. Here are presented some examples of existing encoding.</p>
 <div class="section" id="encoding-text">
-<h3>2.2.1.1. Encoding text<a class="headerlink" href="#encoding-text" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1.1. </span>Encoding text<a class="headerlink" href="#encoding-text" title="Permalink to this headline">¶</a></h3>
 <p>The simpler way to encode a text is to associate an integer number to each possible character. For example, in the English language, there are 26 letters and some special characters (%&lt;,;:! etc.). The ASCII code is encoding characters with a value range between 0 and 127.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-chap1-ascii"></span><a class="reference internal image-reference" href="_images/ASCII.jpg"><img alt="_images/ASCII.jpg" src="_images/ASCII.jpg" style="width: 500.0px; height: 406.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.2:  </span><span class="caption-text">ASCII table for character encoding</span></p>
+<p class="caption"><span class="caption-number">Figure 2.2:  </span><span class="caption-text">ASCII table for character encoding</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>As example, we see that the ‘a’ character is represented by the number 97 in the ASCII table.</p>
 </div>
 <div class="section" id="encoding-images">
-<h3>2.2.1.2. Encoding images<a class="headerlink" href="#encoding-images" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1.2. </span>Encoding images<a class="headerlink" href="#encoding-images" title="Permalink to this headline">¶</a></h3>
 <p>For images, this is similar to text. An image is discretized in pixels. Typically, a full HD image is composed with 1920 x 1080 pixels, that is to say more than 2 million pixels. A pixel is a small square with a unique value for each primary colors (Red, Green and Blue) ranged between 0 and 255.</p>
 <div class="figure align-center" id="id2">
-<span id="fig-chap1-rgb"></span><a class="reference internal image-reference" href="_images/RGB.jpg"><img alt="_images/RGB.jpg" src="_images/RGB.jpg" style="width: 373.8px; height: 181.3px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.3:  </span><span class="caption-text">RGB encoding example (<a class="reference external" href="https://htmlcolorcodes.com/fr/">https://htmlcolorcodes.com/fr/</a>)</span></p>
+<span id="fig-chap1-rgb"></span><a class="reference internal image-reference" href="_images/RGB.jpg"><img alt="_images/RGB.jpg" src="_images/RGB.jpg" style="width: 373.79999999999995px; height: 181.29999999999998px;" /></a>
+<p class="caption"><span class="caption-number">Figure 2.3:  </span><span class="caption-text">RGB encoding example (<a class="reference external" href="https://htmlcolorcodes.com/fr/">https://htmlcolorcodes.com/fr/</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="other-encoding-examples">
-<h3>2.2.1.3. Other encoding examples<a class="headerlink" href="#other-encoding-examples" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.1.3. </span>Other encoding examples<a class="headerlink" href="#other-encoding-examples" title="Permalink to this headline">¶</a></h3>
 <p>Other information are also encoded:</p>
 <ul class="simple">
-<li>A sound needs pitch and intensity encoding.</li>
-<li>A video is composed with a lot of images.</li>
+<li><p>A sound needs pitch and intensity encoding.</p></li>
+<li><p>A video is composed with a lot of images.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="binary-algebra">
-<h2>2.2.2. Binary algebra<a class="headerlink" href="#binary-algebra" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2.2. </span>Binary algebra<a class="headerlink" href="#binary-algebra" title="Permalink to this headline">¶</a></h2>
 <p>Thus, each data of informatics systems are encoded as numbers. But how these numbers are stored themselves physically in an electronic system ? This is ensured thanks to electronic components that may let a current pass (1) or not (0) acting like switches.
 For example, a unique switch is able to encode 2 different information:</p>
 <ul class="simple">
-<li>the switch is open: the current do not pass (0)</li>
-<li>the switch is closed: the current pass (1)</li>
+<li><p>the switch is open: the current do not pass (0)</p></li>
+<li><p>the switch is closed: the current pass (1)</p></li>
 </ul>
 <p>If we use a second switch, 4 different information may be encoded:</p>
 <ul class="simple">
-<li>switch A is open:<ul>
-<li>switch B is open: (00)</li>
-<li>switch B is closed: (01)</li>
+<li><p>switch A is open:</p>
+<ul>
+<li><p>switch B is open: (00)</p></li>
+<li><p>switch B is closed: (01)</p></li>
 </ul>
 </li>
-<li>switch A is closed:<ul>
-<li>switch B is open: (10)</li>
-<li>switch B is closed: (11)</li>
+<li><p>switch A is closed:</p>
+<ul>
+<li><p>switch B is open: (10)</p></li>
+<li><p>switch B is closed: (11)</p></li>
 </ul>
 </li>
 </ul>
-<p>With n switches, <img class="math" src="_images/math/d337c3294387cc79893f21514a2b0a51e3894ed2.svg" alt="2^n"/> different information may be encoded.</p>
+<p>With n switches, <img class="math" src="_images/math/838c06f1aefce2bcc7117386250b28efeb6a2e02.svg" alt="2^n" style="vertical-align: 0px"/> different information may be encoded.</p>
 <p>In informatics the elementary data that can be stored electronically is named a <strong>bit</strong> and can be set to <em>0</em> or <em>1</em>.</p>
 <p>8 bits are grouped to form a <strong>byte</strong>.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>How many bytes are necessary to encode 256 different information (i.e. for example to store one primary color in the RGB encoding) ?</p>
+</div>
 <div class="section" id="encoding-positive-integers">
-<h3>2.2.2.1. Encoding positive integers<a class="headerlink" href="#encoding-positive-integers" title="Permalink to this headline">¶</a></h3>
-<p>Binary encoding of positive integers is the more natural. Let us consider that the information to store is encoded on 8 bits (or 1 byte), the range of integer will be from 0 to <img class="math" src="_images/math/9ca2e8cb4a5ab2432970dc7b92fcccf1090a4d58.svg" alt="2^8 - 1 = 255"/>.</p>
-<table border="1" class="docutils">
+<h3><span class="section-number">2.2.2.1. </span>Encoding positive integers<a class="headerlink" href="#encoding-positive-integers" title="Permalink to this headline">¶</a></h3>
+<p>Binary encoding of positive integers is the more natural. Let us consider that the information to store is encoded on 8 bits (or 1 byte), the range of integer will be from 0 to <img class="math" src="_images/math/e2893b0151bb5371af2b78cee0df2f3c9f82e152.svg" alt="2^8 - 1 = 255" style="vertical-align: -1px"/>.</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col style="width: 35%" />
+<col style="width: 65%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">integer</th>
-<th class="head">binary encoding</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>integer</p></th>
+<th class="head"><p>binary encoding</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>00000000</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>00000000</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>00000001</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>00000001</p></td>
 </tr>
-<tr class="row-even"><td>2</td>
-<td>00000010</td>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>00000010</p></td>
 </tr>
-<tr class="row-odd"><td>3</td>
-<td>00000011</td>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>00000011</p></td>
 </tr>
-<tr class="row-even"><td>4</td>
-<td>00000100</td>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>00000100</p></td>
 </tr>
-<tr class="row-odd"><td>5</td>
-<td>00000101</td>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>00000101</p></td>
 </tr>
-<tr class="row-even"><td>…</td>
-<td>…</td>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
 </tr>
-<tr class="row-odd"><td>255</td>
-<td>11111111</td>
+<tr class="row-odd"><td><p>255</p></td>
+<td><p>11111111</p></td>
 </tr>
 </tbody>
 </table>
 <p>To generalize, every integer may be written as a sum of power of 2.</p>
 <div class="math">
-<p><img src="_images/math/356a3ace9c537658a003e463348fcac1b349a6d3.svg" alt="\forall i \in \mathbb{N}, i = b_0 2^0 + b_1 2^1 + b_2 2^2 + ... + b_n 2^n"/></p>
+<p><img src="_images/math/5c578d728063979ec95b929ee570a8684634de27.svg" alt="\forall i \in \mathbb{N}, i = b_0 2^0 + b_1 2^1 + b_2 2^2 + ... + b_n 2^n"/></p>
 </div><p>The binary representation of an integer is thus:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>bn</td>
-<td>…</td>
-<td>b2</td>
-<td>b1</td>
-<td>b0</td>
+<tbody>
+<tr class="row-odd"><td><p>bn</p></td>
+<td><p>…</p></td>
+<td><p>b2</p></td>
+<td><p>b1</p></td>
+<td><p>b0</p></td>
 </tr>
 </tbody>
 </table>
 <p>Integers are generally encoded on 4 bytes (32 bits).</p>
 <div class="section" id="convert-an-integer-in-binary">
-<h4>2.2.2.1.1. Convert an integer in binary<a class="headerlink" href="#convert-an-integer-in-binary" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.2.2.1.1. </span>Convert an integer in binary<a class="headerlink" href="#convert-an-integer-in-binary" title="Permalink to this headline">¶</a></h4>
 <p>To convert easily an integer in binary, a simple way is to apply successive entire division by 2. As example, let us consider the number 156:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="34%" />
-<col width="31%" />
-<col width="34%" />
+<col style="width: 34%" />
+<col style="width: 31%" />
+<col style="width: 34%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">operation</th>
-<th class="head">quotient</th>
-<th class="head">remainder</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>operation</p></th>
+<th class="head"><p>quotient</p></th>
+<th class="head"><p>remainder</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>156/2</td>
-<td>78</td>
-<td><strong>0</strong></td>
+<tbody>
+<tr class="row-even"><td><p>156/2</p></td>
+<td><p>78</p></td>
+<td><p><strong>0</strong></p></td>
 </tr>
-<tr class="row-odd"><td>78/2</td>
-<td>39</td>
-<td><strong>0</strong></td>
+<tr class="row-odd"><td><p>78/2</p></td>
+<td><p>39</p></td>
+<td><p><strong>0</strong></p></td>
 </tr>
-<tr class="row-even"><td>39/2</td>
-<td>19</td>
-<td><strong>1</strong></td>
+<tr class="row-even"><td><p>39/2</p></td>
+<td><p>19</p></td>
+<td><p><strong>1</strong></p></td>
 </tr>
-<tr class="row-odd"><td>19/2</td>
-<td>9</td>
-<td><strong>1</strong></td>
+<tr class="row-odd"><td><p>19/2</p></td>
+<td><p>9</p></td>
+<td><p><strong>1</strong></p></td>
 </tr>
-<tr class="row-even"><td>9/2</td>
-<td>4</td>
-<td><strong>1</strong></td>
+<tr class="row-even"><td><p>9/2</p></td>
+<td><p>4</p></td>
+<td><p><strong>1</strong></p></td>
 </tr>
-<tr class="row-odd"><td>4/2</td>
-<td>2</td>
-<td><strong>0</strong></td>
+<tr class="row-odd"><td><p>4/2</p></td>
+<td><p>2</p></td>
+<td><p><strong>0</strong></p></td>
 </tr>
-<tr class="row-even"><td>2/2</td>
-<td>1</td>
-<td><strong>0</strong></td>
+<tr class="row-even"><td><p>2/2</p></td>
+<td><p>1</p></td>
+<td><p><strong>0</strong></p></td>
 </tr>
-<tr class="row-odd"><td>1/2</td>
-<td>0</td>
-<td><strong>1</strong></td>
+<tr class="row-odd"><td><p>1/2</p></td>
+<td><p>0</p></td>
+<td><p><strong>1</strong></p></td>
 </tr>
 </tbody>
 </table>
-<p><img class="math" src="_images/math/ab9543fdece52bee74af22a32c3d6bd4c09ae8be.svg" alt="156 = 0 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 + 1 \times 2^4 + 0 \times 2^5 + 0 \times 2^6 + 1 \times 2^7"/></p>
+<p><img class="math" src="_images/math/94595a40fcd7dd7c9a93b1419053562146d72ac6.svg" alt="156 = 0 \times 2^0 + 0 \times 2^1 + 1 \times 2^2 + 1 \times 2^3 + 1 \times 2^4 + 0 \times 2^5 + 0 \times 2^6 + 1 \times 2^7" style="vertical-align: -1px"/></p>
 <blockquote>
-<div><table border="1" class="docutils">
+<div><table class="docutils align-default">
 <colgroup>
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
-<col width="13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
+<tbody>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">exercise</p>
+<p>How many bytes are necessary to store complete information of an image in full HD (1920 x 1080 colored pixels) ?</p>
+</div>
 </div>
 </div>
 <div class="section" id="encoding-negative-integers">
-<h3>2.2.2.2. Encoding negative integers<a class="headerlink" href="#encoding-negative-integers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.2.2. </span>Encoding negative integers<a class="headerlink" href="#encoding-negative-integers" title="Permalink to this headline">¶</a></h3>
 <p>Several methods exist to encode a negative number, but the more efficient is those using the two’s complement and act in three steps:</p>
 <ol class="arabic simple">
-<li>The absolute value of the number is encoded in binary.</li>
-<li>All bits are reversed (0 becomes 1 and reversely).</li>
-<li>1 is added to the result.</li>
+<li><p>The absolute value of the number is encoded in binary.</p></li>
+<li><p>All bits are reversed (0 becomes 1 and reversely).</p></li>
+<li><p>1 is added to the result.</p></li>
 </ol>
 <p>As example, the negative number -42 will be encoding by these three steps:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="22%" />
-<col width="11%" />
-<col width="11%" />
-<col width="11%" />
-<col width="11%" />
-<col width="11%" />
-<col width="11%" />
-<col width="11%" />
+<col style="width: 22%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&#160;</th>
-<th class="head">b6</th>
-<th class="head">b5</th>
-<th class="head">b4</th>
-<th class="head">b3</th>
-<th class="head">b2</th>
-<th class="head">b1</th>
-<th class="head">b0</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>b6</p></th>
+<th class="head"><p>b5</p></th>
+<th class="head"><p>b4</p></th>
+<th class="head"><p>b3</p></th>
+<th class="head"><p>b2</p></th>
+<th class="head"><p>b1</p></th>
+<th class="head"><p>b0</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>step 1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td><p>step 1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>step 2</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-odd"><td><p>step 2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>step 3</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-even"><td><p>step 3</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="encoding-real-numbers">
-<h3>2.2.2.3. Encoding real numbers<a class="headerlink" href="#encoding-real-numbers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.2.2.3. </span>Encoding real numbers<a class="headerlink" href="#encoding-real-numbers" title="Permalink to this headline">¶</a></h3>
 <p>Real number are encoded thanks to the IEEE754 standard using 32 bits (4 bytes). The objective is to express the real number using a scientific representation in binary. The steps are:</p>
 <ol class="arabic simple">
-<li>The real number is decomposed in power of 2 the entire and decimal part of the real number.</li>
-<li>The binary encoding is then normalized in scientific form.</li>
-<li>The first bit is used for the sign (0 for positive real number). The mantissa is using 23 bits and the exponent is augmented by 127 and encoded on 8 bits.</li>
+<li><p>The real number is decomposed in power of 2 the entire and decimal part of the real number.</p></li>
+<li><p>The binary encoding is then normalized in scientific form.</p></li>
+<li><p>The first bit is used for the sign (0 for positive real number). The mantissa is using 23 bits and the exponent is augmented by 127 and encoded on 8 bits.</p></li>
 </ol>
 <p>Let us take an example: the number 197,75.</p>
 <div class="math">
-<p><img src="_images/math/6ce9b0795ab4f4f7f06a621b5efba9e77e23449a.svg" alt="\[
+<p><img src="_images/math/36a07cddf2205f66f2ae4977049050994382205d.svg" alt="\[
 \begin{array}{ccc}
     197,75 &amp; = &amp; 128 + 64 + 4 + 1 , 0.5 + 0.25 \\
            &amp; = &amp; 2^7 + 2^6 + 2^2 + 2^0, 2^{-1} + 2^{-2} \\
@@ -456,22 +469,22 @@ For example, a unique switch is able to encode 2 different information:</p>
 \end{array}
 \]"/></p>
 </div><p>The binary representation of 197,75 is then:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="38%" />
-<col width="42%" />
+<col style="width: 20%" />
+<col style="width: 38%" />
+<col style="width: 42%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">sign (b31)</th>
-<th class="head">exponent (b23 to b30)</th>
-<th class="head">mantissa (b0 to b22)</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>sign (b31)</p></th>
+<th class="head"><p>exponent (b23 to b30)</p></th>
+<th class="head"><p>mantissa (b0 to b22)</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>10000110</td>
-<td>10001011100000000000000</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>10000110</p></td>
+<td><p>10001011100000000000000</p></td>
 </tr>
 </tbody>
 </table>
@@ -499,11 +512,19 @@ For example, a unique switch is able to encode 2 different information:</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -514,7 +535,6 @@ For example, a unique switch is able to encode 2 different information:</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

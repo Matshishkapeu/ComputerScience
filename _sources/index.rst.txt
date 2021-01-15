@@ -34,6 +34,7 @@ This course is decomposed in 7 chapters, treating different subjects of informat
    chap5_arduino_Chap
    chap6_python_Chap
    chap7_C++_Chap
+   zBibliography
 
 Table of contents
 =================

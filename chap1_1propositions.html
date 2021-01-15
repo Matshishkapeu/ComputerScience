@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="2.2. Binary encoding" href="chap1_2binaryEncoding.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -126,12 +127,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -170,11 +173,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap1_binaryLogic_Chap.html">2. Binary logic</a> &raquo;</li>
+          <li><a href="chap1_binaryLogic_Chap.html"><span class="section-number">2. </span>Binary logic</a> &raquo;</li>
         
-      <li>2.1. Propositional Logic</li>
+      <li><span class="section-number">2.1. </span>Propositional Logic</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -194,11 +197,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="propositional-logic">
-<h1>2.1. Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.1. </span>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Permalink to this headline">¶</a></h1>
 <p>Propositional logic is a branch of logic. It helps to formalize logical problems and to solve it. It also provides the prerequisites to understand the basics of how the integrated circuits used in our computers work.
 This lesson presents the logical approach and introduces the Boolean algebra.</p>
 <div class="section" id="intuitive-approach">
-<h2>2.1.1. Intuitive approach<a class="headerlink" href="#intuitive-approach" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.1. </span>Intuitive approach<a class="headerlink" href="#intuitive-approach" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>proposition</strong> (also named <strong>statement</strong>) can be <em>true</em> or <em>false</em>. Here are presented some examples of propositions:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1 + 1 = 2
 1 + 1 = 3
@@ -208,12 +211,12 @@ Marseille is the capital of France
 </pre></div>
 </div>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
+<p class="admonition-title">Caution</p>
 <p>Following statements are not propositions:</p>
-<blockquote class="last">
+<blockquote>
 <div><ul class="simple">
-<li>1 + x = 2  (x being a variable, it is a predicate).</li>
-<li>this sentence is false  (this can not be true or false).</li>
+<li><p>1 + x = 2  (x being a variable, it is a predicate).</p></li>
+<li><p>this sentence is false  (this can not be true or false).</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -222,77 +225,93 @@ Marseille is the capital of France
 The cat is sleeping OR the mouse is happy
 </pre></div>
 </div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Precise if the following sentences are propositions:</p>
+<ul class="simple">
+<li><p>Monkey walk on the moon</p></li>
+<li><p>A square has 5 sides</p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="propositional-syntax">
-<h2>2.1.2. Propositional syntax<a class="headerlink" href="#propositional-syntax" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.2. </span>Propositional syntax<a class="headerlink" href="#propositional-syntax" title="Permalink to this headline">¶</a></h2>
 <p>The syntax gives the rules on how to form new propositions using simple statements. This can be seen as the “grammar” of propositional logic.</p>
 <div class="section" id="proposition-constant">
-<h3>2.1.2.1. Proposition constant<a class="headerlink" href="#proposition-constant" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2.1. </span>Proposition constant<a class="headerlink" href="#proposition-constant" title="Permalink to this headline">¶</a></h3>
 <p>We call <strong>proposition constant</strong> (or <strong>logical constant</strong>) a variable belonging to the <strong>Boolean domain</strong> that contains exactly two values:</p>
 <div class="math">
-<p><img src="_images/math/595e079474eade6d1f86acb6956c9e1f8b228876.svg" alt="\mathbf{B} = \{true, false\} = \{0, 1\}"/></p>
+<p><img src="_images/math/e90946795148bb62d0c137e1463cb74c7fd61cf5.svg" alt="\mathbf{B} = \{true, false\} = \{0, 1\}"/></p>
 </div></div>
 <div class="section" id="compounds-propositions">
-<h3>2.1.2.2. Compounds propositions<a class="headerlink" href="#compounds-propositions" title="Permalink to this headline">¶</a></h3>
-<p>If a proposition constant can be either <em>true</em> (1) or <em>false</em> (0), they can be combined to form new propositions. These new propositions are obtained thanks to different operators: <img class="math" src="_images/math/56ca123698b42bd68130e061beb1a752b81f77de.svg" alt="\lnot"/>, <img class="math" src="_images/math/3e07e4974841ed5227a4e1a71643e78e51a11530.svg" alt="\land"/>, <img class="math" src="_images/math/e9e6f60409b47ef34cda0dfa4ebf5c9493d785af.svg" alt="\lor"/>, <img class="math" src="_images/math/dba201042399067d132d07fb623ec34823682ff1.svg" alt="\Rightarrow"/>, <img class="math" src="_images/math/b6596e1e2bb4c0d8eb499f66b32b4c692e1226f9.svg" alt="\Leftrightarrow"/> and <img class="math" src="_images/math/71aa93f6f482a3c8f808373e78072d3217161411.svg" alt="\oplus"/>.</p>
-<p>As example, if <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/>, <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> and <img class="math" src="_images/math/d6ce91cdb456a31a526334901a14ca60775adb84.svg" alt="r"/> are three proposition constants, we can build thanks to preceeding operators a new compound proposition F also named <strong>propositional formula</strong>:</p>
+<h3><span class="section-number">2.1.2.2. </span>Compounds propositions<a class="headerlink" href="#compounds-propositions" title="Permalink to this headline">¶</a></h3>
+<p>If a proposition constant can be either <em>true</em> (1) or <em>false</em> (0), they can be combined to form new propositions. These new propositions are obtained thanks to different operators: <img class="math" src="_images/math/6f973b0562f50543ecd5ab046ec6f24f19ae5554.svg" alt="\lnot" style="vertical-align: 0px"/>, <img class="math" src="_images/math/272191715c4694e34b5f3f92211d1cb92069e1e8.svg" alt="\land" style="vertical-align: 0px"/>, <img class="math" src="_images/math/c31b472d01ea30c5feb7ec36ebde560e229c0e2f.svg" alt="\lor" style="vertical-align: 0px"/>, <img class="math" src="_images/math/62d0768f75747c33493cbbd6438df1b5a05b1c33.svg" alt="\Rightarrow" style="vertical-align: 0px"/>, <img class="math" src="_images/math/ec32086647acb7ed742600ba9315294a97b48f20.svg" alt="\Leftrightarrow" style="vertical-align: 0px"/> and <img class="math" src="_images/math/d511710a6d5a7e9e0c6bab990a6403e25a626a52.svg" alt="\oplus" style="vertical-align: -1px"/>.</p>
+<p>As example, if <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/>, <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> and <img class="math" src="_images/math/ba23040c851c2d429485b49ea3e4355079c5c4c6.svg" alt="r" style="vertical-align: 0px"/> are three proposition constants, we can build thanks to preceeding operators a new compound proposition F also named <strong>propositional formula</strong>:</p>
 <div class="math" id="equation-formula-ex">
-<p><span class="eqno">(2.1)<a class="headerlink" href="#equation-formula-ex" title="Permalink to this equation">¶</a></span><img src="_images/math/f56c90f5a3956c54fe68a8409842f153f9327b4d.svg" alt="F = ((p\land q) \lor (\lnot r)) \Rightarrow p"/></p>
+<p><span class="eqno">(2.1)<a class="headerlink" href="#equation-formula-ex" title="Permalink to this equation">¶</a></span><img src="_images/math/5146596fe7dea2b80349b6bd9cbaca1b35e32c76.svg" alt="F = ((p\land q) \lor (\lnot r)) \Rightarrow p"/></p>
 </div></div>
 <div class="section" id="vocabulary-and-language">
-<h3>2.1.2.3. Vocabulary and language<a class="headerlink" href="#vocabulary-and-language" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2.3. </span>Vocabulary and language<a class="headerlink" href="#vocabulary-and-language" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>propositional vocabulary</strong> is a set of proposition constants. The set of all compound propositions that can be formed using a vocabulary is named <strong>propositional language</strong>.</p>
-<p>The propositional formula of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>: is a compound propositions belonging to the language formed by the vocabulary <img class="math" src="_images/math/c95b29808f7f2fbc0b2f6889c764f85eadac437f.svg" alt="\{p,q,r\}"/>.</p>
+<p>The propositional formula of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>: is a compound propositions belonging to the language formed by the vocabulary <img class="math" src="_images/math/39cff51a1fa66242044f464aa6367e1fb9407756.svg" alt="\{p,q,r\}" style="vertical-align: -4px"/>.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>Do the following propositional formulas belong to the propositional language using the vocabulary <img class="math" src="_images/math/39cff51a1fa66242044f464aa6367e1fb9407756.svg" alt="\{p,q,r\}" style="vertical-align: -4px"/> ?</p>
+<ul class="simple">
+<li><p><img class="math" src="_images/math/19753cb5d2efd2ccbb5eb97767100219605c10a8.svg" alt="F_1 = p \Leftrightarrow r" style="vertical-align: -3px"/></p></li>
+<li><p><img class="math" src="_images/math/bb2ba9691037f8c428ad288890e03b06040859cd.svg" alt="F_2 = r \Rightarrow q \land \lnot s" style="vertical-align: -3px"/></p></li>
+</ul>
+</div>
 </div>
 <div class="section" id="tree-representation">
-<h3>2.1.2.4. Tree representation<a class="headerlink" href="#tree-representation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2.4. </span>Tree representation<a class="headerlink" href="#tree-representation" title="Permalink to this headline">¶</a></h3>
 <p>A propositional formula can also be represented by a tree structure. Here is presented the tree representation of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>:</p>
 <div class="figure align-center" id="id1">
 <span id="fig-chap1-arbre"></span><a class="reference internal image-reference" href="_images/arbre.png"><img alt="_images/arbre.png" src="_images/arbre.png" style="width: 247.0px; height: 232.0px;" /></a>
-<p class="caption"><span class="caption-number">Figure 2.1:  </span><span class="caption-text">Tree representation for example of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>.</span></p>
+<p class="caption"><span class="caption-number">Figure 2.1:  </span><span class="caption-text">Tree representation for example of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="operator-precedence">
-<h3>2.1.2.5. Operator precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2.5. </span>Operator precedence<a class="headerlink" href="#operator-precedence" title="Permalink to this headline">¶</a></h3>
 <p>To simplify writting of propositional formulae and limit usage of parenthesis, an operator precedence is defined:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="65%" />
-<col width="35%" />
+<col style="width: 65%" />
+<col style="width: 35%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">operator</th>
-<th class="head">precedence</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>operator</p></th>
+<th class="head"><p>precedence</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><img class="math" src="_images/math/56ca123698b42bd68130e061beb1a752b81f77de.svg" alt="\lnot"/></td>
-<td>5</td>
+<tbody>
+<tr class="row-even"><td><p><img class="math" src="_images/math/6f973b0562f50543ecd5ab046ec6f24f19ae5554.svg" alt="\lnot" style="vertical-align: 0px"/></p></td>
+<td><p>5</p></td>
 </tr>
-<tr class="row-odd"><td><img class="math" src="_images/math/3e07e4974841ed5227a4e1a71643e78e51a11530.svg" alt="\land"/></td>
-<td>4</td>
+<tr class="row-odd"><td><p><img class="math" src="_images/math/272191715c4694e34b5f3f92211d1cb92069e1e8.svg" alt="\land" style="vertical-align: 0px"/></p></td>
+<td><p>4</p></td>
 </tr>
-<tr class="row-even"><td><img class="math" src="_images/math/e9e6f60409b47ef34cda0dfa4ebf5c9493d785af.svg" alt="\lor"/></td>
-<td>3</td>
+<tr class="row-even"><td><p><img class="math" src="_images/math/c31b472d01ea30c5feb7ec36ebde560e229c0e2f.svg" alt="\lor" style="vertical-align: 0px"/></p></td>
+<td><p>3</p></td>
 </tr>
-<tr class="row-odd"><td><img class="math" src="_images/math/71aa93f6f482a3c8f808373e78072d3217161411.svg" alt="\oplus"/></td>
-<td>2</td>
+<tr class="row-odd"><td><p><img class="math" src="_images/math/d511710a6d5a7e9e0c6bab990a6403e25a626a52.svg" alt="\oplus" style="vertical-align: -1px"/></p></td>
+<td><p>2</p></td>
 </tr>
-<tr class="row-even"><td><img class="math" src="_images/math/dba201042399067d132d07fb623ec34823682ff1.svg" alt="\Rightarrow"/>, <img class="math" src="_images/math/b6596e1e2bb4c0d8eb499f66b32b4c692e1226f9.svg" alt="\Leftrightarrow"/></td>
-<td>1</td>
+<tr class="row-even"><td><p><img class="math" src="_images/math/62d0768f75747c33493cbbd6438df1b5a05b1c33.svg" alt="\Rightarrow" style="vertical-align: 0px"/>, <img class="math" src="_images/math/ec32086647acb7ed742600ba9315294a97b48f20.svg" alt="\Leftrightarrow" style="vertical-align: 0px"/></p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="propositional-semantics">
-<h2>2.1.3. Propositional semantics<a class="headerlink" href="#propositional-semantics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.3. </span>Propositional semantics<a class="headerlink" href="#propositional-semantics" title="Permalink to this headline">¶</a></h2>
 <p>Once the syntax being define (rules of grammar), the “meanings” of the symbol used is then defined. This is named <strong>semantics</strong>.</p>
 <div class="section" id="truth-assignment">
-<h3>2.1.3.1. Truth assignment<a class="headerlink" href="#truth-assignment" title="Permalink to this headline">¶</a></h3>
-<p>If we consider a propositional vocabulary <img class="math" src="_images/math/701746dcc30b1fd174c1906ea020aa09715389c9.svg" alt="\mathcal{V}=\{ p_1, p_2, ..., p_n \}"/> of <img class="math" src="_images/math/fb461f04d226fe3084ad376fc3bd57ebe410c415.svg" alt="n"/> propositional constants, we call a <strong>truth assignment</strong> an application such that:</p>
+<h3><span class="section-number">2.1.3.1. </span>Truth assignment<a class="headerlink" href="#truth-assignment" title="Permalink to this headline">¶</a></h3>
+<p>If we consider a propositional vocabulary <img class="math" src="_images/math/b27cf930ddadaf06e3449c41a9b2c9283ca787c5.svg" alt="\mathcal{V}=\{ p_1, p_2, ..., p_n \}" style="vertical-align: -4px"/> of <img class="math" src="_images/math/fca97c34599a4c7389abdb23260fdc11729fe611.svg" alt="n" style="vertical-align: 0px"/> propositional constants, we call a <strong>truth assignment</strong> an application such that:</p>
 <div class="math">
-<p><img src="_images/math/d85f8d238d91600510d73d309585fb27280e14a2.svg" alt="\[
+<p><img src="_images/math/bff326d15ed1bebb01df88c175793f391cd9b673.svg" alt="\[
 \begin{array}{cccc}
   \sigma: &amp; \mathcal{V} &amp; \to &amp; \mathbf{B} \\
           &amp;   p_1  &amp; \mapsto &amp; ... \\
@@ -301,233 +320,237 @@ The cat is sleeping OR the mouse is happy
           &amp;   p_n  &amp; \mapsto &amp; ...
 \end{array}
 \]"/></p>
-</div><p>For example, we will write that <img class="math" src="_images/math/546df63b3478f1e8f7881da3433627e3510d2d1f.svg" alt="(p = 1, q=0, r=1)"/> is a possible truth assignment of vocabulary <img class="math" src="_images/math/24d3c8f335da8600c28ffe9fc526bc2a4b1d9bfd.svg" alt="\mathcal{V}=\{ p,q,r \}"/>.</p>
+</div><p>For example, we will write that <img class="math" src="_images/math/d51379ccf0083d654f0818ca7ec4cd8685d50da2.svg" alt="(p = 1, q=0, r=1)" style="vertical-align: -4px"/> is a possible truth assignment of vocabulary <img class="math" src="_images/math/582b3157c2d3e32f21cd9219e187fef945708cf1.svg" alt="\mathcal{V}=\{ p,q,r \}" style="vertical-align: -4px"/>.</p>
 <ul class="simple">
-<li>For <img class="math" src="_images/math/3e948a23098e8cd632bf0731e991f4a23855c9d3.svg" alt="n=1"/>, there are 2 possible truth assignments,</li>
-<li>For <img class="math" src="_images/math/1a4bffec40af9d31114ddbe1347717ff82c41256.svg" alt="n=2"/>, there are 4 possible truth assignments,</li>
-<li>…</li>
-<li>For <img class="math" src="_images/math/fb461f04d226fe3084ad376fc3bd57ebe410c415.svg" alt="n"/>, there are <img class="math" src="_images/math/d337c3294387cc79893f21514a2b0a51e3894ed2.svg" alt="2^n"/> possible truth assignments,</li>
+<li><p>For <img class="math" src="_images/math/01162578cd169a806023fff86ce04cc6df76f9c1.svg" alt="n=1" style="vertical-align: 0px"/>, there are 2 possible truth assignments,</p></li>
+<li><p>For <img class="math" src="_images/math/99f4a0e9b1de979b0f317fcd657ca44d9f9c44f8.svg" alt="n=2" style="vertical-align: 0px"/>, there are 4 possible truth assignments,</p></li>
+<li><p>…</p></li>
+<li><p>For <img class="math" src="_images/math/fca97c34599a4c7389abdb23260fdc11729fe611.svg" alt="n" style="vertical-align: 0px"/>, there are <img class="math" src="_images/math/838c06f1aefce2bcc7117386250b28efeb6a2e02.svg" alt="2^n" style="vertical-align: 0px"/> possible truth assignments,</p></li>
 </ul>
 <p>The complexity is exponential. To be understand here as “explosive”.</p>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>If we consider a vocabulary composed with 8 propositional constants, what is the total number of possible truth assignments?</p>
+</div>
 </div>
 <div class="section" id="definition-of-logical-operators">
-<h3>2.1.3.2. Definition of logical operators<a class="headerlink" href="#definition-of-logical-operators" title="Permalink to this headline">¶</a></h3>
-<p>A semantic is given to each operators: <img class="math" src="_images/math/56ca123698b42bd68130e061beb1a752b81f77de.svg" alt="\lnot"/>, <img class="math" src="_images/math/3e07e4974841ed5227a4e1a71643e78e51a11530.svg" alt="\land"/>, <img class="math" src="_images/math/e9e6f60409b47ef34cda0dfa4ebf5c9493d785af.svg" alt="\lor"/>, <img class="math" src="_images/math/dba201042399067d132d07fb623ec34823682ff1.svg" alt="\Rightarrow"/>, <img class="math" src="_images/math/b6596e1e2bb4c0d8eb499f66b32b4c692e1226f9.svg" alt="\Leftrightarrow"/> and <img class="math" src="_images/math/71aa93f6f482a3c8f808373e78072d3217161411.svg" alt="\oplus"/></p>
+<h3><span class="section-number">2.1.3.2. </span>Definition of logical operators<a class="headerlink" href="#definition-of-logical-operators" title="Permalink to this headline">¶</a></h3>
+<p>A semantic is given to each operators: <img class="math" src="_images/math/6f973b0562f50543ecd5ab046ec6f24f19ae5554.svg" alt="\lnot" style="vertical-align: 0px"/>, <img class="math" src="_images/math/272191715c4694e34b5f3f92211d1cb92069e1e8.svg" alt="\land" style="vertical-align: 0px"/>, <img class="math" src="_images/math/c31b472d01ea30c5feb7ec36ebde560e229c0e2f.svg" alt="\lor" style="vertical-align: 0px"/>, <img class="math" src="_images/math/62d0768f75747c33493cbbd6438df1b5a05b1c33.svg" alt="\Rightarrow" style="vertical-align: 0px"/>, <img class="math" src="_images/math/ec32086647acb7ed742600ba9315294a97b48f20.svg" alt="\Leftrightarrow" style="vertical-align: 0px"/> and <img class="math" src="_images/math/d511710a6d5a7e9e0c6bab990a6403e25a626a52.svg" alt="\oplus" style="vertical-align: -1px"/></p>
 <div class="section" id="negation">
-<h4>2.1.3.2.1. Negation<a class="headerlink" href="#negation" title="Permalink to this headline">¶</a></h4>
-<p>This is the only unitary operator (working with a unique proposition) noted <img class="math" src="_images/math/240c2a15820af88bf23cd3cf397c282846c885fe.svg" alt="\lnot p"/>. The truth table for negation (NOT) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.1. </span>Negation<a class="headerlink" href="#negation" title="Permalink to this headline">¶</a></h4>
+<p>This is the only unitary operator (working with a unique proposition) noted <img class="math" src="_images/math/28097481cf65fb6bfeed6c9eb20ba75e01633464.svg" alt="\lnot p" style="vertical-align: -3px"/>. The truth table for negation (NOT) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="39%" />
-<col width="61%" />
+<col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/240c2a15820af88bf23cd3cf397c282846c885fe.svg" alt="\lnot p"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/28097481cf65fb6bfeed6c9eb20ba75e01633464.svg" alt="\lnot p" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>1</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>0</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
-<p>It is interesting to remark that <img class="math" src="_images/math/6bbe0e3f8e0d8809dc886ad82e3ee963086835c2.svg" alt="\lnot\lnot p = p"/></p>
+<p>It is interesting to remark that <img class="math" src="_images/math/e65f90fe515b275fca6f8f8f05f015763b719be4.svg" alt="\lnot\lnot p = p" style="vertical-align: -3px"/></p>
 </div>
 <div class="section" id="conjunction-land">
-<h4>2.1.3.2.2. Conjunction <img class="math" src="_images/math/3e07e4974841ed5227a4e1a71643e78e51a11530.svg" alt="\land"/><a class="headerlink" href="#conjunction-land" title="Permalink to this headline">¶</a></h4>
-<p>Conjunction of two propositions <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is noted <img class="math" src="_images/math/364f5efb7d55511403d0cb8dbdeb08b6125c7643.svg" alt="p \land q"/>. Evaluation of this propositional formula is <em>true</em> only if <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> are <em>true</em>. The corresponding truth table for conjunction (AND) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.2. </span>Conjunction <img class="math" src="_images/math/272191715c4694e34b5f3f92211d1cb92069e1e8.svg" alt="\land" style="vertical-align: 0px"/><a class="headerlink" href="#conjunction-land" title="Permalink to this headline">¶</a></h4>
+<p>Conjunction of two propositions <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is noted <img class="math" src="_images/math/184650c1a924827975f669ba8bda6f6fe20841e8.svg" alt="p \land q" style="vertical-align: -3px"/>. Evaluation of this propositional formula is <em>true</em> only if <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> are <em>true</em>. The corresponding truth table for conjunction (AND) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="27%" />
-<col width="27%" />
-<col width="46%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 46%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/364f5efb7d55511403d0cb8dbdeb08b6125c7643.svg" alt="p \land q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/184650c1a924827975f669ba8bda6f6fe20841e8.svg" alt="p \land q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>0</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="disjunction-lor">
-<h4>2.1.3.2.3. Disjunction <img class="math" src="_images/math/e9e6f60409b47ef34cda0dfa4ebf5c9493d785af.svg" alt="\lor"/><a class="headerlink" href="#disjunction-lor" title="Permalink to this headline">¶</a></h4>
-<p>Disjunction of two propositions <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is noted <img class="math" src="_images/math/983070e8a9d9464cbf04ffac6de94bfcd65963b5.svg" alt="p \lor q"/>. Evaluation of this propositional formula is <em>false</em> only if <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> are <em>false</em>. The corresponding truth table for disjunction (OR) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.3. </span>Disjunction <img class="math" src="_images/math/c31b472d01ea30c5feb7ec36ebde560e229c0e2f.svg" alt="\lor" style="vertical-align: 0px"/><a class="headerlink" href="#disjunction-lor" title="Permalink to this headline">¶</a></h4>
+<p>Disjunction of two propositions <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is noted <img class="math" src="_images/math/0c02755af3da61091ccc46227eda9792a12d980d.svg" alt="p \lor q" style="vertical-align: -3px"/>. Evaluation of this propositional formula is <em>false</em> only if <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> are <em>false</em>. The corresponding truth table for disjunction (OR) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="27%" />
-<col width="27%" />
-<col width="46%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 46%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/983070e8a9d9464cbf04ffac6de94bfcd65963b5.svg" alt="p \lor q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/0c02755af3da61091ccc46227eda9792a12d980d.svg" alt="p \lor q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="exclusive-disjunction-oplus">
-<h4>2.1.3.2.4. Exclusive disjunction <img class="math" src="_images/math/71aa93f6f482a3c8f808373e78072d3217161411.svg" alt="\oplus"/><a class="headerlink" href="#exclusive-disjunction-oplus" title="Permalink to this headline">¶</a></h4>
-<p>The exclusive disjunction of two propositions <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is noted <img class="math" src="_images/math/e7f52941504a3e11f2819671b2891298f4bfcb1a.svg" alt="p \oplus q"/>. Evaluation of this propositional formula is <em>true</em> if only one of <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is <em>true</em>. The corresponding truth table for exclusive disjunction (XOR) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.4. </span>Exclusive disjunction <img class="math" src="_images/math/d511710a6d5a7e9e0c6bab990a6403e25a626a52.svg" alt="\oplus" style="vertical-align: -1px"/><a class="headerlink" href="#exclusive-disjunction-oplus" title="Permalink to this headline">¶</a></h4>
+<p>The exclusive disjunction of two propositions <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is noted <img class="math" src="_images/math/d770b4e11ec0c47dec0f7a7ad8158a2285be2f20.svg" alt="p \oplus q" style="vertical-align: -3px"/>. Evaluation of this propositional formula is <em>true</em> if only one of <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is <em>true</em>. The corresponding truth table for exclusive disjunction (XOR) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="26%" />
-<col width="26%" />
-<col width="49%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+<col style="width: 49%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/e7f52941504a3e11f2819671b2891298f4bfcb1a.svg" alt="p \oplus q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/d770b4e11ec0c47dec0f7a7ad8158a2285be2f20.svg" alt="p \oplus q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="implication-rightarrow">
-<h4>2.1.3.2.5. Implication <img class="math" src="_images/math/dba201042399067d132d07fb623ec34823682ff1.svg" alt="\Rightarrow"/><a class="headerlink" href="#implication-rightarrow" title="Permalink to this headline">¶</a></h4>
-<p>Implication between two propositions <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is noted <img class="math" src="_images/math/0bc5192bc3258325e44f598c9ce08f046cc5de41.svg" alt="p \Rightarrow q"/>. Evaluation of this propositional formula is <em>false</em> only if <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> is <em>true</em> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is <em>false</em>. The corresponding truth table for implication (IMPLY) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.5. </span>Implication <img class="math" src="_images/math/62d0768f75747c33493cbbd6438df1b5a05b1c33.svg" alt="\Rightarrow" style="vertical-align: 0px"/><a class="headerlink" href="#implication-rightarrow" title="Permalink to this headline">¶</a></h4>
+<p>Implication between two propositions <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is noted <img class="math" src="_images/math/2e62098ff74380f6ea5d735c5ba54fa607c843a4.svg" alt="p \Rightarrow q" style="vertical-align: -3px"/>. Evaluation of this propositional formula is <em>false</em> only if <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> is <em>true</em> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is <em>false</em>. The corresponding truth table for implication (IMPLY) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="23%" />
-<col width="23%" />
-<col width="53%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+<col style="width: 53%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/0bc5192bc3258325e44f598c9ce08f046cc5de41.svg" alt="p \Rightarrow q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/2e62098ff74380f6ea5d735c5ba54fa607c843a4.svg" alt="p \Rightarrow q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>1</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>0</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="biconditional-leftrightarrow">
-<h4>2.1.3.2.6. Biconditional <img class="math" src="_images/math/b6596e1e2bb4c0d8eb499f66b32b4c692e1226f9.svg" alt="\Leftrightarrow"/><a class="headerlink" href="#biconditional-leftrightarrow" title="Permalink to this headline">¶</a></h4>
-<p>Biconditional between two propositions <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is noted <img class="math" src="_images/math/607e21b97a27adef5e455e44fa627e63a3716ec1.svg" alt="p \Leftrightarrow q"/>. Evaluation of this propositional formula is <em>false</em> if only one of <img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/> and <img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/> is <em>false</em>. The corresponding truth table for Biconditional (XNOR) is:</p>
-<table border="1" class="docutils">
+<h4><span class="section-number">2.1.3.2.6. </span>Biconditional <img class="math" src="_images/math/ec32086647acb7ed742600ba9315294a97b48f20.svg" alt="\Leftrightarrow" style="vertical-align: 0px"/><a class="headerlink" href="#biconditional-leftrightarrow" title="Permalink to this headline">¶</a></h4>
+<p>Biconditional between two propositions <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is noted <img class="math" src="_images/math/0136a5237a2a654e1eb65a7d14da42302caf4db0.svg" alt="p \Leftrightarrow q" style="vertical-align: -3px"/>. Evaluation of this propositional formula is <em>false</em> if only one of <img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/> and <img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/> is <em>false</em>. The corresponding truth table for Biconditional (XNOR) is:</p>
+<table class="docutils align-default">
 <colgroup>
-<col width="22%" />
-<col width="22%" />
-<col width="57%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 57%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/607e21b97a27adef5e455e44fa627e63a3716ec1.svg" alt="p \Leftrightarrow q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/0136a5237a2a654e1eb65a7d14da42302caf4db0.svg" alt="p \Leftrightarrow q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>1</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>0</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="other-notations-for-operators">
-<h3>2.1.3.3. Other notations for operators<a class="headerlink" href="#other-notations-for-operators" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3.3. </span>Other notations for operators<a class="headerlink" href="#other-notations-for-operators" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes, other notations can be found for operators:</p>
 <ul class="simple">
-<li><img class="math" src="_images/math/240c2a15820af88bf23cd3cf397c282846c885fe.svg" alt="\lnot p"/> can also be written <img class="math" src="_images/math/e1da7d549fc0429096f9f4e233a786ffdb89bf3b.svg" alt="\overline p"/></li>
-<li><img class="math" src="_images/math/364f5efb7d55511403d0cb8dbdeb08b6125c7643.svg" alt="p \land q"/> can also be written <img class="math" src="_images/math/3758ed0a891d900624e3c167bfb27264807b3212.svg" alt="p \cdot q"/></li>
-<li><img class="math" src="_images/math/983070e8a9d9464cbf04ffac6de94bfcd65963b5.svg" alt="p \lor q"/> can also be written <img class="math" src="_images/math/131f2491c22a786a6e9f835a6d60c5920ebebd67.svg" alt="p + q"/></li>
+<li><p><img class="math" src="_images/math/28097481cf65fb6bfeed6c9eb20ba75e01633464.svg" alt="\lnot p" style="vertical-align: -3px"/> can also be written <img class="math" src="_images/math/40794983176d47cb382bdd1a564feeedc4cca295.svg" alt="\overline p" style="vertical-align: -3px"/></p></li>
+<li><p><img class="math" src="_images/math/184650c1a924827975f669ba8bda6f6fe20841e8.svg" alt="p \land q" style="vertical-align: -3px"/> can also be written <img class="math" src="_images/math/394425e46271a383f9870ad31a359113fc75576f.svg" alt="p \cdot q" style="vertical-align: -3px"/></p></li>
+<li><p><img class="math" src="_images/math/0c02755af3da61091ccc46227eda9792a12d980d.svg" alt="p \lor q" style="vertical-align: -3px"/> can also be written <img class="math" src="_images/math/4e5521eed335bbd87de0b39d27ac9aa82e3a68b2.svg" alt="p + q" style="vertical-align: -3px"/></p></li>
 </ul>
 </div>
 <div class="section" id="evaluation-of-a-compound-proposition">
-<h3>2.1.3.4. Evaluation of a compound proposition<a class="headerlink" href="#evaluation-of-a-compound-proposition" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3.4. </span>Evaluation of a compound proposition<a class="headerlink" href="#evaluation-of-a-compound-proposition" title="Permalink to this headline">¶</a></h3>
 <p><strong>Evaluate</strong> a compound proposition consists in determining the truth value of the compound proposition given a truth assignment.</p>
-<p>This is done in practice by replacing proposition constants by there values in formula. For example, the evaluation of compound proposition <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> under the truth assignment <img class="math" src="_images/math/a62d0a6a1f310550f995c76abfeb5667391b5786.svg" alt="(p = 0, q=1, r=0)"/> is :</p>
+<p>This is done in practice by replacing proposition constants by there values in formula. For example, the evaluation of compound proposition <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> under the truth assignment <img class="math" src="_images/math/96b792aa85e2f8dd85c2fe2ba816c448226daaac.svg" alt="(p = 0, q=1, r=0)" style="vertical-align: -4px"/> is :</p>
 <div class="math">
-<p><img src="_images/math/c5947cdb68b2a462428250ca6ce14d8ba3bbc97c.svg" alt="\[
+<p><img src="_images/math/7009de79f99d8c771359a976b118ab309b734b0a.svg" alt="\[
 \begin{array}{cc}
   F = &amp; ((p\land q) \lor (\lnot r)) \Rightarrow p \\
   &amp; ((0\land 1) \lor (\lnot 0)) \Rightarrow 0 \\
@@ -536,152 +559,156 @@ The cat is sleeping OR the mouse is happy
   &amp; 0
 \end{array}
 \]"/></p>
-</div><p>The evaluation of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> under the truth assignment <img class="math" src="_images/math/a62d0a6a1f310550f995c76abfeb5667391b5786.svg" alt="(p = 0, q=1, r=0)"/> is <em>false</em>.</p>
+</div><p>The evaluation of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> under the truth assignment <img class="math" src="_images/math/96b792aa85e2f8dd85c2fe2ba816c448226daaac.svg" alt="(p = 0, q=1, r=0)" style="vertical-align: -4px"/> is <em>false</em>.</p>
 </div>
 <div class="section" id="truth-tables-for-compounds-propositions">
-<h3>2.1.3.5. Truth tables for compounds propositions<a class="headerlink" href="#truth-tables-for-compounds-propositions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3.5. </span>Truth tables for compounds propositions<a class="headerlink" href="#truth-tables-for-compounds-propositions" title="Permalink to this headline">¶</a></h3>
 <p>truth tables for compounds propositions allows to determine exhaustively the truth values of compounds propositions for each possible truth assignment. They are build by adding as many columns as necessary to evaluate sub-propositions. As example, let us consider the propositional formula of <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a>. The corresponding truth table is:</p>
-<table border="1" class="docutils" id="id2">
+<table class="docutils align-default" id="id2">
 <caption><span class="caption-number">Table 2.1:  </span><span class="caption-text">truth table for <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="17%" />
-<col width="15%" />
-<col width="28%" />
-<col width="10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 28%" />
+<col style="width: 10%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/d6ce91cdb456a31a526334901a14ca60775adb84.svg" alt="r"/></th>
-<th class="head"><img class="math" src="_images/math/364f5efb7d55511403d0cb8dbdeb08b6125c7643.svg" alt="p \land q"/></th>
-<th class="head"><img class="math" src="_images/math/6a4cb47e0fa56f428fd486dca67c79150d10e798.svg" alt="\lnot r"/></th>
-<th class="head"><img class="math" src="_images/math/a80c905114ba89b9163d41d7272fb584bc52de78.svg" alt="(p\land q)\lor\lnot r"/></th>
-<th class="head"><img class="math" src="_images/math/29769ff2b024fb2a8abc2b82ca336b8941ad74c1.svg" alt="F"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/ba23040c851c2d429485b49ea3e4355079c5c4c6.svg" alt="r" style="vertical-align: 0px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/184650c1a924827975f669ba8bda6f6fe20841e8.svg" alt="p \land q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/b11d97518051ede81229a66b72ec37879e98ad77.svg" alt="\lnot r" style="vertical-align: 0px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/0bbbd22104578289e68d17be71d7889c595ce481.svg" alt="(p\land q)\lor\lnot r" style="vertical-align: -4px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/08c042503764ac606884ea39dfb6a481cb165f41.svg" alt="F" style="vertical-align: 0px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>What is the evaluation of propositional formula F under the truth assignment (p=0, q=1, r=1) ?</p>
+</div>
 </div>
 <div class="section" id="satisfaction">
-<h3>2.1.3.6. Satisfaction<a class="headerlink" href="#satisfaction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3.6. </span>Satisfaction<a class="headerlink" href="#satisfaction" title="Permalink to this headline">¶</a></h3>
 <p>A truth assignment is said to <strong>satisfy</strong> a proposition if and only if the proposition is evaluated as <em>true</em> under that truth assignment.</p>
 <p>A truth assignment is said to <strong>falsify</strong> a proposition if and only if the proposition is evaluated as <em>false</em> under that truth assignment.</p>
 <ul class="simple">
-<li>A proposition is said <strong>valid</strong> if and only if it <em>satisfies</em> every truth assignment.</li>
-<li>A proposition is said <strong>unsatisfiable</strong> if and only if it <em>satisfies</em> any truth assignment.</li>
-<li>A proposition is said <strong>contingent</strong> if and only if some truth assignments <em>satisfies</em> it and some other <em>falsifies</em> it.</li>
+<li><p>A proposition is said <strong>valid</strong> if and only if it <em>satisfies</em> every truth assignment.</p></li>
+<li><p>A proposition is said <strong>unsatisfiable</strong> if and only if it <em>satisfies</em> any truth assignment.</p></li>
+<li><p>A proposition is said <strong>contingent</strong> if and only if some truth assignments <em>satisfies</em> it and some other <em>falsifies</em> it.</p></li>
 </ul>
 <p>Here are some examples:</p>
 <ol class="arabic simple">
-<li>As example, the proposition defined in <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> is <em>contingent</em> since 6 truth assignments <em>satisfies</em> the proposition and 2 <em>falsifies</em> it.</li>
-<li>the formula <img class="math" src="_images/math/ffbe66af5f0a99a78a06d96d0830c26a7e607f34.svg" alt="p \lor \lnot p"/> is <em>valid</em></li>
-<li>the formula <img class="math" src="_images/math/4b3c1e2ed04fa5909b2b33761ab89044d457853d.svg" alt="p \land \lnot p"/> is <em>unsatisfiable</em></li>
+<li><p>As example, the proposition defined in <a class="reference internal" href="#equation-formula-ex">Eq.2.1</a> is <em>contingent</em> since 6 truth assignments <em>satisfies</em> the proposition and 2 <em>falsifies</em> it.</p></li>
+<li><p>the formula <img class="math" src="_images/math/35ee010eaedb7c1277e73caed71da377a07b0f39.svg" alt="p \lor \lnot p" style="vertical-align: -3px"/> is <em>valid</em></p></li>
+<li><p>the formula <img class="math" src="_images/math/510975580f4b2798fc8d7d5b27735b67f5c007f1.svg" alt="p \land \lnot p" style="vertical-align: -3px"/> is <em>unsatisfiable</em></p></li>
 </ol>
 </div>
 <div class="section" id="natural-language-and-logic">
-<h3>2.1.3.7. Natural language and logic<a class="headerlink" href="#natural-language-and-logic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3.7. </span>Natural language and logic<a class="headerlink" href="#natural-language-and-logic" title="Permalink to this headline">¶</a></h3>
 <p>Propositional logic can be used to formalize natural language by encoding sentences and thus helps to solve logical problems.</p>
 <p>Consider the following sentence: <em>If a student does not work hard in physics or in informatics, he will not become an engineer</em>. This sentence is composed with 3 statements:</p>
 <ul class="simple">
-<li>p: <em>student works hard in physics</em></li>
-<li>i: <em>student works hard in informatics</em></li>
-<li>e: <em>student will become an engineer</em></li>
+<li><p>p: <em>student works hard in physics</em></p></li>
+<li><p>i: <em>student works hard in informatics</em></p></li>
+<li><p>e: <em>student will become an engineer</em></p></li>
 </ul>
 <p>This sentence can be easily traduced in propositional logic by the formula:</p>
 <div class="math">
-<p><img src="_images/math/b4d88b944b0ced612f0cacfdcf828d2e00f59081.svg" alt="\lnot p \lor \lnot i \Rightarrow \lnot e"/></p>
+<p><img src="_images/math/5004ed4078d70b6c7480dda162b5c46436a1f40a.svg" alt="\lnot p \lor \lnot i \Rightarrow \lnot e"/></p>
 </div></div>
 </div>
 <div class="section" id="propositional-analysis">
-<h2>2.1.4. Propositional Analysis<a class="headerlink" href="#propositional-analysis" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.4. </span>Propositional Analysis<a class="headerlink" href="#propositional-analysis" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="logical-equivalence">
-<h3>2.1.4.1. Logical equivalence<a class="headerlink" href="#logical-equivalence" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.4.1. </span>Logical equivalence<a class="headerlink" href="#logical-equivalence" title="Permalink to this headline">¶</a></h3>
 <p>The logical equivalence can be intuitively understand: Two propositions are equivalent if they says the same thing.</p>
 <p>Two propositions F and G are thus said <strong>logically equivalent</strong> if and only if every truth assignment that satisfies F satisfies G and every truth assignment that satisfies G satisfies F. In that case we will write:</p>
 <div class="math">
-<p><img src="_images/math/327668da0fbfd99e8c74e1dc2e447d32db7c472a.svg" alt="F \equiv G"/></p>
+<p><img src="_images/math/03a24ab6f17de1e9f3fcbb6351411ef821216645.svg" alt="F \equiv G"/></p>
 </div><p>It is possible to check the equivalence between two propositions by determining their truth tables and compare results.</p>
 <div class="admonition caution">
-<p class="first admonition-title">Caution</p>
-<p class="last"><strong>Logical equivalence</strong> is a semantic equivalence that should not be confused with <strong>biconditional</strong> that is a syntax operator for logical propositions.</p>
+<p class="admonition-title">Caution</p>
+<p><strong>Logical equivalence</strong> is a semantic equivalence that should not be confused with <strong>biconditional</strong> that is a syntax operator for logical propositions.</p>
 </div>
 </div>
 <div class="section" id="logical-properties">
-<span id="sec-logical-properties"></span><h3>2.1.4.2. Logical properties<a class="headerlink" href="#logical-properties" title="Permalink to this headline">¶</a></h3>
+<span id="sec-logical-properties"></span><h3><span class="section-number">2.1.4.2. </span>Logical properties<a class="headerlink" href="#logical-properties" title="Permalink to this headline">¶</a></h3>
 <p>It is possible to demonstrate an important number of logical properties. Thus, we have:</p>
 <div class="section" id="commutation">
-<h4>2.1.4.2.1. Commutation<a class="headerlink" href="#commutation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.1. </span>Commutation<a class="headerlink" href="#commutation" title="Permalink to this headline">¶</a></h4>
 <p>conjunction and disjunction operators can commute:</p>
 <div class="math">
-<p><img src="_images/math/a407bc69bb3b5a732db37091d2f8168f85e6279c.svg" alt="\[
+<p><img src="_images/math/66bb686d3a399d2f7dc1e16ff967ac42563b028c.svg" alt="\[
 \begin{array}{ccc}
   p \land q &amp; \equiv &amp; q \land p \\
   p \lor q &amp; \equiv &amp; q \lor p
@@ -689,10 +716,10 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="association">
-<h4>2.1.4.2.2. Association<a class="headerlink" href="#association" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.2. </span>Association<a class="headerlink" href="#association" title="Permalink to this headline">¶</a></h4>
 <p>conjunction and disjunction operators are associative:</p>
 <div class="math">
-<p><img src="_images/math/0391a9b25540d85bdf5a172ad8a4c966309d1a75.svg" alt="\[
+<p><img src="_images/math/5c607096697751643a660c6fcb2193a9540978c8.svg" alt="\[
 \begin{array}{ccc}
   (p \land q) \land r &amp; \equiv &amp; p \land ( q \land r) \\
   (p \lor q) \lor r &amp; \equiv &amp; p \lor ( q \lor r)
@@ -700,10 +727,10 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="distribution">
-<h4>2.1.4.2.3. Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.3. </span>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h4>
 <p>conjunction and disjunction operators are distributive:</p>
 <div class="math">
-<p><img src="_images/math/1ea93ca293406128bcc3188d84e90c89010f3196.svg" alt="\[
+<p><img src="_images/math/7f62ad0a07eee60ed2200c3adc337ec6835193d7.svg" alt="\[
 \begin{array}{ccc}
   p \land (q \lor r) &amp; \equiv &amp; (p \land q) \lor( p \land r) \\
   p \lor (q \land r) &amp; \equiv &amp; (p \lor q) \land( p \lor r)
@@ -711,10 +738,10 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="neutral-elements">
-<h4>2.1.4.2.4. Neutral elements<a class="headerlink" href="#neutral-elements" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.4. </span>Neutral elements<a class="headerlink" href="#neutral-elements" title="Permalink to this headline">¶</a></h4>
 <p><em>true</em> is neutral for conjunction and <em>false</em> is neutral for disjunction:</p>
 <div class="math">
-<p><img src="_images/math/16ec7e390950d24c3d188e905b1dbf27bfee9746.svg" alt="\[
+<p><img src="_images/math/16bafca85b1f00bfe7b3a95c35e3aedbe9c772d6.svg" alt="\[
 \begin{array}{ccc}
   p \land true &amp; \equiv &amp; p \\
   p \lor false &amp; \equiv &amp; p
@@ -722,10 +749,10 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="absorptive-elements">
-<h4>2.1.4.2.5. Absorptive elements<a class="headerlink" href="#absorptive-elements" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.5. </span>Absorptive elements<a class="headerlink" href="#absorptive-elements" title="Permalink to this headline">¶</a></h4>
 <p><em>false</em> is absorptive for conjunction and <em>true</em> is absorptive for disjunction:</p>
 <div class="math">
-<p><img src="_images/math/45356ffcfb3f68394cf99d4fb07b8cb402419202.svg" alt="\[
+<p><img src="_images/math/51dab3c8d5467781f82eb4579d371bc77d2d442a.svg" alt="\[
 \begin{array}{ccc}
   p \land false &amp; \equiv &amp; false \\
   p \lor true &amp; \equiv &amp; true
@@ -733,10 +760,10 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="elimination-of-logical-operators">
-<span id="sec-chap1-eliminateoperators"></span><h4>2.1.4.2.6. Elimination of logical operators<a class="headerlink" href="#elimination-of-logical-operators" title="Permalink to this headline">¶</a></h4>
+<span id="sec-chap1-eliminateoperators"></span><h4><span class="section-number">2.1.4.2.6. </span>Elimination of logical operators<a class="headerlink" href="#elimination-of-logical-operators" title="Permalink to this headline">¶</a></h4>
 <p>Some operators can be eliminate to the profit of others. This is the case for <em>implication</em>, <em>biconditional</em> and <em>exclusive disjunction</em>:</p>
 <div class="math">
-<p><img src="_images/math/53be1eaabace23cdc8bd7ad61e1ed3c295d45b77.svg" alt="\[
+<p><img src="_images/math/c3a2832b9acd1d3800f863cc655ae422a34ad0ec.svg" alt="\[
 \begin{array}{ccc}
   p \Rightarrow q &amp; \equiv &amp; \lnot p \lor q \\
   p \Leftrightarrow q &amp; \equiv &amp; (p \Rightarrow q) \land (q \Rightarrow p) \\
@@ -745,9 +772,9 @@ The cat is sleeping OR the mouse is happy
 \]"/></p>
 </div></div>
 <div class="section" id="morgan-s-laws">
-<h4>2.1.4.2.7. Morgan’s laws<a class="headerlink" href="#morgan-s-laws" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.2.7. </span>Morgan’s laws<a class="headerlink" href="#morgan-s-laws" title="Permalink to this headline">¶</a></h4>
 <div class="math">
-<p><img src="_images/math/e63f6ac44cfa714707e07511d7958c640b2e3e23.svg" alt="\[
+<p><img src="_images/math/983ebfdfec3b13539ebe06609ff72722a2fc401c.svg" alt="\[
 \begin{array}{ccc}
   \lnot (p \land q) &amp; \equiv &amp; \lnot p \lor \lnot q \\
   \lnot (p \lor q) &amp; \equiv &amp; \lnot p \land \lnot q
@@ -756,50 +783,50 @@ The cat is sleeping OR the mouse is happy
 </div></div>
 </div>
 <div class="section" id="full-system-of-operators">
-<span id="sec-chap1-fullsystem"></span><h3>2.1.4.3. Full system of operators<a class="headerlink" href="#full-system-of-operators" title="Permalink to this headline">¶</a></h3>
+<span id="sec-chap1-fullsystem"></span><h3><span class="section-number">2.1.4.3. </span>Full system of operators<a class="headerlink" href="#full-system-of-operators" title="Permalink to this headline">¶</a></h3>
 <p>A system of logical operators is said <strong>functionally complete</strong> on a propositional language if every logical formula of this language can be expressed in terms of this system’s operators.</p>
-<p>If we consider a finite domain of propositional constants, ie. <img class="math" src="_images/math/bcd71b5af73d41ee896f180e182a8fa5b742ca39.svg" alt="\mathcal{V}=\{ p_1,p_2, .. p_n \}"/> and <img class="math" src="_images/math/39582768b980f0b3ec034ec29e8d710181afbd2d.svg" alt="\mathcal{F}"/> representing the domain of propositional formulas that can be build on this vocabulary.</p>
+<p>If we consider a finite domain of propositional constants, ie. <img class="math" src="_images/math/66f04c6b49ef8c0a1779336fa59dd103e423a865.svg" alt="\mathcal{V}=\{ p_1,p_2, .. p_n \}" style="vertical-align: -4px"/> and <img class="math" src="_images/math/5e11c0bf3f6e337c877182e6b0a9a5c9939fb021.svg" alt="\mathcal{F}" style="vertical-align: 0px"/> representing the domain of propositional formulas that can be build on this vocabulary.</p>
 <ol class="arabic simple">
-<li>We can say that the system <img class="math" src="_images/math/7f4088bc3a7f7f4d6ceeb251e289a620b46bdc8c.svg" alt="S=\{ \lnot, \land, \lor\}"/> is functionally complete. This can be demonstrate easily from properties of section <a class="reference internal" href="#sec-chap1-eliminateoperators"><span class="std std-ref">Elimination of logical operators</span></a>.</li>
-<li><img class="math" src="_images/math/6c367b1b90be0442fa92ce9614f36f9884de18c6.svg" alt="\{ \lnot, \land\}"/> and <img class="math" src="_images/math/264d08e9958d6c3051b561c6ad033998167e0ae5.svg" alt="\{ \lnot, \lor\}"/> are also functionally complete systems.</li>
+<li><p>We can say that the system <img class="math" src="_images/math/e840e7e670420b0f041f9086cb3e58d58872d84c.svg" alt="S=\{ \lnot, \land, \lor\}" style="vertical-align: -4px"/> is functionally complete. This can be demonstrate easily from properties of section <a class="reference internal" href="#sec-chap1-eliminateoperators"><span class="std std-ref">Elimination of logical operators</span></a>.</p></li>
+<li><p><img class="math" src="_images/math/acd0c87bf9722d91552a67d42439079a89d41714.svg" alt="\{ \lnot, \land\}" style="vertical-align: -4px"/> and <img class="math" src="_images/math/af3792c97afc30bb6fe0d1b4a12afe7c95c8a5e1.svg" alt="\{ \lnot, \lor\}" style="vertical-align: -4px"/> are also functionally complete systems.</p></li>
 </ol>
 <div class="section" id="the-nand-and-nor-operators">
-<h4>2.1.4.3.1. The NAND and NOR operators<a class="headerlink" href="#the-nand-and-nor-operators" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">2.1.4.3.1. </span>The NAND and NOR operators<a class="headerlink" href="#the-nand-and-nor-operators" title="Permalink to this headline">¶</a></h4>
 <p>The NAND and NOR operators respectively for ‘not and’ and ‘not or’ are defined by the following truth table:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="36%" />
-<col width="35%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 36%" />
+<col style="width: 35%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><img class="math" src="_images/math/4125d21fc2fa84618db934e33d806ba00eda7b8b.svg" alt="p"/></th>
-<th class="head"><img class="math" src="_images/math/36d0fe14b74715661e99e80224981800b937f2d7.svg" alt="q"/></th>
-<th class="head"><img class="math" src="_images/math/778b28e7ef4b52fd09020231e8e5b7e339ce1b39.svg" alt="p \text{ NAND } q"/></th>
-<th class="head"><img class="math" src="_images/math/73b7e2971e80adea54af718c3edeaca9302718f2.svg" alt="p \text{ NOR } q"/></th>
+<thead>
+<tr class="row-odd"><th class="head"><p><img class="math" src="_images/math/2b449adf8e7e9062b514cc5038a5f2a6b73d4952.svg" alt="p" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/bed0c074cea5b12e4b4cad7866633d3ec224ef77.svg" alt="q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/157e70195a782a69f86c710cb0554e288ee2a1b0.svg" alt="p \text{ NAND } q" style="vertical-align: -3px"/></p></th>
+<th class="head"><p><img class="math" src="_images/math/c25f7047047c67b672718a3a3808916c5ebc926f.svg" alt="p \text{ NOR } q" style="vertical-align: -3px"/></p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
 </tr>
 </tbody>
 </table>
@@ -807,12 +834,12 @@ The cat is sleeping OR the mouse is happy
 </div>
 </div>
 <div class="section" id="normal-forms">
-<h3>2.1.4.4. Normal forms<a class="headerlink" href="#normal-forms" title="Permalink to this headline">¶</a></h3>
-<p>A clause containing only the  <img class="math" src="_images/math/e9e6f60409b47ef34cda0dfa4ebf5c9493d785af.svg" alt="\lor"/> connector between propositional constants (or their negation) is called a <strong>disjunctive clause</strong>, also called <strong>maxterm</strong>.</p>
-<p>A clause containing only the  <img class="math" src="_images/math/3e07e4974841ed5227a4e1a71643e78e51a11530.svg" alt="\land"/> connector between propositional constants (or their negation) is called a <strong>conjunctive clause</strong>, also called <strong>minterm</strong>.</p>
-<p>Let us consider a propositional formulae F composed with propositional constants of vocabulary <img class="math" src="_images/math/bcd71b5af73d41ee896f180e182a8fa5b742ca39.svg" alt="\mathcal{V}=\{ p_1,p_2, .. p_n \}"/>.</p>
-<p>We call <strong>disjunctive normal form</strong> (DNF) of propositional formulae F, the propositional formula <img class="math" src="_images/math/67de134e69ccfdbb6db273a9f383b4bcef430193.svg" alt="F_D"/> semantically equivalent to F and that is a disjunction of <em>conjunctive clauses</em> relative to F.</p>
-<p>We call <strong>conjunctive normal form</strong> (CNF) of propositional formulae F, the propositional formula <img class="math" src="_images/math/a5a746f18497f69f0c5e3a988c1737943120c11f.svg" alt="F_C"/> semantically equivalent to F that is a disjunction of <em>conjunctive clauses</em> relative to F.</p>
+<h3><span class="section-number">2.1.4.4. </span>Normal forms<a class="headerlink" href="#normal-forms" title="Permalink to this headline">¶</a></h3>
+<p>A clause containing only the  <img class="math" src="_images/math/c31b472d01ea30c5feb7ec36ebde560e229c0e2f.svg" alt="\lor" style="vertical-align: 0px"/> connector between propositional constants (or their negation) is called a <strong>disjunctive clause</strong>, also called <strong>maxterm</strong>.</p>
+<p>A clause containing only the  <img class="math" src="_images/math/272191715c4694e34b5f3f92211d1cb92069e1e8.svg" alt="\land" style="vertical-align: 0px"/> connector between propositional constants (or their negation) is called a <strong>conjunctive clause</strong>, also called <strong>minterm</strong>.</p>
+<p>Let us consider a propositional formulae F composed with propositional constants of vocabulary <img class="math" src="_images/math/66f04c6b49ef8c0a1779336fa59dd103e423a865.svg" alt="\mathcal{V}=\{ p_1,p_2, .. p_n \}" style="vertical-align: -4px"/>.</p>
+<p>We call <strong>disjunctive normal form</strong> (DNF) of propositional formulae F, the propositional formula <img class="math" src="_images/math/db5f314f78f4f773dbfec1a9e01a579668cbdf32.svg" alt="F_D" style="vertical-align: -2px"/> semantically equivalent to F and that is a disjunction of <em>conjunctive clauses</em> relative to F.</p>
+<p>We call <strong>conjunctive normal form</strong> (CNF) of propositional formulae F, the propositional formula <img class="math" src="_images/math/a77de7070ab5d1c05f15beba45d2234eea42c1e8.svg" alt="F_C" style="vertical-align: -2px"/> semantically equivalent to F that is a disjunction of <em>conjunctive clauses</em> relative to F.</p>
 <p>A propositional formulae F admit a unique CNF and a unique DNF.</p>
 <p>Writing the CNF or DNF of a propositional formulae is a way to determine if it is <em>valid</em> or <em>unsatisfiable</em>. It can be easily done using properties of section <a class="reference internal" href="#sec-logical-properties"><span class="std std-ref">Logical properties</span></a></p>
 </div>
@@ -839,11 +866,19 @@ The cat is sleeping OR the mouse is happy
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -854,7 +889,6 @@ The cat is sleeping OR the mouse is happy
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

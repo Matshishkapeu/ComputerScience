@@ -2,7 +2,6 @@
 C++
 ***
 
-soon...
 
 .. toctree::
   :maxdepth: 1

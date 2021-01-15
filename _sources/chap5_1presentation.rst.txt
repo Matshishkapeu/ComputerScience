@@ -1,0 +1,129 @@
+**************
+Arduino system
+**************
+
+
+What is Arduino ?
+=================
+Arduino is an open-source electronics platform that uses the C programming language. It is one of the simplest electronic plateform that can use simple sensors and control actuators by making simple programs using a great number of functions available in existing librairies.
+
+.. _Fig:chap5:arduino:
+
+.. figure:: ./_static/fig/arduino.jpg
+  :scale: 50%
+  :align: center
+
+  The arduino UNO electronics platform that is used in this course.
+
+Arduino UNO starter kit
+=======================
+
+Le kit fournit dans le cadre de ce cours correspond au "Starter kit" officiel de la marque Arduino.
+
+.. _Fig:chap5:arduinoKit:
+
+.. figure:: ./_static/fig/chap5/Arduino_starter_kit.PNG
+  :scale: 30%
+  :align: center
+
+  The arduino UNO starter kit.
+
+Comme c'est indiqué dans le livre que vous avez trouvé dans la boite, vous disposez d'une carte Arduino Uno, d'un câble usb, d'une plaque pour réaliser des montages et de plusieurs composants électroniques qu'il vous sera facile d'identifier (pages 6 à 10 du livre). 
+
+.. _Fig:chap5:kitContent:
+
+.. figure:: ./_static/fig/chap5/ce_kit_contient.PNG
+  :scale: 50%
+  :align: center
+
+  List of electronic components in the starter kit.
+
+Parmi ces composants, vous trouverez un certains nombre de résistances. Le code couleur des résistances est disponible ici : :ref:`Fig:chap5:CodeResistor`
+
+Arduino UNO electronic board
+============================
+
+.. _Fig:chap5:ArduinoUNOBoard:
+
+.. figure:: ./_static/fig/chap5/ArduinoUNOBoard.PNG
+  :scale: 80%
+  :align: center
+
+  The arduino UNO board with the ATMega controller.
+
+La carte Arduino Uno est le premier modèle de cartes vendues par la société Arduino, qui est une société italienne. C'est une carte électronique basée autour d'un microcontrôleur (1) Atmega du fabricant Atmel interfacée par un port USB (2).
+
+Le micro-contrôleur (1)
+-----------------------
+
+C’est lui qui que vous allez programmer en langage C. Le programme sera envoyé vers la carte, stocké dans la mémoire du microcontrôleur et exécuté par celui-ci.
+
+Alimentation (2) ou (3)
+-----------------------
+
+Pour fonctionner, la carte a besoin d'une alimentation. Le microcontrôleur fonctionnant sous 5V, la carte peut être alimentée en 5V par le port USB (2) ou bien par une alimentation externe (3) qui est comprise entre 7V et 12V. Cette tension doit être continue et peut par exemple être fournie par une pile 9V. Un régulateur se charge ensuite de réduire la tension à 5V pour le bon fonctionnement de la carte. Pas de danger de tout griller! Veuillez seulement à respecter l'intervalle de 7V à 15V.
+
+Visualisation (4)
+-----------------
+
+Les trois "points blancs" entourés en rouge (4) sont en fait des LED dont la taille est de l'ordre du millimètre. Ces LED servent à deux choses :
+
+Celle tout en haut du cadre est connectée à une broche du microcontrôleur et sert à tester le matériel. Quand on branche la carte au PC, elle clignote quelques secondes.
+Les deux LED du bas du cadre servent à visualiser l'activité sur la voie série (une pour l'émission et l'autre pour la réception). Le téléchargement du programme dans le microcontrôleur se faisant par cette voie, on peut les voir clignoter lors du chargement.
+5a) 5b) La connectique :
+
+La carte Arduino ne possède pas de composants mis à par la LED connectée à la broche 13 du micro-contrôleur. Il faut connecter les composants, de votre montage à la carte. C'est là qu'intervient la connectique en (5a) et (5b). Par exemple, si on veut connecter une LED sur une sortie du microcontrôleur afin d'éclairer celle-ci en mettant la sortie à 1 ; Il suffit de la connecter, avec une résistance en série, à la carte, sur les fiches de connections de la carte.
+
+Programming
+===========
+
+Avec l'application Arduino IDE, qui figure dans vos applications.
+Une fois l'application lancée, vous disposez d'un environnement de développement dédié à la programmation des cartes de la marque Arduino que vous allez pouvoir utiliser pour faire des montages électroniques plus ou moins basiques.
+
+.. _Fig:chap5:arduino_ide:
+
+.. figure:: ./_static/fig/chap5/arduino_ide.PNG
+  :scale: 50%
+  :align: center
+
+  The arduino IDE for programming the board.
+
+Pour programmer cette carte, vous allez programmer en C (c'est très simplifié). Votre programme source va se diviser en deux parties :
+
+  * Une première fonction permettant d'initialiser la carte que nous nommerons *setup()*;
+
+	.. code-block:: C
+	  :name: setupFunction
+	  :linenos:
+      
+	  void setup() //fonction d'initialisation de la carte
+	  { 
+	  	//contenu de l'initialisation	
+	  }
+
+	Cette fonction ne va être appelée qu'une seule fois, en début de programme.
+
+  * une deuxième fonction qui va s'exécuter en boucle et qui s'appelle la fonction *loop()*.
+
+  	.. code-block:: c
+	  :caption: loop function
+	  :name: loopFunction
+	  :linenos:
+
+	  void loop() // ce sera la fonction principale de votre programme, c'est une boucle sans fin
+	  {
+	  	//contenu de votre programme
+	  }
+
+Dans chacune de ces parties, vous allez pouvoir :
+
+	* déclarer des variables connues en langage C comme char, int, float, double, des pointeurs, des tableaux de variables ; mais aussi des variables de taille mémoire plus réduites qui n'existe pas forcément en C : byte, word, boolean : 
+	
+		- byte : variable entière positive permettant de stocker des nombres compris entre [0 ; 255] en utilisant 1 octet en mémoire ;
+		- word : variable entière positive permettant de stocker des nombres compris entre [0 ; 65535] en utilisant 2 octets en mémoire ;
+		- boolean : variable entière positive permettant de stocker des nombres compris entre [0 ; 1] en utilisant 1 bit en mémoire
+
+	* utiliser les opérateurs vus en C : +, -, * , / , %, <, >, =, ==, !=, ...
+	* faire appel aux instructions conditionnelles : if(  ), if(  ) .. else, switch ()
+	* et aux instructions de boucle : for(  ), while () et do...while()
+	* **faire vos propres fonctions**. Ici pas besoin de prototypage cependant afin de garder les réflexes de tout bon programmeur, nous vous recommandons de définir vos fonctions après la fonction loop () et d'appeler celles-ci dans la fonction loop.

@@ -12,6 +12,7 @@ First are exposed the concept of propositional langage and Boolean algebra. Then
   chap1_1propositions
   chap1_2binaryEncoding
   chap1_3digitalCircuits
+
    
 
 

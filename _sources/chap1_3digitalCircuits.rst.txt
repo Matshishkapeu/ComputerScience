@@ -7,6 +7,8 @@ The binary logic presented in the preceding lesson is at the basis of modern com
 Basic components
 ================
 
+.. _Sec:chap1:diode:
+
 Diode
 -----
 A diode is a junction between two semiconductors (PN junction):
@@ -145,6 +147,10 @@ A multiplexer (MUX) has several inputs and a unique output. Its role is to copy 
   :align: center
 
   A 2 input multiplexer
+
+.. admonition:: Question
+
+  What is the output of the preceding multiplexer if the command value is 1.
 
 Binary adder
 ------------

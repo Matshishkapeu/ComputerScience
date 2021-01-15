@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4.2. Algorithm Syntax" href="chap3_2algorithmSyntax.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -102,12 +103,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -146,11 +149,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap3_algorithm_Chap.html">4. Algorithm</a> &raquo;</li>
+          <li><a href="chap3_algorithm_Chap.html"><span class="section-number">4. </span>Algorithm</a> &raquo;</li>
         
-      <li>4.1. Basic concept of algorithm</li>
+      <li><span class="section-number">4.1. </span>Basic concept of algorithm</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,33 +173,33 @@
            <div itemprop="articleBody">
             
   <div class="section" id="basic-concept-of-algorithm">
-<h1>4.1. Basic concept of algorithm<a class="headerlink" href="#basic-concept-of-algorithm" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.1. </span>Basic concept of algorithm<a class="headerlink" href="#basic-concept-of-algorithm" title="Permalink to this headline">¶</a></h1>
 <p>An <strong>algorithm</strong> is a set of unambiguous simple instructions. It ends after a finite amount of operations and produces a result from input data.
 The algorithm is designed to be executed by the processor. If the processor is a computer, then the algorithm is traduced in a programming language (ie. C/C++, Python, Fortran, Java, etc.) and becomes a <strong>program</strong>.</p>
 <p>The developpement of a programm is following different steps and actors.</p>
 <div class="figure align-center" id="id1">
 <span id="fig-chap3-program"></span><a class="reference internal image-reference" href="_images/program.jpg"><img alt="_images/program.jpg" src="_images/program.jpg" style="width: 364.5px; height: 220.5px;" /></a>
-<p class="caption"><span class="caption-number">Figure 4.1:  </span><span class="caption-text">Main steps of program development</span></p>
+<p class="caption"><span class="caption-number">Figure 4.1:  </span><span class="caption-text">Main steps of program development</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The analyse step consists on proposing a solution to the problem by writting an algorithm together with a set of verification tests proving the algorithm value.</p>
 <div class="section" id="simple-algorithm-example">
-<h2>4.1.1. Simple algorithm example<a class="headerlink" href="#simple-algorithm-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1.1. </span>Simple algorithm example<a class="headerlink" href="#simple-algorithm-example" title="Permalink to this headline">¶</a></h2>
 <p>Recipe of a chocolate cake is an algorithm as it includes a list of simple instructions that takes ingredients in input and produces a chocolate cake as result:</p>
 <ol class="arabic simple">
-<li>Preheat oven at 180°C.</li>
-<li>Melt chocolate and butter together.</li>
-<li>Whisk 3 eggs.</li>
-<li>Add chestnut cream and beat with eggs.</li>
-<li>Incorporate melt chocolate.</li>
-<li>Bake for 35 min at 180°C.</li>
+<li><p>Preheat oven at 180°C.</p></li>
+<li><p>Melt chocolate and butter together.</p></li>
+<li><p>Whisk 3 eggs.</p></li>
+<li><p>Add chestnut cream and beat with eggs.</p></li>
+<li><p>Incorporate melt chocolate.</p></li>
+<li><p>Bake for 35 min at 180°C.</p></li>
 </ol>
 </div>
 <div class="section" id="flowchart-representation-of-an-algorithm">
-<h2>4.1.2. Flowchart representation of an algorithm<a class="headerlink" href="#flowchart-representation-of-an-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1.2. </span>Flowchart representation of an algorithm<a class="headerlink" href="#flowchart-representation-of-an-algorithm" title="Permalink to this headline">¶</a></h2>
 <p>Algorithms can be more complex than the preceding recipe. For example it can contains structured instructions. In that case, it can be usefull to represent the algorithm using a flowchart.</p>
 <div class="figure align-center" id="id2">
-<span id="fig-chap3-algolesson"></span><a class="reference internal image-reference" href="_images/algoLesson.jpg"><img alt="_images/algoLesson.jpg" src="_images/algoLesson.jpg" style="width: 230.4px; height: 383.4px;" /></a>
-<p class="caption"><span class="caption-number">Figure 4.2:  </span><span class="caption-text">A basic algorithm example with conditional instructions.</span></p>
+<span id="fig-chap3-algolesson"></span><a class="reference internal image-reference" href="_images/algoLesson.jpg"><img alt="_images/algoLesson.jpg" src="_images/algoLesson.jpg" style="width: 230.39999999999998px; height: 383.4px;" /></a>
+<p class="caption"><span class="caption-number">Figure 4.2:  </span><span class="caption-text">A basic algorithm example with conditional instructions.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -221,11 +224,19 @@ The algorithm is designed to be executed by the processor. If the processor is a
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -236,7 +247,6 @@ The algorithm is designed to be executed by the processor. If the processor is a
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

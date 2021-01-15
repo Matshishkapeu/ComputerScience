@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.1. Arduino system &mdash; Computing for engineer 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6.2. Data base" href="chap5_2dataBase.html" />
+    <link rel="prev" title="6. Arduino" href="chap5_arduino_Chap.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap1_binaryLogic_Chap.html">2. Binary logic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap2_architecture_Chap.html">3. Computer architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap3_algorithm_Chap.html">4. Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Arduino system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-arduino">6.1.1. What is Arduino ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-uno-starter-kit">6.1.2. Arduino UNO starter kit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arduino-uno-electronic-board">6.1.3. Arduino UNO electronic board</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#le-micro-controleur-1">6.1.3.1. Le micro-contrôleur (1)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alimentation-2-ou-3">6.1.3.2. Alimentation (2) ou (3)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#visualisation-4">6.1.3.3. Visualisation (4)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#programming">6.1.4. Programming</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="chap5_2dataBase.html">6.2. Data base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap5_3tutos.html">6.3. Electronic components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computing for engineer</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="chap5_arduino_Chap.html"><span class="section-number">6. </span>Arduino</a> &raquo;</li>
+        
+      <li><span class="section-number">6.1. </span>Arduino system</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/chap5_1presentation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="arduino-system">
+<h1><span class="section-number">6.1. </span>Arduino system<a class="headerlink" href="#arduino-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-arduino">
+<h2><span class="section-number">6.1.1. </span>What is Arduino ?<a class="headerlink" href="#what-is-arduino" title="Permalink to this headline">¶</a></h2>
+<p>Arduino is an open-source electronics platform that uses the C programming language. It is one of the simplest electronic plateform that can use simple sensors and control actuators by making simple programs using a great number of functions available in existing librairies.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-chap5-arduino"></span><a class="reference internal image-reference" href="_images/arduino.jpg"><img alt="_images/arduino.jpg" src="_images/arduino.jpg" style="width: 320.0px; height: 320.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.1:  </span><span class="caption-text">The arduino UNO electronics platform that is used in this course.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="arduino-uno-starter-kit">
+<h2><span class="section-number">6.1.2. </span>Arduino UNO starter kit<a class="headerlink" href="#arduino-uno-starter-kit" title="Permalink to this headline">¶</a></h2>
+<p>Le kit fournit dans le cadre de ce cours correspond au “Starter kit” officiel de la marque Arduino.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-chap5-arduinokit"></span><a class="reference internal image-reference" href="_images/Arduino_starter_kit.PNG"><img alt="_images/Arduino_starter_kit.PNG" src="_images/Arduino_starter_kit.PNG" style="width: 300.59999999999997px; height: 212.7px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.2:  </span><span class="caption-text">The arduino UNO starter kit.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Comme c’est indiqué dans le livre que vous avez trouvé dans la boite, vous disposez d’une carte Arduino Uno, d’un câble usb, d’une plaque pour réaliser des montages et de plusieurs composants électroniques qu’il vous sera facile d’identifier (pages 6 à 10 du livre).</p>
+<div class="figure align-center" id="id3">
+<span id="fig-chap5-kitcontent"></span><a class="reference internal image-reference" href="_images/ce_kit_contient.PNG"><img alt="_images/ce_kit_contient.PNG" src="_images/ce_kit_contient.PNG" style="width: 181.5px; height: 344.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.3:  </span><span class="caption-text">List of electronic components in the starter kit.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Parmi ces composants, vous trouverez un certains nombre de résistances. Le code couleur des résistances est disponible ici : <a class="reference internal" href="chap5_2dataBase.html#fig-chap5-coderesistor"><span class="std std-ref">Resistor color codes.</span></a></p>
+</div>
+<div class="section" id="arduino-uno-electronic-board">
+<h2><span class="section-number">6.1.3. </span>Arduino UNO electronic board<a class="headerlink" href="#arduino-uno-electronic-board" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id4">
+<span id="fig-chap5-arduinounoboard"></span><a class="reference internal image-reference" href="_images/ArduinoUNOBoard.PNG"><img alt="_images/ArduinoUNOBoard.PNG" src="_images/ArduinoUNOBoard.PNG" style="width: 512.0px; height: 357.6px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.4:  </span><span class="caption-text">The arduino UNO board with the ATMega controller.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>La carte Arduino Uno est le premier modèle de cartes vendues par la société Arduino, qui est une société italienne. C’est une carte électronique basée autour d’un microcontrôleur (1) Atmega du fabricant Atmel interfacée par un port USB (2).</p>
+<div class="section" id="le-micro-controleur-1">
+<h3><span class="section-number">6.1.3.1. </span>Le micro-contrôleur (1)<a class="headerlink" href="#le-micro-controleur-1" title="Permalink to this headline">¶</a></h3>
+<p>C’est lui qui que vous allez programmer en langage C. Le programme sera envoyé vers la carte, stocké dans la mémoire du microcontrôleur et exécuté par celui-ci.</p>
+</div>
+<div class="section" id="alimentation-2-ou-3">
+<h3><span class="section-number">6.1.3.2. </span>Alimentation (2) ou (3)<a class="headerlink" href="#alimentation-2-ou-3" title="Permalink to this headline">¶</a></h3>
+<p>Pour fonctionner, la carte a besoin d’une alimentation. Le microcontrôleur fonctionnant sous 5V, la carte peut être alimentée en 5V par le port USB (2) ou bien par une alimentation externe (3) qui est comprise entre 7V et 12V. Cette tension doit être continue et peut par exemple être fournie par une pile 9V. Un régulateur se charge ensuite de réduire la tension à 5V pour le bon fonctionnement de la carte. Pas de danger de tout griller! Veuillez seulement à respecter l’intervalle de 7V à 15V.</p>
+</div>
+<div class="section" id="visualisation-4">
+<h3><span class="section-number">6.1.3.3. </span>Visualisation (4)<a class="headerlink" href="#visualisation-4" title="Permalink to this headline">¶</a></h3>
+<p>Les trois “points blancs” entourés en rouge (4) sont en fait des LED dont la taille est de l’ordre du millimètre. Ces LED servent à deux choses :</p>
+<p>Celle tout en haut du cadre est connectée à une broche du microcontrôleur et sert à tester le matériel. Quand on branche la carte au PC, elle clignote quelques secondes.
+Les deux LED du bas du cadre servent à visualiser l’activité sur la voie série (une pour l’émission et l’autre pour la réception). Le téléchargement du programme dans le microcontrôleur se faisant par cette voie, on peut les voir clignoter lors du chargement.
+5a) 5b) La connectique :</p>
+<p>La carte Arduino ne possède pas de composants mis à par la LED connectée à la broche 13 du micro-contrôleur. Il faut connecter les composants, de votre montage à la carte. C’est là qu’intervient la connectique en (5a) et (5b). Par exemple, si on veut connecter une LED sur une sortie du microcontrôleur afin d’éclairer celle-ci en mettant la sortie à 1 ; Il suffit de la connecter, avec une résistance en série, à la carte, sur les fiches de connections de la carte.</p>
+</div>
+</div>
+<div class="section" id="programming">
+<h2><span class="section-number">6.1.4. </span>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h2>
+<p>Avec l’application Arduino IDE, qui figure dans vos applications.
+Une fois l’application lancée, vous disposez d’un environnement de développement dédié à la programmation des cartes de la marque Arduino que vous allez pouvoir utiliser pour faire des montages électroniques plus ou moins basiques.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-chap5-arduino-ide"></span><a class="reference internal image-reference" href="_images/arduino_ide.PNG"><img alt="_images/arduino_ide.PNG" src="_images/arduino_ide.PNG" style="width: 379.5px; height: 335.0px;" /></a>
+<p class="caption"><span class="caption-number">Figure 6.5:  </span><span class="caption-text">The arduino IDE for programming the board.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Pour programmer cette carte, vous allez programmer en C (c’est très simplifié). Votre programme source va se diviser en deux parties :</p>
+<blockquote>
+<div><ul>
+<li><p>Une première fonction permettant d’initialiser la carte que nous nommerons <em>setup()</em>;</p>
+<blockquote>
+<div><div class="highlight-C notranslate" id="setupfunction"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="c1">//fonction d&#39;initialisation de la carte</span>
+<span class="p">{</span>
+      <span class="c1">//contenu de l&#39;initialisation</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+<p>Cette fonction ne va être appelée qu’une seule fois, en début de programme.</p>
+</div></blockquote>
+</li>
+<li><p>une deuxième fonction qui va s’exécuter en boucle et qui s’appelle la fonction <em>loop()</em>.</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="loopfunction">
+<div class="code-block-caption"><span class="caption-number">Listing 6.1:  </span><span class="caption-text">loop function</span><a class="headerlink" href="#loopfunction" title="Permalink to this code">¶</a></div>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="c1">// ce sera la fonction principale de votre programme, c&#39;est une boucle sans fin</span>
+<span class="p">{</span>
+      <span class="c1">//contenu de votre programme</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Dans chacune de ces parties, vous allez pouvoir :</p>
+<blockquote>
+<div><ul>
+<li><p>déclarer des variables connues en langage C comme char, int, float, double, des pointeurs, des tableaux de variables ; mais aussi des variables de taille mémoire plus réduites qui n’existe pas forcément en C : byte, word, boolean :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>byte : variable entière positive permettant de stocker des nombres compris entre [0 ; 255] en utilisant 1 octet en mémoire ;</p></li>
+<li><p>word : variable entière positive permettant de stocker des nombres compris entre [0 ; 65535] en utilisant 2 octets en mémoire ;</p></li>
+<li><p>boolean : variable entière positive permettant de stocker des nombres compris entre [0 ; 1] en utilisant 1 bit en mémoire</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>utiliser les opérateurs vus en C : +, -, * , / , %, &lt;, &gt;, =, ==, !=, …</p></li>
+<li><p>faire appel aux instructions conditionnelles : if(  ), if(  ) .. else, switch ()</p></li>
+<li><p>et aux instructions de boucle : for(  ), while () et do…while()</p></li>
+<li><p><strong>faire vos propres fonctions</strong>. Ici pas besoin de prototypage cependant afin de garder les réflexes de tout bon programmeur, nous vous recommandons de définir vos fonctions après la fonction loop () et d’appeler celles-ci dans la fonction loop.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chap5_2dataBase.html" class="btn btn-neutral float-right" title="6.2. Data base" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="chap5_arduino_Chap.html" class="btn btn-neutral float-left" title="6. Arduino" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

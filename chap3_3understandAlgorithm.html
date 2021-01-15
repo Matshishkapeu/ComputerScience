@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,27 +11,28 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="5. C/C++ Programming Langage" href="chap4_cLangage_Chap.html" />
@@ -50,7 +50,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Computing for engineer
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Computing for engineer
           
 
           
@@ -77,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -112,12 +113,14 @@
 <li class="toctree-l1"><a class="reference internal" href="chap4_cLangage_Chap.html">5. C/C++ Programming Langage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap5_arduino_Chap.html">6. Arduino</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chap6_python_Chap.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chap7_C++_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap7_C%2B%2B_Chap.html">8. C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zBibliography.html">9. Bibliography</a></li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -156,11 +159,11 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="chap3_algorithm_Chap.html">4. Algorithm</a> &raquo;</li>
+          <li><a href="chap3_algorithm_Chap.html"><span class="section-number">4. </span>Algorithm</a> &raquo;</li>
         
-      <li>4.3. Think, write and test algorithms</li>
+      <li><span class="section-number">4.3. </span>Think, write and test algorithms</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,32 +183,32 @@
            <div itemprop="articleBody">
             
   <div class="section" id="think-write-and-test-algorithms">
-<h1>4.3. Think, write and test algorithms<a class="headerlink" href="#think-write-and-test-algorithms" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4.3. </span>Think, write and test algorithms<a class="headerlink" href="#think-write-and-test-algorithms" title="Permalink to this headline">¶</a></h1>
 <p>Writting an algorithm to solve a problem acts in several steps. From a clear statement, the analyst should:</p>
 <ol class="arabic simple">
-<li>Extract and formalize input data</li>
-<li>Determine what will be the result</li>
-<li>Elaborate the process that will produce the result from input data</li>
+<li><p>Extract and formalize input data</p></li>
+<li><p>Determine what will be the result</p></li>
+<li><p>Elaborate the process that will produce the result from input data</p></li>
 </ol>
 <div class="section" id="thinking-and-writting-algorithm">
-<h2>4.3.1. Thinking and writting algorithm<a class="headerlink" href="#thinking-and-writting-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3.1. </span>Thinking and writting algorithm<a class="headerlink" href="#thinking-and-writting-algorithm" title="Permalink to this headline">¶</a></h2>
 <p>In the major cases, the analyst is not producing the “good” algorithm the first time. It is common to produce several versions of an algorithm until it reaches the objectives. One can retain some general method to write an algorithm:</p>
 <ul class="simple">
-<li>Read and understand the statement.</li>
-<li>Imagine the discussion between the user and the processor: what should the user give to the processor and what does it return in exchange.</li>
-<li>Solve the problem by hand on typical example to verify the understanding and begin to structure what kind of instructions will be necessary.</li>
-<li>Isolate the problem data and make a first version of variable declarations.</li>
-<li>Organise ideas to find complex successive instructions that can solve the problem. Take care about conditions and repetitive instructions that can emerge from any reformulation of the statement.</li>
-<li>Treat independantly each complex instruction in elementary instructions that will represent instruction blocks of the written algorithm. This step may require to add new variables to the declaration section of the algorithm. If some operations seems very complex, do not hesitate to structure the algorithm using functions.</li>
+<li><p>Read and understand the statement.</p></li>
+<li><p>Imagine the discussion between the user and the processor: what should the user give to the processor and what does it return in exchange.</p></li>
+<li><p>Solve the problem by hand on typical example to verify the understanding and begin to structure what kind of instructions will be necessary.</p></li>
+<li><p>Isolate the problem data and make a first version of variable declarations.</p></li>
+<li><p>Organise ideas to find complex successive instructions that can solve the problem. Take care about conditions and repetitive instructions that can emerge from any reformulation of the statement.</p></li>
+<li><p>Treat independantly each complex instruction in elementary instructions that will represent instruction blocks of the written algorithm. This step may require to add new variables to the declaration section of the algorithm. If some operations seems very complex, do not hesitate to structure the algorithm using functions.</p></li>
 </ul>
 </div>
 <div class="section" id="testing-trace-table">
-<h2>4.3.2. Testing: trace table<a class="headerlink" href="#testing-trace-table" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3.2. </span>Testing: trace table<a class="headerlink" href="#testing-trace-table" title="Permalink to this headline">¶</a></h2>
 <p>When a version of an algorithm has been written, it should be tested and eventually corrected. This is a complex step in algorithm writting because the more the tests will be exhaustive, the more the validation of the safety of the produced algorithm will be. For example, if one of the input of the algorithm is an integer, one can test positive, nul and negative values for this integer.</p>
 <p>There are at least two possibilities to test an algorithm:</p>
 <ul class="simple">
-<li>Traduce it in a programming language and run it on a computer on different data sets.</li>
-<li>Test by hand using a trace table</li>
+<li><p>Traduce it in a programming language and run it on a computer on different data sets.</p></li>
+<li><p>Test by hand using a trace table</p></li>
 </ul>
 <p>A <strong>trace table</strong> is representing the value of variables (and eventually the screen output) at each line during the algorithm execution.</p>
 <p>Let us take the example of the conversion algorithm seen in section <a class="reference internal" href="chap3_2algorithmSyntax.html#sec-chap3-firstexample"><span class="std std-ref">A first example</span></a>. This algorithm is recalled hereafter:</p>
@@ -243,62 +246,62 @@ End
 </pre></div>
 </td></tr></table></div>
 <p>A possible trace table for this algorithm is:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="10%" />
-<col width="13%" />
-<col width="12%" />
-<col width="12%" />
-<col width="53%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 53%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">line</th>
-<th class="head">zeroC</th>
-<th class="head">tempC</th>
-<th class="head">tempK</th>
-<th class="head">screen</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>line</p></th>
+<th class="head"><p>zeroC</p></th>
+<th class="head"><p>tempC</p></th>
+<th class="head"><p>tempK</p></th>
+<th class="head"><p>screen</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>7</td>
-<td>273.15</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<tbody>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>273.15</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>12</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>Enter temperature un Celcius :</td>
+<tr class="row-odd"><td><p>12</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>Enter temperature un Celcius :</p></td>
 </tr>
-<tr class="row-even"><td>13</td>
-<td>&#160;</td>
-<td>42.0</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>13</p></td>
+<td></td>
+<td><p>42.0</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>14</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>315.15</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>14</p></td>
+<td></td>
+<td></td>
+<td><p>315.15</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td>15</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>42.0°C is 315.15K</td>
+<tr class="row-even"><td><p>15</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>42.0°C is 315.15K</p></td>
 </tr>
 </tbody>
 </table>
 <p>Testing this algorithm with a temperature of -300 °C will send an unphysical result and shows one of the algorithm limitations.</p>
 </div>
 <div class="section" id="basic-exercices">
-<span id="sec-chap3-basics"></span><h2>4.3.3. Basic exercices<a class="headerlink" href="#basic-exercices" title="Permalink to this headline">¶</a></h2>
+<span id="sec-chap3-basics"></span><h2><span class="section-number">4.3.3. </span>Basic exercices<a class="headerlink" href="#basic-exercices" title="Permalink to this headline">¶</a></h2>
 <p>Here are presented some basic exercices that needs to be understand before writting more complex algorithms. This section is a practicing section that should be done sequentially to understand the basic instructions to build algorithms.</p>
 <div class="section" id="permutation">
-<span id="sec-chap3-permutation"></span><h3>4.3.3.1. Permutation<a class="headerlink" href="#permutation" title="Permalink to this headline">¶</a></h3>
+<span id="sec-chap3-permutation"></span><h3><span class="section-number">4.3.3.1. </span>Permutation<a class="headerlink" href="#permutation" title="Permalink to this headline">¶</a></h3>
 <p>The aim is to permut the content of two variables. This kind of instruction may be used when sorting data in arrays for example. Consider the following algorithm:</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -336,12 +339,12 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>Write the trace table of the algorithm <em>permutation_V0</em> and explain why it is wrong.</li>
-<li>Propose a new version <em>permutation_V1</em> that correct the algorithm (use a third variable).</li>
+<li><p>Write the trace table of the algorithm <em>permutation_V0</em> and explain why it is wrong.</p></li>
+<li><p>Propose a new version <em>permutation_V1</em> that correct the algorithm (use a third variable).</p></li>
 </ol>
 </div>
 <div class="section" id="accumulation">
-<span id="sec-chap3-accumulation"></span><h3>4.3.3.2. Accumulation<a class="headerlink" href="#accumulation" title="Permalink to this headline">¶</a></h3>
+<span id="sec-chap3-accumulation"></span><h3><span class="section-number">4.3.3.2. </span>Accumulation<a class="headerlink" href="#accumulation" title="Permalink to this headline">¶</a></h3>
 <p>The value of an <strong>accumulation</strong> variable increases during the execution of the algorithm. As example, the following algorithm proposes to accumulate points during darts game with 3 throws.</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -387,12 +390,12 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>This algorithm is wrong. Explain why.</li>
-<li>Propose a new version <em>accumulation_V1</em> that correct the algorithm</li>
+<li><p>This algorithm is wrong. Explain why.</p></li>
+<li><p>Propose a new version <em>accumulation_V1</em> that correct the algorithm</p></li>
 </ol>
 </div>
 <div class="section" id="if-conditional-instructions">
-<h3>4.3.3.3. if conditional instructions<a class="headerlink" href="#if-conditional-instructions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.3.3. </span>if conditional instructions<a class="headerlink" href="#if-conditional-instructions" title="Permalink to this headline">¶</a></h3>
 <p>Consider the two following algorithm:</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -455,17 +458,17 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>Write the trace table for each algorithm with value for e = 20, -20 and -2</li>
-<li>Are these two algorithm equivalent ?</li>
+<li><p>Write the trace table for each algorithm with value for e = 20, -20 and -2</p></li>
+<li><p>Are these two algorithm equivalent ?</p></li>
 </ol>
 <p>We want an algorithm that asks for three values entered by user and prints the maximum.</p>
 <ol class="arabic simple" start="3">
-<li>Write this algorithm.</li>
-<li>Verify your algorithm using a trace table and different input values.</li>
+<li><p>Write this algorithm.</p></li>
+<li><p>Verify your algorithm using a trace table and different input values.</p></li>
 </ol>
 </div>
 <div class="section" id="while-repetitive-instructions">
-<h3>4.3.3.4. While repetitive instructions<a class="headerlink" href="#while-repetitive-instructions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.3.4. </span>While repetitive instructions<a class="headerlink" href="#while-repetitive-instructions" title="Permalink to this headline">¶</a></h3>
 <p>Consider the following algorithm:</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -493,7 +496,7 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>Write the trace table of this algorithm and give the final value for x.</li>
+<li><p>Write the trace table of this algorithm and give the final value for x.</p></li>
 </ol>
 <p>Consider the following algorithm:</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -524,11 +527,11 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple" start="2">
-<li>This algorithm is wrong as it contains an infinite loop. Propose a corrected version for  this algorithm and write its trace table.</li>
+<li><p>This algorithm is wrong as it contains an infinite loop. Propose a corrected version for  this algorithm and write its trace table.</p></li>
 </ol>
 </div>
 <div class="section" id="for-repetitive-instruction">
-<h3>4.3.3.5. For repetitive instruction<a class="headerlink" href="#for-repetitive-instruction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.3.5. </span>For repetitive instruction<a class="headerlink" href="#for-repetitive-instruction" title="Permalink to this headline">¶</a></h3>
 <p>Consider the following algorithm</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -570,12 +573,12 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>Write the trace table of this algorithm and compare it to the preceding algorithm accumulation_V1 of section <a class="reference internal" href="#sec-chap3-accumulation"><span class="std std-ref">Accumulation</span></a>.</li>
-<li>Write an algorithm that asks n real to a user (n is also given by user) and prints the average.</li>
+<li><p>Write the trace table of this algorithm and compare it to the preceding algorithm accumulation_V1 of section <a class="reference internal" href="#sec-chap3-accumulation"><span class="std std-ref">Accumulation</span></a>.</p></li>
+<li><p>Write an algorithm that asks n real to a user (n is also given by user) and prints the average.</p></li>
 </ol>
 </div>
 <div class="section" id="using-and-writting-functions">
-<h3>4.3.3.6. Using and writting functions<a class="headerlink" href="#using-and-writting-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.3.6. </span>Using and writting functions<a class="headerlink" href="#using-and-writting-functions" title="Permalink to this headline">¶</a></h3>
 <p>Consider that you dispose the description (and not the definition) of the following functions:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>units(number : integer) : integer
   /Returns the number of units in the positive integer number
@@ -591,8 +594,8 @@ hundreds(number : integer) : integer
 </pre></div>
 </div>
 <ol class="arabic simple">
-<li>Write an algotrithm that asks user for a positive number and prints the reversed corresponding number (ex : 156 -&gt; 651)</li>
-<li>Write the two functions tens and hundreds, the units fonction definition being:</li>
+<li><p>Write an algotrithm that asks user for a positive number and prints the reversed corresponding number (ex : 156 -&gt; 651)</p></li>
+<li><p>Write the two functions tens and hundreds, the units fonction definition being:</p></li>
 </ol>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
@@ -615,7 +618,7 @@ End
 </td></tr></table></div>
 </div>
 <div class="section" id="playing-with-arrays">
-<h3>4.3.3.7. Playing with arrays<a class="headerlink" href="#playing-with-arrays" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.3.3.7. </span>Playing with arrays<a class="headerlink" href="#playing-with-arrays" title="Permalink to this headline">¶</a></h3>
 <p>Consider the following algorithm that allows a user to enter 5 real numbers in an array:</p>
 <div class="highlight-none notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -645,49 +648,49 @@ End
 </pre></div>
 </td></tr></table></div>
 <ol class="arabic simple">
-<li>Add to this algorithm instructions for printing the array.</li>
-<li>Add to this algorithm instructions for reversing the array. You can help with the permutation algorithm of section <a class="reference internal" href="#sec-chap3-permutation"><span class="std std-ref">Permutation</span></a> under a function form.</li>
+<li><p>Add to this algorithm instructions for printing the array.</p></li>
+<li><p>Add to this algorithm instructions for reversing the array. You can help with the permutation algorithm of section <a class="reference internal" href="#sec-chap3-permutation"><span class="std std-ref">Permutation</span></a> under a function form.</p></li>
 </ol>
 <p>Example of reversed array:</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="35%" />
-<col width="15%" />
-<col width="13%" />
-<col width="11%" />
-<col width="11%" />
-<col width="15%" />
+<col style="width: 35%" />
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">original array</th>
-<th class="head">3.2</th>
-<th class="head">40.0</th>
-<th class="head">1.0</th>
-<th class="head">5.0</th>
-<th class="head">-26.1</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>original array</p></th>
+<th class="head"><p>3.2</p></th>
+<th class="head"><p>40.0</p></th>
+<th class="head"><p>1.0</p></th>
+<th class="head"><p>5.0</p></th>
+<th class="head"><p>-26.1</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>reversed array</td>
-<td>-26.1</td>
-<td><ol class="first last arabic simple" start="5">
+<tbody>
+<tr class="row-even"><td><p>reversed array</p></td>
+<td><p>-26.1</p></td>
+<td><ol class="arabic simple" start="5">
 <li></li>
 </ol>
 </td>
-<td><ol class="first last arabic simple">
+<td><ol class="arabic simple">
 <li></li>
 </ol>
 </td>
-<td><ol class="first last arabic simple" start="40">
+<td><ol class="arabic simple" start="40">
 <li></li>
 </ol>
 </td>
-<td>3.2</td>
+<td><p>3.2</p></td>
 </tr>
 </tbody>
 </table>
 <ol class="arabic simple" start="3">
-<li>Write a function that sorts the array (ascending or descending)</li>
+<li><p>Write a function that sorts the array (ascending or descending)</p></li>
 </ol>
 </div>
 </div>
@@ -713,11 +716,19 @@ End
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Polytech ME Info team : LB, CM, FP, JV
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -728,7 +739,6 @@ End
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

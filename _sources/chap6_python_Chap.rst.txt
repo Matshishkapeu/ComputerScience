@@ -2,7 +2,6 @@
 Python
 ******
 
-soon...
 
 .. toctree::
   :maxdepth: 1

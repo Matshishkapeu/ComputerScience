@@ -2,7 +2,6 @@
 C/C++ Programming Langage
 *************************
 
-soon...
 
 .. toctree::
   :maxdepth: 1

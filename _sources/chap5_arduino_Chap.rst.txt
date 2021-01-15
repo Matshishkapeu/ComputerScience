@@ -2,15 +2,16 @@
 Arduino
 *******
 
-soon...
+Arduino est un projet créé par une équipe de développeurs, composée de six personnes : Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino, David Mellis et Nicholas Zambetti, qui pour travailler sur ce projet se réunissaient au bar di Re Arduino (en français « bar du roi Arduin »),  à Ivrée en Italie du Nord( cf. Lien wikipedia ci-dessous). 
+
+C'est maintenant la marque d'une plateforme de prototypage open-source qui permet aux débutants, amateurs ou professionnels de créer des objets électroniques interactifs à partir de cartes électroniques, en programmant le microcontrôleur de celle-ci. 
+
 
 .. toctree::
   :maxdepth: 1
   :caption: Contents:
 
-  
-
-
-
-
+  chap5_1presentation
+  chap5_2dataBase
+  chap5_3tutos
 

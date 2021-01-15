@@ -1,0 +1,33 @@
+*********
+Data base
+*********
+
+Usefull informations for building Arduino circuits and programs
+
+Resistor color codes
+====================
+
+.. _Fig:chap5:CodeResistor:
+
+.. figure:: ./_static/fig/chap5/codeResistor.gif
+  :scale: 80%
+  :align: center
+
+  Resistor color codes.
+
+.. _Fig:chap5:resistorsStarterPack:
+
+.. figure:: ./_static/fig/chap5/resistorsStarterPack.png
+  :scale: 20%
+  :align: center
+
+  Resistors found in the arduino kit.
+
+Arduino digital input/output
+============================
+
+Arduino digital PWM output
+==========================
+
+Arduino analog input
+====================

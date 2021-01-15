@@ -66,6 +66,10 @@ In informatics the elementary data that can be stored electronically is named a 
 
 8 bits are grouped to form a **byte**.
 
+.. admonition:: Question
+
+  How many bytes are necessary to encode 256 different information (i.e. for example to store one primary color in the RGB encoding) ?
+
 Encoding positive integers
 --------------------------
 Binary encoding of positive integers is the more natural. Let us consider that the information to store is encoded on 8 bits (or 1 byte), the range of integer will be from 0 to :math:`2^8 - 1 = 255`.
@@ -126,6 +130,10 @@ To convert easily an integer in binary, a simple way is to apply successive enti
  ===  ===  ===  ===  ===  ===  ===  ===
  1    0    0    1    1    1    0    0  
  ===  ===  ===  ===  ===  ===  ===  ===
+
+.. admonition:: exercise
+
+  How many bytes are necessary to store complete information of an image in full HD (1920 x 1080 colored pixels) ?
 
 Encoding negative integers
 --------------------------

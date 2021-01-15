@@ -2,7 +2,6 @@
 Computer architecture
 *********************
 
-soon...
 
 .. toctree::
   :maxdepth: 1
